@@ -1,0 +1,1679 @@
+A table of solstice/equinox dates and full moon dates with
+"traditional" moon names,  for 2000 to 2099.  This was
+generated with the 'phases.cpp' code in the 'lunar' repository,
+and is used by 'lunchart' (code to generate PostScript/PDF
+lunar calendars).
+
+I added the names by hand (with some editor tricks to speed that
+process up a bit).  I followed the _Maine Farmer's Almanac_
+scheme in which full moon names are assigned by season :
+
+Winter:
+   After Yule
+   Wolf
+   Lenten
+
+Spring:
+   Egg
+   Milk
+   Flower
+
+Summer:
+   Hay
+   Grain
+   Fruit
+
+Autumn:
+   Harvest
+   Hunter's
+   Before Yule
+
+Every two or three years,  you get four full moons in a season.
+For some reason,  the _Maine Farmer's Almanac_ called the
+_third_ moon in that season the 'Blue Moon'.  (The modern concept
+in which the second full moon in a Gregorian-calendar month is
+called 'blue' is a more modern definition.)
+
+This was discussed and analyzed in two articles in _Sky & Telescope_,
+May 1999 and in a follow-up article a few months later than I no
+longer have.
+
+Dec sol:   22 Dec 1999  7:44:52 2451534.82283
+Full moon: 22 Dec 1999 17:31:00 2451535.229861 After Yule
+Full moon: 21 Jan 2000  4:40:31 2451564.694808 Wolf
+Full moon: 19 Feb 2000 16:26:49 2451594.185290 Blue
+Full moon: 20 Mar 2000  4:44:25 2451623.697520 Lenten
+Mar equ:   20 Mar 2000  7:36:18 2451623.81688
+Full moon: 18 Apr 2000 17:41:26 2451653.237110 Egg
+Full moon: 18 May 2000  7:34:21 2451682.815521 Milk
+Full moon: 16 Jun 2000 22:26:56 2451712.435378 Flower
+Jun sol:   21 Jun 2000  1:48:46 2451716.57554
+Full moon: 16 Jul 2000 13:55:07 2451742.079949 Hay
+Full moon: 15 Aug 2000  5:12:38 2451771.717112 Grain
+Full moon: 13 Sep 2000 19:36:51 2451801.317260 Fruit
+Sep equ:   22 Sep 2000 17:28:39 2451810.22823
+Full moon: 13 Oct 2000  8:52:58 2451830.870124 Harvest
+Full moon: 11 Nov 2000 21:14:43 2451860.385229 Hunter's
+Full moon: 11 Dec 2000  9:03:04 2451889.877135 Before Yule
+Dec sol:   21 Dec 2000 13:38:29 2451900.06840
+Full moon:  9 Jan 2001 20:24:36 2451919.350418 After Yule
+Full moon:  8 Feb 2001  7:11:36 2451948.799726 Wolf
+Full moon:  9 Mar 2001 17:23:02 2451978.224328 Lenten
+Mar equ:   20 Mar 2001 13:31:46 2451989.06374
+Full moon:  8 Apr 2001  3:22:02 2452007.640303 Egg
+Full moon:  7 May 2001 13:52:38 2452037.078218 Milk
+Full moon:  6 Jun 2001  1:39:12 2452066.568900 Flower
+Jun sol:   21 Jun 2001  7:38:47 2452081.81861
+Full moon:  5 Jul 2001 15:03:37 2452096.127519 Hay
+Full moon:  4 Aug 2001  5:55:37 2452125.746967 Grain
+Full moon:  2 Sep 2001 21:42:48 2452155.404733 Fruit
+Sep equ:   22 Sep 2001 23:05:32 2452175.46218
+Full moon:  2 Oct 2001 13:48:40 2452185.075467 Harvest
+Full moon:  1 Nov 2001  5:41:01 2452214.736820 Hunter's
+Full moon: 30 Nov 2001 20:49:01 2452244.367381 Before Yule
+Dec sol:   21 Dec 2001 19:22:33 2452265.30733
+Full moon: 30 Dec 2001 10:40:34 2452273.944849 After Yule
+Full moon: 28 Jan 2002 22:50:31 2452303.451753 Wolf
+Full moon: 27 Feb 2002  9:16:36 2452332.886537 Lenten
+Mar equ:   20 Mar 2002 19:17:12 2452354.30362
+Full moon: 28 Mar 2002 18:24:56 2452362.267317 Egg
+Full moon: 27 Apr 2002  3:00:08 2452391.625095 Milk
+Full moon: 26 May 2002 11:51:26 2452420.994052 Flower
+Jun sol:   21 Jun 2002 13:25:28 2452447.05936
+Full moon: 24 Jun 2002 21:42:22 2452450.404431 Hay
+Full moon: 24 Jul 2002  9:06:56 2452479.879818 Grain
+Full moon: 22 Aug 2002 22:29:12 2452509.436951 Blue
+Full moon: 21 Sep 2002 13:59:07 2452539.082727 Fruit
+Sep equ:   23 Sep 2002  4:56:27 2452540.70588
+Full moon: 21 Oct 2002  7:19:49 2452568.805438 Harvest
+Full moon: 20 Nov 2002  1:33:40 2452598.565050 Hunter's
+Full moon: 19 Dec 2002 19:10:11 2452628.298741 Before Yule
+Dec sol:   22 Dec 2002  1:15:26 2452630.55239
+Full moon: 18 Jan 2003 10:47:31 2452657.949672 After Yule
+Full moon: 16 Feb 2003 23:51:05 2452687.493814 Wolf
+Full moon: 18 Mar 2003 10:34:36 2452716.940695 Lenten
+Mar equ:   21 Mar 2003  1:00:50 2452719.54225
+Full moon: 16 Apr 2003 19:35:46 2452746.316510 Egg
+Full moon: 16 May 2003  3:36:00 2452775.650006 Milk
+Full moon: 14 Jun 2003 11:15:56 2452804.969404 Flower
+Jun sol:   21 Jun 2003 19:11:32 2452812.29968
+Full moon: 13 Jul 2003 19:21:24 2452834.306531 Hay
+Full moon: 12 Aug 2003  4:48:15 2452863.700179 Grain
+Full moon: 10 Sep 2003 16:36:16 2452893.191857 Fruit
+Sep equ:   23 Sep 2003 10:47:53 2452905.94992
+Full moon: 10 Oct 2003  7:27:22 2452922.810672 Harvest
+Full moon:  9 Nov 2003  1:13:14 2452952.550856 Hunter's
+Full moon:  8 Dec 2003 20:36:40 2452982.358805 Before Yule
+Dec sol:   22 Dec 2003  7:04:53 2452995.79506
+Full moon:  7 Jan 2004 15:40:05 2453012.152846 After Yule
+Full moon:  6 Feb 2004  8:46:50 2453041.865867 Wolf
+Full moon:  6 Mar 2004 23:14:20 2453071.468292 Lenten
+Mar equ:   20 Mar 2004  6:49:42 2453084.78452
+Full moon:  5 Apr 2004 11:02:55 2453100.960367 Egg
+Full moon:  4 May 2004 20:33:38 2453130.356695 Milk
+Full moon:  3 Jun 2004  4:19:39 2453159.680315 Flower
+Jun sol:   21 Jun 2004  0:57:56 2453177.54024
+Full moon:  2 Jul 2004 11:08:55 2453188.964534 Hay
+Full moon: 31 Jul 2004 18:05:17 2453218.253675 Grain
+Full moon: 30 Aug 2004  2:22:22 2453247.598873 Fruit
+Sep equ:   22 Sep 2004 16:30:54 2453271.18813
+Full moon: 28 Sep 2004 13:09:14 2453277.048080 Harvest
+Full moon: 28 Oct 2004  3:07:13 2453306.630013 Hunter's
+Full moon: 26 Nov 2004 20:07:09 2453336.338308 Before Yule
+Dec sol:   21 Dec 2004 12:42:40 2453361.02964
+Full moon: 26 Dec 2004 15:06:17 2453366.129370 After Yule
+Full moon: 25 Jan 2005 10:32:14 2453395.939052 Wolf
+Full moon: 24 Feb 2005  4:53:41 2453425.703950 Lenten
+Mar equ:   20 Mar 2005 12:34:29 2453450.02395
+Full moon: 25 Mar 2005 20:58:37 2453455.374043 Egg
+Full moon: 24 Apr 2005 10:06:36 2453484.921253 Milk
+Full moon: 23 May 2005 20:18:13 2453514.345984 Flower
+Jun sol:   21 Jun 2005  6:47:11 2453542.78278
+Full moon: 22 Jun 2005  4:13:55 2453543.676336 Hay
+Full moon: 21 Jul 2005 11:00:30 2453572.958684 Grain
+Full moon: 19 Aug 2005 17:53:14 2453602.245312 Blue
+Full moon: 18 Sep 2005  2:00:49 2453631.583908 Fruit
+Sep equ:   22 Sep 2005 22:24:14 2453636.43350
+Full moon: 17 Oct 2005 12:13:36 2453661.009454 Harvest
+Full moon: 16 Nov 2005  0:57:31 2453690.539953 Hunter's
+Full moon: 15 Dec 2005 16:15:32 2453720.177464 Before Yule
+Dec sol:   21 Dec 2005 18:36:00 2453726.27501
+Full moon: 14 Jan 2006  9:48:08 2453749.908429 After Yule
+Full moon: 13 Feb 2006  4:44:09 2453779.697331 Wolf
+Full moon: 14 Mar 2006 23:35:24 2453809.482926 Lenten
+Mar equ:   20 Mar 2006 18:26:39 2453815.26851
+Full moon: 13 Apr 2006 16:40:08 2453839.194544 Egg
+Full moon: 13 May 2006  6:50:57 2453868.785388 Milk
+Full moon: 11 Jun 2006 18:03:00 2453898.252084 Flower
+Jun sol:   21 Jun 2006 12:26:56 2453908.01871
+Full moon: 11 Jul 2006  3:01:53 2453927.626313 Hay
+Full moon:  9 Aug 2006 10:54:03 2453956.954206 Grain
+Full moon:  7 Sep 2006 18:42:07 2453986.279251 Fruit
+Sep equ:   23 Sep 2006  4:04:27 2454001.66976
+Full moon:  7 Oct 2006  3:12:51 2454015.633930 Harvest
+Full moon:  5 Nov 2006 12:58:18 2454045.040486 Hunter's
+Full moon:  5 Dec 2006  0:24:55 2454074.517314 Before Yule
+Dec sol:   22 Dec 2006  0:23:10 2454091.51609
+Full moon:  3 Jan 2007 13:57:31 2454104.081612 After Yule
+Full moon:  2 Feb 2007  5:45:15 2454133.739767 Wolf
+Full moon:  3 Mar 2007 23:17:00 2454163.470144 Lenten
+Mar equ:   21 Mar 2007  0:08:30 2454180.50590
+Full moon:  2 Apr 2007 17:15:05 2454193.218818 Egg
+Full moon:  2 May 2007 10:09:24 2454222.923195 Milk
+Full moon:  1 Jun 2007  1:03:32 2454252.544131 Flower
+Jun sol:   21 Jun 2007 18:07:30 2454273.25521
+Full moon: 30 Jun 2007 13:48:43 2454282.075503 Hay
+Full moon: 30 Jul 2007  0:47:45 2454311.533163 Grain
+Full moon: 28 Aug 2007 10:35:03 2454340.941010 Fruit
+Sep equ:   23 Sep 2007  9:52:18 2454366.91132
+Full moon: 26 Sep 2007 19:45:11 2454370.323055 Harvest
+Full moon: 26 Oct 2007  4:51:44 2454399.702599 Hunter's
+Full moon: 24 Nov 2007 14:30:02 2454429.104201 Before Yule
+Dec sol:   22 Dec 2007  6:08:53 2454456.75618
+Full moon: 24 Dec 2007  1:15:41 2454458.552568 After Yule
+Full moon: 22 Jan 2008 13:34:44 2454488.065795 Wolf
+Full moon: 21 Feb 2008  3:30:29 2454517.646175 Lenten
+Mar equ:   20 Mar 2008  5:49:22 2454545.74262
+Full moon: 21 Mar 2008 18:39:50 2454547.277663 Egg
+Full moon: 20 Apr 2008 10:25:23 2454576.934298 Milk
+Full moon: 20 May 2008  2:11:24 2454606.591258 Blue
+Full moon: 18 Jun 2008 17:30:23 2454636.229440 Flower
+Jun sol:   21 Jun 2008  0:00:26 2454638.50031
+Full moon: 18 Jul 2008  7:59:06 2454665.832717 Hay
+Full moon: 16 Aug 2008 21:16:35 2454695.386516 Grain
+Full moon: 15 Sep 2008  9:13:21 2454724.884275 Fruit
+Sep equ:   22 Sep 2008 15:45:34 2454732.15664
+Full moon: 14 Oct 2008 20:02:28 2454754.335046 Harvest
+Full moon: 13 Nov 2008  6:17:39 2454783.762258 Hunter's
+Full moon: 12 Dec 2008 16:37:28 2454813.192687 Before Yule
+Dec sol:   21 Dec 2008 12:04:50 2454822.00336
+Full moon: 11 Jan 2009  3:26:45 2454842.643584 After Yule
+Full moon:  9 Feb 2009 14:49:08 2454872.117453 Wolf
+Full moon: 11 Mar 2009  2:37:48 2454901.609591 Lenten
+Mar equ:   20 Mar 2009 11:44:43 2454910.98939
+Full moon:  9 Apr 2009 14:55:47 2454931.122078 Egg
+Full moon:  9 May 2009  4:01:22 2454960.667616 Milk
+Full moon:  7 Jun 2009 18:11:42 2454990.258126 Flower
+Jun sol:   21 Jun 2009  5:46:37 2455003.74071
+Full moon:  7 Jul 2009  9:21:20 2455019.889816 Hay
+Full moon:  6 Aug 2009  0:54:49 2455049.538077 Grain
+Full moon:  4 Sep 2009 16:02:36 2455079.168475 Fruit
+Sep equ:   22 Sep 2009 21:19:40 2455097.38867
+Full moon:  4 Oct 2009  6:10:06 2455108.757018 Harvest
+Full moon:  2 Nov 2009 19:13:48 2455138.301257 Hunter's
+Full moon:  2 Dec 2009  7:30:28 2455167.812831 Before Yule
+Dec sol:   21 Dec 2009 17:47:53 2455187.24159
+Full moon: 31 Dec 2009 19:12:51 2455197.300593 After Yule
+Full moon: 30 Jan 2010  6:17:30 2455226.762157 Wolf
+Full moon: 28 Feb 2010 16:37:40 2455256.192829 Lenten
+Mar equ:   20 Mar 2010 17:33:18 2455276.23146
+Full moon: 30 Mar 2010  2:25:24 2455285.600977 Egg
+Full moon: 28 Apr 2010 12:18:35 2455315.012906 Milk
+Full moon: 27 May 2010 23:07:17 2455344.463399 Flower
+Jun sol:   21 Jun 2010 11:29:30 2455368.97883
+Full moon: 26 Jun 2010 11:30:14 2455373.979339 Hay
+Full moon: 26 Jul 2010  1:36:31 2455403.567028 Grain
+Full moon: 24 Aug 2010 17:04:31 2455433.211480 Fruit
+Sep equ:   23 Sep 2010  3:10:07 2455462.63203
+Full moon: 23 Sep 2010  9:17:05 2455462.886871 Harvest
+Full moon: 23 Oct 2010  1:36:29 2455492.567006 Hunter's
+Full moon: 21 Nov 2010 17:27:17 2455522.227288 Blue
+Full moon: 21 Dec 2010  8:13:21 2455551.842609 Before Yule
+Dec sol:   21 Dec 2010 23:39:33 2455552.48580
+Full moon: 19 Jan 2011 21:21:20 2455581.389822 After Yule
+Full moon: 18 Feb 2011  8:35:30 2455610.857987 Wolf
+Full moon: 19 Mar 2011 18:09:51 2455640.256844 Lenten
+Mar equ:   20 Mar 2011 23:21:49 2455641.47349
+Full moon: 18 Apr 2011  2:43:55 2455669.613832 Egg
+Full moon: 17 May 2011 11:08:37 2455698.964328 Milk
+Full moon: 15 Jun 2011 20:13:31 2455728.342724 Flower
+Jun sol:   21 Jun 2011 17:17:36 2455734.22056
+Full moon: 15 Jul 2011  6:39:30 2455757.777440 Hay
+Full moon: 13 Aug 2011 18:57:29 2455787.289926 Grain
+Full moon: 12 Sep 2011  9:26:42 2455816.893548 Fruit
+Sep equ:   23 Sep 2011  9:05:44 2455827.87898
+Full moon: 12 Oct 2011  2:05:39 2455846.587260 Harvest
+Full moon: 10 Nov 2011 20:16:04 2455876.344498 Hunter's
+Full moon: 10 Dec 2011 14:36:28 2455906.108657 Before Yule
+Dec sol:   22 Dec 2011  5:31:08 2455917.72996
+Full moon:  9 Jan 2012  7:30:02 2455935.812532 After Yule
+Full moon:  7 Feb 2012 21:53:39 2455965.412258 Wolf
+Full moon:  8 Mar 2012  9:39:31 2455994.902450 Lenten
+Mar equ:   20 Mar 2012  5:15:31 2456006.71912
+Full moon:  6 Apr 2012 19:18:48 2456024.304732 Egg
+Full moon:  6 May 2012  3:35:09 2456053.649421 Milk
+Full moon:  4 Jun 2012 11:11:33 2456082.966360 Flower
+Jun sol:   20 Jun 2012 23:09:54 2456099.46522
+Full moon:  3 Jul 2012 18:51:49 2456112.285990 Hay
+Full moon:  2 Aug 2012  3:27:27 2456141.644067 Grain
+Full moon: 31 Aug 2012 13:58:11 2456171.082077 Fruit
+Sep equ:   22 Sep 2012 14:50:04 2456193.11811
+Full moon: 30 Sep 2012  3:18:39 2456200.637956 Harvest
+Full moon: 29 Oct 2012 19:49:21 2456230.325942 Hunter's
+Full moon: 28 Nov 2012 14:45:54 2456260.115208 Before Yule
+Dec sol:   21 Dec 2012 11:12:43 2456282.96717
+Full moon: 28 Dec 2012 10:21:09 2456289.931357 After Yule
+Full moon: 27 Jan 2013  4:38:17 2456319.693255 Wolf
+Full moon: 25 Feb 2013 20:26:05 2456349.351453 Lenten
+Mar equ:   20 Mar 2013 11:03:01 2456371.96044
+Full moon: 27 Mar 2013  9:27:28 2456378.894076 Egg
+Full moon: 25 Apr 2013 19:57:20 2456408.331492 Milk
+Full moon: 25 May 2013  4:25:05 2456437.684092 Flower
+Jun sol:   21 Jun 2013  5:05:03 2456464.71185
+Full moon: 23 Jun 2013 11:32:17 2456466.980758 Hay
+Full moon: 22 Jul 2013 18:15:36 2456496.260842 Grain
+Full moon: 21 Aug 2013  1:44:47 2456525.572775 Blue
+Full moon: 19 Sep 2013 11:12:57 2456554.967332 Fruit
+Sep equ:   22 Sep 2013 20:45:14 2456558.36475
+Full moon: 18 Oct 2013 23:37:38 2456584.484467 Harvest
+Full moon: 17 Nov 2013 15:15:39 2456614.135875 Hunter's
+Full moon: 17 Dec 2013  9:28:05 2456643.894504 Before Yule
+Dec sol:   21 Dec 2013 17:12:07 2456648.21675
+Full moon: 16 Jan 2014  4:52:10 2456673.702902 After Yule
+Full moon: 14 Feb 2014 23:53:00 2456703.495144 Wolf
+Full moon: 16 Mar 2014 17:08:26 2456733.214192 Lenten
+Mar equ:   20 Mar 2014 16:58:12 2456737.20709
+Full moon: 15 Apr 2014  7:42:26 2456762.821139 Egg
+Full moon: 14 May 2014 19:15:57 2456792.302748 Milk
+Full moon: 13 Jun 2014  4:11:26 2456821.674614 Flower
+Jun sol:   21 Jun 2014 10:52:21 2456829.95302
+Full moon: 12 Jul 2014 11:24:58 2456850.975678 Hay
+Full moon: 10 Aug 2014 18:09:33 2456880.256632 Grain
+Full moon:  9 Sep 2014  1:38:14 2456909.568226 Fruit
+Sep equ:   23 Sep 2014  2:30:11 2456923.60430
+Full moon:  8 Oct 2014 10:50:33 2456938.951771 Harvest
+Full moon:  6 Nov 2014 22:22:49 2456968.432512 Hunter's
+Full moon:  6 Dec 2014 12:26:46 2456998.018593 Before Yule
+Dec sol:   21 Dec 2014 23:04:08 2457013.46121
+Full moon:  5 Jan 2015  4:53:20 2457027.703713 After Yule
+Full moon:  3 Feb 2015 23:08:59 2457057.464576 Wolf
+Full moon:  5 Mar 2015 18:05:25 2457087.253762 Lenten
+Mar equ:   20 Mar 2015 22:46:16 2457102.44880
+Full moon:  4 Apr 2015 12:05:39 2457117.003933 Egg
+Full moon:  4 May 2015  3:42:06 2457146.654241 Milk
+Full moon:  2 Jun 2015 16:18:58 2457176.179846 Flower
+Jun sol:   21 Jun 2015 16:39:02 2457195.19378
+Full moon:  2 Jul 2015  2:19:38 2457205.596977 Hay
+Full moon: 31 Jul 2015 10:43:06 2457234.946597 Grain
+Full moon: 29 Aug 2015 18:35:23 2457264.274571 Fruit
+Sep equ:   23 Sep 2015  8:21:39 2457288.84838
+Full moon: 28 Sep 2015  2:50:36 2457293.618478 Harvest
+Full moon: 27 Oct 2015 12:05:09 2457323.003581 Hunter's
+Full moon: 25 Nov 2015 22:44:17 2457352.447423 Before Yule
+Dec sol:   22 Dec 2015  4:49:04 2457378.70074
+Full moon: 25 Dec 2015 11:11:37 2457381.966403 After Yule
+Full moon: 24 Jan 2016  1:45:50 2457411.573500 Wolf
+Full moon: 22 Feb 2016 18:19:45 2457441.263720 Lenten
+Mar equ:   20 Mar 2016  4:31:18 2457467.68841
+Full moon: 23 Mar 2016 12:00:48 2457471.000563 Egg
+Full moon: 22 Apr 2016  5:23:38 2457500.724755 Milk
+Full moon: 21 May 2016 21:14:19 2457530.384952 Blue
+Full moon: 20 Jun 2016 11:02:19 2457559.959949 Flower
+Jun sol:   20 Jun 2016 22:35:18 2457560.44118
+Full moon: 19 Jul 2016 22:56:45 2457589.456083 Hay
+Full moon: 18 Aug 2016  9:26:43 2457618.893554 Grain
+Full moon: 16 Sep 2016 19:05:13 2457648.295289 Fruit
+Sep equ:   22 Sep 2016 14:22:14 2457654.09878
+Full moon: 16 Oct 2016  4:23:19 2457677.682861 Harvest
+Full moon: 14 Nov 2016 13:52:19 2457707.078008 Hunter's
+Full moon: 14 Dec 2016  0:05:45 2457736.504000 Before Yule
+Dec sol:   21 Dec 2016 10:45:18 2457743.94813
+Full moon: 12 Jan 2017 11:34:07 2457765.982034 After Yule
+Full moon: 11 Feb 2017  0:33:02 2457795.522945 Wolf
+Full moon: 12 Mar 2017 14:53:46 2457825.120675 Lenten
+Mar equ:   20 Mar 2017 10:29:46 2457832.93734
+Full moon: 11 Apr 2017  6:08:01 2457854.755575 Egg
+Full moon: 10 May 2017 21:42:32 2457884.404540 Milk
+Full moon:  9 Jun 2017 13:09:33 2457914.048305 Flower
+Jun sol:   21 Jun 2017  4:25:17 2457925.68423
+Full moon:  9 Jul 2017  4:06:33 2457943.671222 Hay
+Full moon:  7 Aug 2017 18:10:47 2457973.257491 Grain
+Full moon:  6 Sep 2017  7:02:52 2458002.793667 Fruit
+Sep equ:   22 Sep 2017 20:02:55 2458019.33537
+Full moon:  5 Oct 2017 18:40:00 2458032.277789 Harvest
+Full moon:  4 Nov 2017  5:22:59 2458061.724303 Hunter's
+Full moon:  3 Dec 2017 15:47:17 2458091.157839 Before Yule
+Dec sol:   21 Dec 2017 16:29:05 2458109.18686
+Full moon:  2 Jan 2018  2:24:12 2458120.600147 After Yule
+Full moon: 31 Jan 2018 13:26:42 2458150.060216 Wolf
+Full moon:  2 Mar 2018  0:51:27 2458179.535731 Lenten
+Mar equ:   20 Mar 2018 16:16:35 2458198.17819
+Full moon: 31 Mar 2018 12:36:56 2458209.025648 Egg
+Full moon: 30 Apr 2018  0:58:09 2458238.540392 Milk
+Full moon: 29 May 2018 14:19:34 2458268.096927 Flower
+Jun sol:   21 Jun 2018 10:08:25 2458290.92252
+Full moon: 28 Jun 2018  4:52:58 2458297.703449 Hay
+Full moon: 27 Jul 2018 20:20:19 2458327.347449 Grain
+Full moon: 26 Aug 2018 11:56:13 2458356.997379 Fruit
+Sep equ:   23 Sep 2018  1:55:13 2458384.58002
+Full moon: 25 Sep 2018  2:52:26 2458386.619751 Harvest
+Full moon: 24 Oct 2018 16:45:09 2458416.198025 Hunter's
+Full moon: 23 Nov 2018  5:39:14 2458445.735583 Before Yule
+Dec sol:   21 Dec 2018 22:23:52 2458474.43324
+Full moon: 22 Dec 2018 17:48:43 2458475.242169 After Yule
+Full moon: 21 Jan 2019  5:16:05 2458504.719505 Wolf
+Full moon: 19 Feb 2019 15:53:19 2458534.162028 Lenten
+Mar equ:   20 Mar 2019 21:59:34 2458563.41637
+Full moon: 21 Mar 2019  1:42:37 2458563.571265 Egg
+Full moon: 19 Apr 2019 11:12:09 2458592.966778 Milk
+Full moon: 18 May 2019 21:11:22 2458622.382895 Blue
+Full moon: 17 Jun 2019  8:30:33 2458651.854552 Flower
+Jun sol:   21 Jun 2019 15:55:23 2458656.16346
+Full moon: 16 Jul 2019 21:38:07 2458681.401473 Hay
+Full moon: 15 Aug 2019 12:29:13 2458711.020290 Grain
+Full moon: 14 Sep 2019  4:32:38 2458740.689339 Fruit
+Sep equ:   23 Sep 2019  7:51:18 2458749.82730
+Full moon: 13 Oct 2019 21:07:47 2458770.380412 Harvest
+Full moon: 12 Nov 2019 13:34:28 2458800.065609 Hunter's
+Full moon: 12 Dec 2019  5:12:19 2458829.716886 Before Yule
+Dec sol:   22 Dec 2019  4:20:34 2458839.68095
+Full moon: 10 Jan 2020 19:21:18 2458859.306464 After Yule
+Full moon:  9 Feb 2020  7:33:10 2458888.814699 Wolf
+Full moon:  9 Mar 2020 17:47:29 2458918.241310 Lenten
+Mar equ:   20 Mar 2020  3:50:45 2458928.66025
+Full moon:  8 Apr 2020  2:34:55 2458947.607590 Egg
+Full moon:  7 May 2020 10:45:14 2458976.948083 Milk
+Full moon:  5 Jun 2020 19:12:25 2459006.300298 Flower
+Jun sol:   20 Jun 2020 21:44:48 2459021.40612
+Full moon:  5 Jul 2020  4:44:22 2459035.697481 Hay
+Full moon:  3 Aug 2020 15:58:40 2459065.165751 Grain
+Full moon:  2 Sep 2020  5:22:02 2459094.723637 Fruit
+Sep equ:   22 Sep 2020 13:31:47 2459115.06374
+Full moon:  1 Oct 2020 21:05:10 2459124.378589 Harvest
+Full moon: 31 Oct 2020 14:48:58 2459154.117349 Hunter's
+Full moon: 30 Nov 2020  9:29:42 2459183.895625 Before Yule
+Dec sol:   21 Dec 2020 10:03:28 2459204.91908
+Full moon: 30 Dec 2020  3:28:14 2459213.644614 After Yule
+Full moon: 28 Jan 2021 19:16:06 2459243.302852 Wolf
+Full moon: 27 Feb 2021  8:17:14 2459272.845300 Lenten
+Mar equ:   20 Mar 2021  9:38:36 2459293.90181
+Full moon: 28 Mar 2021 18:48:13 2459302.283483 Egg
+Full moon: 27 Apr 2021  3:31:38 2459331.646971 Milk
+Full moon: 26 May 2021 11:13:56 2459360.968017 Flower
+Jun sol:   21 Jun 2021  3:33:17 2459386.64812
+Full moon: 24 Jun 2021 18:39:43 2459390.277586 Hay
+Full moon: 24 Jul 2021  2:36:55 2459419.608973 Grain
+Full moon: 22 Aug 2021 12:02:00 2459449.001390 Blue
+Full moon: 20 Sep 2021 23:54:44 2459478.496343 Fruit
+Sep equ:   22 Sep 2021 19:22:13 2459480.30710
+Full moon: 20 Oct 2021 14:56:36 2459508.122641 Harvest
+Full moon: 19 Nov 2021  8:57:21 2459537.873166 Hunter's
+Full moon: 19 Dec 2021  4:35:30 2459567.691325 Before Yule
+Dec sol:   21 Dec 2021 16:00:26 2459570.16697
+Full moon: 17 Jan 2022 23:48:21 2459597.491917 After Yule
+Full moon: 16 Feb 2022 16:56:27 2459627.205876 Wolf
+Full moon: 18 Mar 2022  7:17:37 2459656.803908 Lenten
+Mar equ:   20 Mar 2022 15:34:33 2459659.14899
+Full moon: 16 Apr 2022 18:55:08 2459686.288294 Egg
+Full moon: 16 May 2022  4:14:11 2459715.676523 Milk
+Full moon: 14 Jun 2022 11:51:39 2459744.994202 Flower
+Jun sol:   21 Jun 2022  9:14:59 2459751.88541
+Full moon: 13 Jul 2022 18:37:27 2459774.276015 Hay
+Full moon: 12 Aug 2022  1:35:40 2459803.566445 Grain
+Full moon: 10 Sep 2022  9:59:02 2459832.915995 Fruit
+Sep equ:   23 Sep 2022  1:04:50 2459845.54502
+Full moon:  9 Oct 2022 20:54:52 2459862.371435 Harvest
+Full moon:  8 Nov 2022 11:01:59 2459891.959712 Hunter's
+Full moon:  8 Dec 2022  4:08:04 2459921.672279 Before Yule
+Dec sol:   21 Dec 2022 21:49:21 2459935.40927
+Full moon:  6 Jan 2023 23:07:53 2459951.463808 After Yule
+Full moon:  5 Feb 2023 18:28:29 2459981.269784 Wolf
+Full moon:  7 Mar 2023 12:40:21 2460011.028024 Lenten
+Mar equ:   20 Mar 2023 21:25:34 2460024.39276
+Full moon:  6 Apr 2023  4:34:37 2460040.690716 Egg
+Full moon:  5 May 2023 17:34:07 2460070.232030 Milk
+Full moon:  4 Jun 2023  3:41:39 2460099.653931 Flower
+Jun sol:   21 Jun 2023 14:58:57 2460117.12428
+Full moon:  3 Jul 2023 11:38:36 2460128.985146 Hay
+Full moon:  1 Aug 2023 18:31:44 2460158.272041 Grain
+Full moon: 31 Aug 2023  1:35:42 2460187.566462 Fruit
+Sep equ:   23 Sep 2023  6:51:07 2460210.78550
+Full moon: 29 Sep 2023  9:57:28 2460216.914907 Harvest
+Full moon: 28 Oct 2023 20:23:56 2460246.349959 Hunter's
+Full moon: 27 Nov 2023  9:16:14 2460275.886277 Before Yule
+Dec sol:   22 Dec 2023  3:28:29 2460300.64479
+Full moon: 27 Dec 2023  0:33:08 2460305.523019 After Yule
+Full moon: 25 Jan 2024 17:53:56 2460335.245796 Wolf
+Full moon: 24 Feb 2024 12:30:19 2460365.021054 Lenten
+Mar equ:   20 Mar 2024  3:07:32 2460389.63023
+Full moon: 25 Mar 2024  7:00:17 2460394.791866 Egg
+Full moon: 23 Apr 2024 23:48:59 2460424.492359 Milk
+Full moon: 23 May 2024 13:53:03 2460454.078506 Flower
+Jun sol:   20 Jun 2024 20:52:07 2460482.36953
+Full moon: 22 Jun 2024  1:07:47 2460483.547073 Hay
+Full moon: 21 Jul 2024 10:17:10 2460512.928596 Grain
+Full moon: 19 Aug 2024 18:25:53 2460542.267985 Blue
+Full moon: 18 Sep 2024  2:34:32 2460571.607324 Fruit
+Sep equ:   22 Sep 2024 12:44:47 2460576.03110
+Full moon: 17 Oct 2024 11:26:27 2460600.976709 Harvest
+Full moon: 15 Nov 2024 21:28:31 2460630.394810 Hunter's
+Full moon: 15 Dec 2024  9:01:43 2460659.876203 Before Yule
+Dec sol:   21 Dec 2024  9:21:42 2460665.89007
+Full moon: 13 Jan 2025 22:27:00 2460689.435418 After Yule
+Full moon: 12 Feb 2025 13:53:19 2460719.078693 Wolf
+Full moon: 14 Mar 2025  6:54:29 2460748.787844 Lenten
+Mar equ:   20 Mar 2025  9:02:36 2460754.87682
+Full moon: 13 Apr 2025  0:22:18 2460778.515487 Egg
+Full moon: 12 May 2025 16:55:54 2460808.205496 Milk
+Full moon: 11 Jun 2025  7:43:43 2460837.822026 Flower
+Jun sol:   21 Jun 2025  2:43:23 2460847.61347
+Full moon: 10 Jul 2025 20:36:47 2460867.358885 Hay
+Full moon:  9 Aug 2025  7:55:02 2460896.829893 Grain
+Full moon:  7 Sep 2025 18:08:44 2460926.256068 Fruit
+Sep equ:   22 Sep 2025 18:20:28 2460941.26422
+Full moon:  7 Oct 2025  3:47:31 2460955.658000 Harvest
+Full moon:  5 Nov 2025 13:19:22 2460985.055119 Hunter's
+Full moon:  4 Dec 2025 23:14:09 2461014.468163 Before Yule
+Dec sol:   21 Dec 2025 15:04:13 2461031.12793
+Full moon:  3 Jan 2026 10:02:56 2461043.918708 After Yule
+Full moon:  1 Feb 2026 22:09:19 2461073.423142 Wolf
+Full moon:  3 Mar 2026 11:37:56 2461102.984676 Lenten
+Mar equ:   20 Mar 2026 14:47:05 2461120.11604
+Full moon:  2 Apr 2026  2:11:51 2461132.591573 Egg
+Full moon:  1 May 2026 17:23:11 2461162.224437 Milk
+Full moon: 31 May 2026  8:45:16 2461191.864769 Flower
+Jun sol:   21 Jun 2026  8:25:38 2461212.85114
+Full moon: 29 Jun 2026 23:56:36 2461221.497648 Hay
+Full moon: 29 Jul 2026 14:35:44 2461251.108157 Grain
+Full moon: 28 Aug 2026  4:18:37 2461280.679598 Fruit
+Sep equ:   23 Sep 2026  0:06:20 2461306.50441
+Full moon: 26 Sep 2026 16:48:53 2461310.200621 Harvest
+Full moon: 26 Oct 2026  4:11:38 2461339.674748 Hunter's
+Full moon: 24 Nov 2026 14:53:40 2461369.120605 Before Yule
+Dec sol:   21 Dec 2026 20:51:22 2461396.36901
+Full moon: 24 Dec 2026  1:28:19 2461398.561341 After Yule
+Full moon: 22 Jan 2027 12:17:12 2461428.011951 Wolf
+Full moon: 20 Feb 2027 23:23:30 2461457.474658 Lenten
+Mar equ:   20 Mar 2027 20:25:49 2461485.35127
+Full moon: 22 Mar 2027 10:43:45 2461486.947059 Egg
+Full moon: 20 Apr 2027 22:27:02 2461516.435450 Milk
+Full moon: 20 May 2027 10:58:55 2461545.957587 Blue
+Full moon: 19 Jun 2027  0:44:18 2461575.530764 Flower
+Jun sol:   21 Jun 2027 14:11:57 2461578.09164
+Full moon: 18 Jul 2027 15:44:49 2461605.156125 Hay
+Full moon: 17 Aug 2027  7:28:39 2461634.811565 Grain
+Full moon: 15 Sep 2027 23:03:32 2461664.460790 Fruit
+Sep equ:   23 Sep 2027  6:02:50 2461671.75198
+Full moon: 15 Oct 2027 13:46:56 2461694.074259 Harvest
+Full moon: 14 Nov 2027  3:25:48 2461723.642923 Hunter's
+Full moon: 13 Dec 2027 16:08:45 2461753.172748 Before Yule
+Dec sol:   22 Dec 2027  2:43:17 2461761.61340
+Full moon: 12 Jan 2028  4:03:03 2461782.668790 After Yule
+Full moon: 10 Feb 2028 15:03:33 2461812.127470 Wolf
+Full moon: 11 Mar 2028  1:05:46 2461841.545676 Lenten
+Mar equ:   20 Mar 2028  2:18:16 2461850.59602
+Full moon:  9 Apr 2028 10:26:31 2461870.935082 Egg
+Full moon:  8 May 2028 19:49:00 2461900.325699 Milk
+Full moon:  7 Jun 2028  6:08:47 2461929.756110 Flower
+Jun sol:   20 Jun 2028 20:03:07 2461943.33551
+Full moon:  6 Jul 2028 18:10:41 2461959.257421 Hay
+Full moon:  5 Aug 2028  8:09:44 2461988.840102 Grain
+Full moon:  3 Sep 2028 23:47:31 2462018.491336 Fruit
+Sep equ:   22 Sep 2028 11:46:25 2462036.99058
+Full moon:  3 Oct 2028 16:24:49 2462048.183911 Harvest
+Full moon:  2 Nov 2028  9:17:15 2462077.886988 Hunter's
+Full moon:  2 Dec 2028  1:40:07 2462107.569531 Before Yule
+Dec sol:   21 Dec 2028  8:20:47 2462126.84777
+Full moon: 31 Dec 2028 16:48:19 2462137.200224 After Yule
+Full moon: 30 Jan 2029  6:03:25 2462166.752377 Wolf
+Full moon: 28 Feb 2029 17:10:00 2462196.215282 Lenten
+Mar equ:   20 Mar 2029  8:03:06 2462215.83549
+Full moon: 30 Mar 2029  2:26:13 2462225.601543 Egg
+Full moon: 28 Apr 2029 10:36:48 2462254.942223 Milk
+Full moon: 27 May 2029 18:37:35 2462284.276099 Flower
+Jun sol:   21 Jun 2029  1:49:25 2462308.57599
+Full moon: 26 Jun 2029  3:22:22 2462313.640542 Hay
+Full moon: 25 Jul 2029 13:35:44 2462343.066482 Grain
+Full moon: 24 Aug 2029  1:51:13 2462372.577237 Blue
+Full moon: 22 Sep 2029 16:29:20 2462402.187044 Fruit
+Sep equ:   22 Sep 2029 17:39:37 2462402.23585
+Full moon: 22 Oct 2029  9:27:28 2462431.894082 Harvest
+Full moon: 21 Nov 2029  4:02:52 2462461.668664 Hunter's
+Full moon: 20 Dec 2029 22:46:30 2462491.448968 Before Yule
+Dec sol:   21 Dec 2029 14:15:14 2462492.09391
+Full moon: 19 Jan 2030 15:54:14 2462521.162664 After Yule
+Full moon: 18 Feb 2030  6:19:37 2462550.763629 Wolf
+Full moon: 19 Mar 2030 17:56:26 2462580.247530 Lenten
+Mar equ:   20 Mar 2030 13:53:13 2462581.07863
+Full moon: 18 Apr 2030  3:20:03 2462609.638934 Egg
+Full moon: 17 May 2030 11:19:07 2462638.971615 Milk
+Full moon: 15 Jun 2030 18:40:54 2462668.278403 Flower
+Jun sol:   21 Jun 2030  7:32:26 2462673.81419
+Full moon: 15 Jul 2030  2:11:51 2462697.591565 Hay
+Full moon: 13 Aug 2030 10:44:20 2462726.947457 Grain
+Full moon: 11 Sep 2030 21:17:57 2462756.387470 Fruit
+Sep equ:   22 Sep 2030 23:28:00 2462767.47779
+Full moon: 11 Oct 2030 10:46:50 2462785.949197 Harvest
+Full moon: 10 Nov 2030  3:30:10 2462815.645954 Hunter's
+Full moon:  9 Dec 2030 22:40:22 2462845.444706 Before Yule
+Dec sol:   21 Dec 2030 20:10:45 2462857.34081
+Full moon:  8 Jan 2031 18:25:45 2462875.267888 After Yule
+Full moon:  7 Feb 2031 12:46:04 2462905.031995 Wolf
+Full moon:  9 Mar 2031  4:29:36 2462934.687233 Lenten
+Mar equ:   20 Mar 2031 19:42:06 2462946.32091
+Full moon:  7 Apr 2031 17:21:22 2462964.223178 Egg
+Full moon:  7 May 2031  3:39:56 2462993.652737 Milk
+Full moon:  5 Jun 2031 11:58:31 2463022.998974 Flower
+Jun sol:   21 Jun 2031 13:18:15 2463039.05435
+Full moon:  4 Jul 2031 19:01:16 2463052.292547 Hay
+Full moon:  3 Aug 2031  1:45:35 2463081.573331 Grain
+Full moon:  1 Sep 2031  9:20:37 2463110.889322 Fruit
+Sep equ:   23 Sep 2031  5:16:25 2463132.71974
+Full moon: 30 Sep 2031 18:57:55 2463140.290224 Harvest
+Full moon: 30 Oct 2031  7:32:37 2463169.814320 Hunter's
+Full moon: 28 Nov 2031 23:18:19 2463199.471053 Before Yule
+Dec sol:   22 Dec 2031  1:56:41 2463222.58103
+Full moon: 28 Dec 2031 17:32:56 2463229.231205 After Yule
+Full moon: 27 Jan 2032 12:52:25 2463259.036401 Wolf
+Full moon: 26 Feb 2032  7:43:07 2463288.821617 Lenten
+Mar equ:   20 Mar 2032  1:23:01 2463311.55766
+Full moon: 27 Mar 2032  0:46:17 2463318.532145 Egg
+Full moon: 25 Apr 2032 15:09:41 2463348.131734 Milk
+Full moon: 25 May 2032  2:37:10 2463377.609146 Flower
+Jun sol:   20 Jun 2032 19:09:53 2463404.29854
+Full moon: 23 Jun 2032 11:32:27 2463406.980878 Hay
+Full moon: 22 Jul 2032 18:51:39 2463436.285873 Grain
+Full moon: 21 Aug 2032  1:47:06 2463465.574382 Blue
+Full moon: 19 Sep 2032  9:30:25 2463494.896133 Fruit
+Sep equ:   22 Sep 2032 11:12:00 2463497.96667
+Full moon: 18 Oct 2032 18:58:10 2463524.290393 Harvest
+Full moon: 17 Nov 2032  6:42:04 2463553.779218 Hunter's
+Full moon: 16 Dec 2032 20:48:59 2463583.367352 Before Yule
+Dec sol:   21 Dec 2032  7:57:04 2463587.83130
+Full moon: 15 Jan 2033 13:07:05 2463613.046596 After Yule
+Full moon: 14 Feb 2033  7:04:09 2463642.794553 Wolf
+Full moon: 16 Mar 2033  1:37:19 2463672.567588 Lenten
+Mar equ:   20 Mar 2033  7:23:51 2463676.80823
+Full moon: 14 Apr 2033 19:17:21 2463702.303721 Egg
+Full moon: 14 May 2033 10:42:37 2463731.946272 Milk
+Full moon: 12 Jun 2033 23:19:03 2463761.471567 Flower
+Jun sol:   21 Jun 2033  1:02:15 2463769.54324
+Full moon: 12 Jul 2033  9:28:31 2463790.894813 Hay
+Full moon: 10 Aug 2033 18:07:46 2463820.255395 Grain
+Full moon:  9 Sep 2033  2:20:38 2463849.597662 Fruit
+Sep equ:   22 Sep 2033 16:52:48 2463863.20333
+Full moon:  8 Oct 2033 10:58:11 2463878.957074 Harvest
+Full moon:  6 Nov 2033 20:32:06 2463908.355632 Hunter's
+Full moon:  6 Dec 2033  7:22:06 2463937.807016 Before Yule
+Dec sol:   21 Dec 2033 13:47:07 2463953.07439
+Full moon:  4 Jan 2034 19:47:15 2463967.324481 After Yule
+Full moon:  3 Feb 2034 10:04:37 2463996.919883 Wolf
+Full moon:  5 Mar 2034  2:09:59 2464026.590275 Lenten
+Mar equ:   20 Mar 2034 13:18:37 2464042.05460
+Full moon:  3 Apr 2034 19:18:46 2464056.304700 Egg
+Full moon:  3 May 2034 12:15:41 2464086.010892 Milk
+Full moon:  2 Jun 2034  3:53:50 2464115.662390 Flower
+Jun sol:   21 Jun 2034  6:45:19 2464134.78147
+Full moon:  1 Jul 2034 17:44:27 2464145.239203 Hay
+Full moon: 31 Jul 2034  5:54:33 2464174.746218 Grain
+Full moon: 29 Aug 2034 16:49:14 2464204.200866 Fruit
+Sep equ:   22 Sep 2034 22:40:41 2464228.44493
+Full moon: 28 Sep 2034  2:56:44 2464233.622732 Harvest
+Full moon: 27 Oct 2034 12:42:33 2464263.029555 Hunter's
+Full moon: 25 Nov 2034 22:32:18 2464292.439099 Before Yule
+Dec sol:   21 Dec 2034 19:35:07 2464318.31606
+Full moon: 25 Dec 2034  8:54:33 2464321.871215 After Yule
+Full moon: 23 Jan 2035 20:16:39 2464351.344895 Wolf
+Full moon: 22 Feb 2035  8:53:58 2464380.870810 Lenten
+Mar equ:   20 Mar 2035 19:03:51 2464407.29435
+Full moon: 23 Mar 2035 22:41:57 2464410.445805 Egg
+Full moon: 22 Apr 2035 13:20:29 2464440.055901 Milk
+Full moon: 22 May 2035  4:25:42 2464469.684517 Blue
+Full moon: 20 Jun 2035 19:37:20 2464499.317597 Flower
+Jun sol:   21 Jun 2035 12:34:15 2464500.02379
+Full moon: 20 Jul 2035 10:36:43 2464528.942172 Hay
+Full moon: 19 Aug 2035  1:00:22 2464558.541924 Grain
+Full moon: 17 Sep 2035 14:23:31 2464588.099669 Fruit
+Sep equ:   23 Sep 2035  4:40:03 2464593.69449
+Full moon: 17 Oct 2035  2:35:23 2464617.607910 Harvest
+Full moon: 15 Nov 2035 13:48:56 2464647.075654 Hunter's
+Full moon: 15 Dec 2035  0:33:27 2464676.523236 Before Yule
+Dec sol:   22 Dec 2035  1:32:00 2464683.56390
+Full moon: 13 Jan 2036 11:16:09 2464705.969559 After Yule
+Full moon: 11 Feb 2036 22:08:36 2464735.422646 Wolf
+Full moon: 12 Mar 2036  9:09:29 2464764.881596 Lenten
+Mar equ:   20 Mar 2036  1:03:58 2464772.54442
+Full moon: 10 Apr 2036 20:22:30 2464794.348966 Egg
+Full moon: 10 May 2036  8:09:23 2464823.839855 Milk
+Full moon:  8 Jun 2036 21:01:52 2464853.376305 Flower
+Jun sol:   20 Jun 2036 18:33:21 2464865.27317
+Full moon:  8 Jul 2036 11:19:10 2464882.971651 Hay
+Full moon:  7 Aug 2036  2:48:46 2464912.617199 Grain
+Full moon:  5 Sep 2036 18:45:29 2464942.281586 Fruit
+Sep equ:   22 Sep 2036 10:24:27 2464958.93365
+Full moon:  5 Oct 2036 10:15:01 2464971.927102 Harvest
+Full moon:  4 Nov 2036  0:44:05 2465001.530620 Hunter's
+Full moon:  3 Dec 2036 14:08:24 2465031.089171 Before Yule
+Dec sol:   21 Dec 2036  7:14:00 2465048.80140
+Full moon:  2 Jan 2037  2:35:16 2465060.607834 After Yule
+Full moon: 31 Jan 2037 14:04:05 2465090.086173 Wolf
+Full moon:  2 Mar 2037  0:27:56 2465119.519401 Lenten
+Mar equ:   20 Mar 2037  6:51:23 2465137.78569
+Full moon: 31 Mar 2037  9:53:22 2465148.912062 Egg
+Full moon: 29 Apr 2037 18:53:55 2465178.287445 Milk
+Full moon: 29 May 2037  4:24:11 2465207.683471 Flower
+Jun sol:   21 Jun 2037  0:23:34 2465230.51637
+Full moon: 27 Jun 2037 15:19:50 2465237.138782 Hay
+Full moon: 27 Jul 2037  4:15:00 2465266.677085 Grain
+Full moon: 25 Aug 2037 19:09:13 2465296.298068 Fruit
+Sep equ:   22 Sep 2037 16:14:13 2465324.17654
+Full moon: 24 Sep 2037 11:31:30 2465325.980210 Harvest
+Full moon: 24 Oct 2037  4:36:19 2465355.691892 Hunter's
+Full moon: 22 Nov 2037 21:35:10 2465385.399425 Before Yule
+Dec sol:   21 Dec 2037 13:08:52 2465414.04783
+Full moon: 22 Dec 2037 13:38:33 2465415.068440 After Yule
+Full moon: 21 Jan 2038  3:59:51 2465444.666568 Wolf
+Full moon: 19 Feb 2038 16:09:15 2465474.173092 Lenten
+Mar equ:   20 Mar 2038 12:41:46 2465503.02901
+Full moon: 21 Mar 2038  2:09:22 2465503.589838 Egg
+Full moon: 19 Apr 2038 10:35:53 2465532.941590 Milk
+Full moon: 18 May 2038 18:23:31 2465562.266339 Blue
+Full moon: 17 Jun 2038  2:30:30 2465591.604515 Flower
+Jun sol:   21 Jun 2038  6:10:32 2465595.75732
+Full moon: 16 Jul 2038 11:48:07 2465620.991751 Hay
+Full moon: 14 Aug 2038 22:56:37 2465650.455987 Grain
+Full moon: 13 Sep 2038 12:24:15 2465680.016846 Fruit
+Sep equ:   22 Sep 2038 22:03:24 2465689.41904
+Full moon: 13 Oct 2038  4:21:39 2465709.681710 Harvest
+Full moon: 11 Nov 2038 22:26:55 2465739.435362 Hunter's
+Full moon: 11 Dec 2038 17:30:18 2465769.229383 Before Yule
+Dec sol:   21 Dec 2038 19:03:28 2465779.29408
+Full moon: 10 Jan 2039 11:45:28 2465798.989907 After Yule
+Full moon:  9 Feb 2039  3:39:03 2465828.652124 Wolf
+Full moon: 10 Mar 2039 16:34:52 2465858.190882 Lenten
+Mar equ:   20 Mar 2039 18:33:10 2465868.27304
+Full moon:  9 Apr 2039  2:52:47 2465887.619995 Egg
+Full moon:  8 May 2039 11:20:05 2465916.972282 Milk
+Full moon:  6 Jun 2039 18:47:42 2465946.283129 Flower
+Jun sol:   21 Jun 2039 11:58:33 2465960.99900
+Full moon:  6 Jul 2039  2:03:26 2465975.585719 Hay
+Full moon:  4 Aug 2039  9:56:34 2466004.914282 Grain
+Full moon:  2 Sep 2039 19:23:28 2466034.307965 Fruit
+Sep equ:   23 Sep 2039  3:50:45 2466054.66024
+Full moon:  2 Oct 2039  7:23:11 2466063.807777 Harvest
+Full moon: 31 Oct 2039 22:36:03 2466093.441705 Hunter's
+Full moon: 30 Nov 2039 16:49:20 2466123.200929 Before Yule
+Dec sol:   22 Dec 2039  0:41:44 2466144.52899
+Full moon: 30 Dec 2039 12:37:35 2466153.026102 After Yule
+Full moon: 29 Jan 2040  7:54:26 2466182.829472 Wolf
+Full moon: 28 Feb 2040  0:59:19 2466212.541195 Lenten
+Mar equ:   20 Mar 2040  0:12:50 2466233.50892
+Full moon: 28 Mar 2040 15:11:37 2466242.133072 Egg
+Full moon: 27 Apr 2040  2:37:53 2466271.609648 Milk
+Full moon: 26 May 2040 11:47:08 2466300.991074 Flower
+Jun sol:   20 Jun 2040 17:47:32 2466326.24135
+Full moon: 24 Jun 2040 19:19:18 2466330.305071 Hay
+Full moon: 24 Jul 2040  2:05:36 2466359.587224 Grain
+Full moon: 22 Aug 2040  9:09:43 2466388.881754 Blue
+Full moon: 20 Sep 2040 17:42:49 2466418.238072 Fruit
+Sep equ:   22 Sep 2040  9:46:03 2466419.90699
+Full moon: 20 Oct 2040  4:49:45 2466447.701217 Harvest
+Full moon: 18 Nov 2040 19:05:56 2466477.295797 Hunter's
+Full moon: 18 Dec 2040 12:15:32 2466507.010794 Before Yule
+Dec sol:   21 Dec 2040  6:33:59 2466509.77361
+Full moon: 17 Jan 2041  7:11:14 2466536.799477 After Yule
+Full moon: 16 Feb 2041  2:21:03 2466566.597953 Wolf
+Full moon: 17 Mar 2041 20:18:57 2466596.346503 Lenten
+Mar equ:   20 Mar 2041  6:07:57 2466598.75553
+Full moon: 16 Apr 2041 12:00:37 2466626.000434 Egg
+Full moon: 16 May 2041  0:52:20 2466655.536353 Milk
+Full moon: 14 Jun 2041 10:58:35 2466684.957359 Flower
+Jun sol:   20 Jun 2041 23:37:01 2466691.48404
+Full moon: 13 Jul 2041 19:00:44 2466714.292176 Hay
+Full moon: 12 Aug 2041  2:04:45 2466743.586635 Grain
+Full moon: 10 Sep 2041  9:23:54 2466772.891601 Fruit
+Sep equ:   22 Sep 2041 15:27:42 2466785.14425
+Full moon:  9 Oct 2041 18:02:32 2466802.251770 Harvest
+Full moon:  8 Nov 2041  4:43:18 2466831.696739 Hunter's
+Full moon:  7 Dec 2041 17:42:03 2466861.237538 Before Yule
+Dec sol:   21 Dec 2041 12:19:29 2466875.01354
+Full moon:  6 Jan 2042  8:53:46 2466890.870671 After Yule
+Full moon:  5 Feb 2042  1:57:38 2466920.581700 Wolf
+Full moon:  6 Mar 2042 20:09:45 2466950.340105 Lenten
+Mar equ:   20 Mar 2042 11:54:28 2466963.99616
+Full moon:  5 Apr 2042 14:15:48 2466980.094306 Egg
+Full moon:  5 May 2042  6:48:30 2467009.783685 Milk
+Full moon:  3 Jun 2042 20:48:06 2467039.366741 Flower
+Jun sol:   21 Jun 2042  5:17:00 2467056.72014
+Full moon:  3 Jul 2042  8:09:13 2467068.839743 Hay
+Full moon:  1 Aug 2042 17:33:16 2467098.231441 Grain
+Full moon: 31 Aug 2042  2:02:21 2467127.584973 Fruit
+Sep equ:   22 Sep 2042 21:12:43 2467150.38383
+Full moon: 29 Sep 2042 10:34:19 2467156.940502 Harvest
+Full moon: 28 Oct 2042 19:48:21 2467186.325253 Hunter's
+Full moon: 27 Nov 2042  6:05:52 2467215.754074 Before Yule
+Dec sol:   21 Dec 2042 18:05:14 2467240.25364
+Full moon: 26 Dec 2042 17:42:35 2467245.237912 After Yule
+Full moon: 25 Jan 2043  6:56:31 2467274.789256 Wolf
+Full moon: 23 Feb 2043 21:57:42 2467304.415074 Lenten
+Mar equ:   20 Mar 2043 17:28:57 2467329.22845
+Full moon: 25 Mar 2043 14:25:58 2467334.101366 Egg
+Full moon: 24 Apr 2043  7:22:54 2467363.807574 Milk
+Full moon: 23 May 2043 23:36:48 2467393.483895 Flower
+Jun sol:   21 Jun 2043 10:59:32 2467421.95802
+Full moon: 22 Jun 2043 14:20:22 2467423.097482 Hay
+Full moon: 22 Jul 2043  3:24:06 2467452.641747 Grain
+Full moon: 20 Aug 2043 15:04:27 2467482.128095 Blue
+Full moon: 19 Sep 2043  1:46:55 2467511.574257 Fruit
+Sep equ:   23 Sep 2043  3:08:06 2467515.63063
+Full moon: 18 Oct 2043 11:55:39 2467540.996988 Harvest
+Full moon: 16 Nov 2043 21:52:35 2467570.411523 Hunter's
+Full moon: 16 Dec 2043  8:02:01 2467599.834735 Before Yule
+Dec sol:   22 Dec 2043  0:02:25 2467605.50168
+Full moon: 14 Jan 2044 18:51:00 2467629.285418 After Yule
+Full moon: 13 Feb 2044  6:41:40 2467658.778945 Wolf
+Full moon: 13 Mar 2044 19:41:02 2467688.320170 Lenten
+Mar equ:   19 Mar 2044 23:21:44 2467694.47343
+Full moon: 12 Apr 2044  9:38:53 2467717.902002 Egg
+Full moon: 12 May 2044  0:16:31 2467747.511478 Milk
+Full moon: 10 Jun 2044 15:16:04 2467777.136165 Flower
+Jun sol:   20 Jun 2044 16:52:19 2467787.20300
+Full moon: 10 Jul 2044  6:21:49 2467806.765159 Hay
+Full moon:  8 Aug 2044 21:13:49 2467836.384599 Grain
+Full moon:  7 Sep 2044 11:24:27 2467865.975317 Fruit
+Sep equ:   22 Sep 2044  8:49:03 2467880.86740
+Full moon:  7 Oct 2044  0:29:52 2467895.520749 Harvest
+Full moon:  5 Nov 2044 12:26:32 2467925.018428 Hunter's
+Full moon:  4 Dec 2044 23:33:57 2467954.481910 Before Yule
+Dec sol:   21 Dec 2044  5:44:47 2467970.73943
+Full moon:  3 Jan 2045 10:20:25 2467983.930851 After Yule
+Full moon:  1 Feb 2045 21:05:13 2468013.378623 Wolf
+Full moon:  3 Mar 2045  7:52:24 2468042.828066 Lenten
+Mar equ:   20 Mar 2045  5:08:49 2468059.71446
+Full moon:  1 Apr 2045 18:42:52 2468072.279776 Egg
+Full moon:  1 May 2045  5:52:00 2468101.744454 Milk
+Full moon: 30 May 2045 17:52:17 2468131.244650 Flower
+Jun sol:   20 Jun 2045 22:35:06 2468152.44104
+Full moon: 29 Jun 2045  7:15:44 2468160.802599 Hay
+Full moon: 28 Jul 2045 22:10:27 2468190.423934 Grain
+Full moon: 27 Aug 2045 14:07:35 2468220.088605 Fruit
+Sep equ:   22 Sep 2045 14:34:07 2468246.10703
+Full moon: 26 Sep 2045  6:11:30 2468249.757995 Harvest
+Full moon: 25 Oct 2045 21:31:03 2468279.396572 Hunter's
+Full moon: 24 Nov 2045 11:43:22 2468308.988455 Before Yule
+Dec sol:   21 Dec 2045 11:36:19 2468335.98356
+Full moon: 24 Dec 2045  0:49:08 2468338.534131 After Yule
+Full moon: 22 Jan 2046 12:51:11 2468368.035546 Wolf
+Full moon: 20 Feb 2046 23:43:59 2468397.488885 Lenten
+Mar equ:   20 Mar 2046 10:59:04 2468424.95769
+Full moon: 22 Mar 2046  9:26:31 2468426.893418 Egg
+Full moon: 20 Apr 2046 18:20:48 2468456.264445 Milk
+Full moon: 20 May 2046  3:15:09 2468485.635521 Blue
+Full moon: 18 Jun 2046 13:09:52 2468515.048520 Flower
+Jun sol:   21 Jun 2046  4:15:51 2468517.67768
+Full moon: 18 Jul 2046  0:54:48 2468544.538057 Hay
+Full moon: 16 Aug 2046 14:49:57 2468574.118021 Grain
+Full moon: 15 Sep 2046  6:39:14 2468603.777249 Fruit
+Sep equ:   22 Sep 2046 20:22:56 2468611.34926
+Full moon: 14 Oct 2046 23:41:05 2468633.486864 Harvest
+Full moon: 13 Nov 2046 17:04:17 2468663.211318 Hunter's
+Full moon: 13 Dec 2046  9:55:19 2468692.913419 Before Yule
+Dec sol:   21 Dec 2046 17:29:42 2468701.22896
+Full moon: 12 Jan 2047  1:21:09 2468722.556364 After Yule
+Full moon: 10 Feb 2047 14:39:38 2468752.110860 Wolf
+Full moon: 12 Mar 2047  1:36:42 2468781.567154 Lenten
+Mar equ:   20 Mar 2047 16:53:53 2468790.20409
+Full moon: 10 Apr 2047 10:34:59 2468810.940961 Egg
+Full moon:  9 May 2047 18:24:15 2468840.266845 Milk
+Full moon:  8 Jun 2047  2:04:42 2468869.586607 Flower
+Jun sol:   21 Jun 2047 10:04:43 2468882.91994
+Full moon:  7 Jul 2047 10:33:39 2468898.940034 Hay
+Full moon:  5 Aug 2047 20:38:18 2468928.359932 Grain
+Full moon:  4 Sep 2047  8:54:03 2468957.870871 Fruit
+Sep equ:   23 Sep 2047  2:09:18 2468976.58980
+Full moon:  3 Oct 2047 23:41:59 2468987.487488 Harvest
+Full moon:  2 Nov 2047 16:57:59 2469017.206937 Hunter's
+Full moon:  2 Dec 2047 11:54:54 2469046.996467 Before Yule
+Dec sol:   21 Dec 2047 23:08:28 2469066.46422
+Full moon:  1 Jan 2048  6:56:58 2469076.789562 After Yule
+Full moon: 31 Jan 2048  0:14:02 2469106.509755 Wolf
+Full moon: 29 Feb 2048 14:37:47 2469136.109582 Lenten
+Mar equ:   19 Mar 2048 22:35:04 2469155.44102
+Full moon: 30 Mar 2048  2:04:11 2469165.586244 Egg
+Full moon: 28 Apr 2048 11:12:52 2469194.967277 Milk
+Full moon: 27 May 2048 18:57:06 2469224.289661 Flower
+Jun sol:   20 Jun 2048 15:55:09 2469248.16331
+Full moon: 26 Jun 2048  2:07:53 2469253.588814 Hay
+Full moon: 25 Jul 2048  9:33:42 2469282.898403 Grain
+Full moon: 23 Aug 2048 18:07:01 2469312.254880 Blue
+Full moon: 22 Sep 2048  4:46:31 2469341.698975 Fruit
+Sep equ:   22 Sep 2048  8:01:53 2469341.83464
+Full moon: 21 Oct 2048 18:24:54 2469371.267301 Harvest
+Full moon: 20 Nov 2048 11:19:20 2469400.971768 Hunter's
+Full moon: 20 Dec 2048  6:39:04 2469430.777137 Before Yule
+Dec sol:   21 Dec 2048  5:03:30 2469431.71077
+Full moon: 19 Jan 2049  2:28:57 2469460.603445 After Yule
+Full moon: 17 Feb 2049 20:47:10 2469490.366097 Wolf
+Full moon: 19 Mar 2049 12:23:08 2469520.016076 Lenten
+Mar equ:   20 Mar 2049  4:29:52 2469520.68741
+Full moon: 18 Apr 2049  1:04:38 2469549.544894 Egg
+Full moon: 17 May 2049 11:13:42 2469578.967852 Milk
+Full moon: 15 Jun 2049 19:26:39 2469608.310178 Flower
+Jun sol:   20 Jun 2049 21:48:34 2469613.40873
+Full moon: 15 Jul 2049  2:29:23 2469637.603744 Hay
+Full moon: 13 Aug 2049  9:19:21 2469666.888442 Grain
+Full moon: 11 Sep 2049 17:04:15 2469696.211289 Fruit
+Sep equ:   22 Sep 2049 13:43:52 2469707.07213
+Full moon: 11 Oct 2049  2:53:08 2469725.620239 Harvest
+Full moon:  9 Nov 2049 15:37:43 2469755.151192 Hunter's
+Full moon:  9 Dec 2049  7:27:48 2469784.810979 Before Yule
+Dec sol:   21 Dec 2049 10:53:26 2469796.95378
+Full moon:  8 Jan 2050  1:38:51 2469814.568654 After Yule
+Full moon:  6 Feb 2050 20:47:20 2469844.366214 Wolf
+Full moon:  8 Mar 2050 15:23:03 2469874.141014 Lenten
+Mar equ:   20 Mar 2050 10:20:51 2469885.93115
+Full moon:  7 Apr 2050  8:12:00 2469903.841668 Egg
+Full moon:  6 May 2050 22:26:01 2469933.434734 Milk
+Full moon:  5 Jun 2050  9:50:57 2469962.910392 Flower
+Jun sol:   21 Jun 2050  3:34:17 2469978.64882
+Full moon:  4 Jul 2050 18:50:42 2469992.285210 Hay
+Full moon:  3 Aug 2050  2:20:20 2470021.597464 Grain
+Full moon:  1 Sep 2050  9:30:50 2470050.896418 Fruit
+Sep equ:   22 Sep 2050 19:29:48 2470072.31236
+Full moon: 30 Sep 2050 17:31:39 2470080.230321 Harvest
+Full moon: 30 Oct 2050  3:15:41 2470109.635891 Hunter's
+Full moon: 28 Nov 2050 15:09:32 2470139.131631 Before Yule
+Dec sol:   21 Dec 2050 16:39:59 2470162.19444
+Full moon: 28 Dec 2050  5:15:22 2470168.719005 After Yule
+Full moon: 26 Jan 2051 21:19:41 2470198.388669 Wolf
+Full moon: 25 Feb 2051 14:53:09 2470228.120253 Lenten
+Mar equ:   20 Mar 2051 16:00:28 2470251.16699
+Full moon: 27 Mar 2051  8:59:55 2470257.874944 Egg
+Full moon: 26 Apr 2051  2:19:05 2470287.596592 Milk
+Full moon: 25 May 2051 17:34:51 2470317.232544 Flower
+Jun sol:   21 Jun 2051  9:19:57 2470343.88886
+Full moon: 24 Jun 2051  6:14:05 2470346.759781 Hay
+Full moon: 23 Jul 2051 16:36:15 2470376.191849 Grain
+Full moon: 22 Aug 2051  1:35:05 2470405.566036 Blue
+Full moon: 20 Sep 2051 10:11:33 2470434.924698 Fruit
+Sep equ:   23 Sep 2051  1:28:40 2470437.56158
+Full moon: 19 Oct 2051 19:13:06 2470464.300765 Harvest
+Full moon: 18 Nov 2051  5:06:12 2470493.712649 Hunter's
+Full moon: 17 Dec 2051 16:04:57 2470523.170113 Before Yule
+Dec sol:   21 Dec 2051 22:35:26 2470527.44128
+Full moon: 16 Jan 2052  4:24:24 2470552.683613 After Yule
+Full moon: 14 Feb 2052 18:20:58 2470582.264560 Wolf
+Full moon: 15 Mar 2052  9:54:27 2470611.912819 Lenten
+Mar equ:   19 Mar 2052 21:57:25 2470616.41488
+Full moon: 14 Apr 2052  2:29:03 2470641.603516 Egg
+Full moon: 13 May 2052 18:59:52 2470671.291579 Milk
+Full moon: 12 Jun 2052 10:26:58 2470700.935403 Flower
+Jun sol:   20 Jun 2052 15:17:32 2470709.13718
+Full moon: 12 Jul 2052  0:23:05 2470730.516030 Hay
+Full moon: 10 Aug 2052 12:52:28 2470760.036444 Grain
+Full moon:  9 Sep 2052  0:15:28 2470789.510742 Fruit
+Sep equ:   22 Sep 2052  7:17:02 2470802.80350
+Full moon:  8 Oct 2052 10:54:30 2470818.954518 Harvest
+Full moon:  6 Nov 2052 21:08:49 2470848.381126 Hunter's
+Full moon:  6 Dec 2052  7:17:56 2470877.804128 Before Yule
+Dec sol:   21 Dec 2052  4:18:33 2470892.67955
+Full moon:  4 Jan 2053 17:45:50 2470907.240168 After Yule
+Full moon:  3 Feb 2053  4:57:36 2470936.706676 Wolf
+Full moon:  4 Mar 2053 17:09:37 2470966.215016 Lenten
+Mar equ:   20 Mar 2053  3:48:44 2470981.65884
+Full moon:  3 Apr 2053  6:22:33 2470995.765664 Egg
+Full moon:  2 May 2053 20:24:53 2471025.350623 Milk
+Full moon:  1 Jun 2053 11:02:01 2471054.959744 Flower
+Jun sol:   20 Jun 2053 21:05:29 2471074.37881
+Full moon:  1 Jul 2053  2:00:52 2471084.583944 Hay
+Full moon: 30 Jul 2053 17:06:09 2471114.212612 Grain
+Full moon: 29 Aug 2053  7:52:59 2471143.828465 Fruit
+Sep equ:   22 Sep 2053 13:07:39 2471168.04699
+Full moon: 27 Sep 2053 21:50:17 2471173.409926 Harvest
+Full moon: 27 Oct 2053 10:38:16 2471202.943246 Hunter's
+Full moon: 25 Nov 2053 22:21:29 2471232.431590 Before Yule
+Dec sol:   21 Dec 2053 10:11:18 2471257.92452
+Full moon: 25 Dec 2053  9:23:16 2471261.891167 After Yule
+Full moon: 23 Jan 2054 20:07:47 2471291.338744 Wolf
+Full moon: 22 Feb 2054  6:46:29 2471320.782285 Lenten
+Mar equ:   20 Mar 2054  9:35:51 2471346.89990
+Full moon: 23 Mar 2054 17:21:22 2471350.223178 Egg
+Full moon: 22 Apr 2054  4:01:52 2471379.667966 Milk
+Full moon: 21 May 2054 15:16:12 2471409.136259 Blue
+Full moon: 20 Jun 2054  3:42:42 2471438.654657 Flower
+Jun sol:   21 Jun 2054  2:48:34 2471439.61707
+Full moon: 19 Jul 2054 17:47:03 2471468.241017 Hay
+Full moon: 18 Aug 2054  9:21:37 2471497.890011 Grain
+Full moon: 17 Sep 2054  1:41:01 2471527.570160 Fruit
+Sep equ:   22 Sep 2054 19:00:53 2471533.29229
+Full moon: 16 Oct 2054 17:44:32 2471557.239260 Harvest
+Full moon: 15 Nov 2054  8:48:57 2471586.867331 Hunter's
+Full moon: 14 Dec 2054 22:40:51 2471616.445044 Before Yule
+Dec sol:   21 Dec 2054 16:11:22 2471623.17456
+Full moon: 13 Jan 2055 11:21:31 2471645.973276 After Yule
+Full moon: 11 Feb 2055 22:48:22 2471675.450261 Wolf
+Full moon: 13 Mar 2055  8:56:49 2471704.872796 Lenten
+Mar equ:   20 Mar 2055 15:30:03 2471712.14587
+Full moon: 11 Apr 2055 17:58:19 2471734.248841 Egg
+Full moon: 11 May 2055  2:31:40 2471763.605334 Milk
+Full moon:  9 Jun 2055 11:36:02 2471792.983366 Flower
+Jun sol:   21 Jun 2055  8:41:18 2471804.86202
+Full moon:  8 Jul 2055 22:11:34 2471822.424706 Hay
+Full moon:  7 Aug 2055 10:57:16 2471851.956444 Grain
+Full moon:  6 Sep 2055  1:56:27 2471881.580872 Fruit
+Sep equ:   23 Sep 2055  0:50:11 2471898.53486
+Full moon:  5 Oct 2055 18:38:03 2471911.276425 Harvest
+Full moon:  4 Nov 2055 12:11:34 2471941.008040 Hunter's
+Full moon:  4 Dec 2055  5:40:15 2471970.736284 Before Yule
+Dec sol:   21 Dec 2055 21:57:03 2471988.41462
+Full moon:  2 Jan 2056 22:05:47 2472000.420683 After Yule
+Full moon:  1 Feb 2056 12:35:49 2472030.024878 Wolf
+Full moon:  2 Mar 2056  0:39:59 2472059.527776 Lenten
+Mar equ:   19 Mar 2056 21:12:32 2472077.38371
+Full moon: 31 Mar 2056 10:24:44 2472088.933844 Egg
+Full moon: 29 Apr 2056 18:30:55 2472118.271480 Milk
+Full moon: 29 May 2056  1:57:58 2472147.581931 Flower
+Jun sol:   20 Jun 2056 14:29:40 2472170.10394
+Full moon: 27 Jun 2056  9:47:49 2472176.908210 Hay
+Full moon: 26 Jul 2056 18:54:36 2472206.287927 Grain
+Full moon: 25 Aug 2056  6:00:30 2472235.750356 Fruit
+Sep equ:   22 Sep 2056  6:40:58 2472263.77846
+Full moon: 23 Sep 2056 19:34:32 2472265.315654 Harvest
+Full moon: 23 Oct 2056 11:46:32 2472294.990658 Hunter's
+Full moon: 22 Nov 2056  6:11:29 2472324.757984 Before Yule
+Dec sol:   21 Dec 2056  3:53:05 2472353.66187
+Full moon: 22 Dec 2056  1:33:58 2472354.565259 After Yule
+Full moon: 20 Jan 2057 20:01:16 2472384.334213 Wolf
+Full moon: 19 Feb 2057 11:56:38 2472413.997667 Lenten
+Mar equ:   20 Mar 2057  3:09:24 2472442.63153
+Full moon: 21 Mar 2057  0:44:51 2472443.531155 Egg
+Full moon: 19 Apr 2057 10:49:33 2472472.951087 Milk
+Full moon: 18 May 2057 19:02:29 2472502.293399 Blue
+Full moon: 17 Jun 2057  2:18:35 2472531.596247 Flower
+Jun sol:   20 Jun 2057 20:20:33 2472535.34761
+Full moon: 16 Jul 2057  9:28:12 2472560.894587 Hay
+Full moon: 14 Aug 2057 17:21:19 2472590.223142 Grain
+Full moon: 13 Sep 2057  2:53:22 2472619.620395 Fruit
+Sep equ:   22 Sep 2057 12:24:46 2472629.01721
+Full moon: 12 Oct 2057 15:01:38 2472649.126145 Harvest
+Full moon: 11 Nov 2057  6:24:22 2472678.766926 Hunter's
+Full moon: 11 Dec 2057  0:46:13 2472708.532103 Before Yule
+Dec sol:   21 Dec 2057  9:44:21 2472718.90581
+Full moon:  9 Jan 2058 20:38:52 2472738.360324 After Yule
+Full moon:  8 Feb 2058 15:54:18 2472768.162711 Wolf
+Full moon: 10 Mar 2058  8:52:36 2472797.869861 Lenten
+Mar equ:   20 Mar 2058  9:06:32 2472807.87954
+Full moon:  8 Apr 2058 22:55:28 2472827.455195 Egg
+Full moon:  8 May 2058 10:12:27 2472856.925322 Milk
+Full moon:  6 Jun 2058 19:15:33 2472886.302475 Flower
+Jun sol:   21 Jun 2058  2:05:35 2472900.58721
+Full moon:  6 Jul 2058  2:46:46 2472915.615817 Hay
+Full moon:  4 Aug 2058  9:37:50 2472944.901279 Grain
+Full moon:  2 Sep 2058 16:51:24 2472974.202365 Fruit
+Sep equ:   22 Sep 2058 18:09:56 2472994.25690
+Full moon:  2 Oct 2058  1:36:24 2473003.566948 Harvest
+Full moon: 31 Oct 2058 12:54:28 2473033.037832 Hunter's
+Full moon: 30 Nov 2058  3:17:11 2473062.636938 Before Yule
+Dec sol:   21 Dec 2058 15:26:31 2473084.14341
+Full moon: 29 Dec 2058 20:25:26 2473092.350997 After Yule
+Full moon: 28 Jan 2059 15:11:22 2473122.132893 Wolf
+Full moon: 27 Feb 2059 10:05:51 2473151.920736 Lenten
+Mar equ:   20 Mar 2059 14:45:48 2473173.11514
+Full moon: 29 Mar 2059  3:47:44 2473181.658156 Egg
+Full moon: 27 Apr 2059 19:17:21 2473211.303726 Milk
+Full moon: 27 May 2059  8:03:55 2473240.836063 Flower
+Jun sol:   21 Jun 2059  7:48:49 2473265.82557
+Full moon: 25 Jun 2059 18:12:35 2473270.258747 Hay
+Full moon: 25 Jul 2059  2:23:51 2473299.599901 Grain
+Full moon: 23 Aug 2059  9:42:11 2473328.904297 Blue
+Full moon: 21 Sep 2059 17:18:56 2473358.221484 Fruit
+Sep equ:   23 Sep 2059  0:05:05 2473359.50353
+Full moon: 21 Oct 2059  2:15:24 2473387.594027 Harvest
+Full moon: 19 Nov 2059 13:09:28 2473417.048251 Hunter's
+Full moon: 19 Dec 2059  2:11:47 2473446.591516 Before Yule
+Dec sol:   21 Dec 2059 21:19:31 2473449.38856
+Full moon: 17 Jan 2060 17:14:02 2473476.218080 After Yule
+Full moon: 16 Feb 2060  9:56:32 2473505.914270 Wolf
+Full moon: 17 Mar 2060  3:41:04 2473535.653527 Lenten
+Mar equ:   19 Mar 2060 20:40:05 2473538.36117
+Full moon: 15 Apr 2060 21:21:53 2473565.390203 Egg
+Full moon: 15 May 2060 13:39:27 2473595.069066 Milk
+Full moon: 14 Jun 2060  3:37:16 2473624.650885 Flower
+Jun sol:   20 Jun 2060 13:47:12 2473631.07445
+Full moon: 13 Jul 2060 15:08:31 2473654.130924 Hay
+Full moon: 12 Aug 2060  0:51:13 2473683.535574 Grain
+Full moon: 10 Sep 2060  9:44:04 2473712.905611 Fruit
+Sep equ:   22 Sep 2060  5:49:46 2473724.74290
+Full moon:  9 Oct 2060 18:41:24 2473742.278751 Harvest
+Full moon:  8 Nov 2060  4:17:37 2473771.678906 Hunter's
+Full moon:  7 Dec 2060 14:48:24 2473801.116952 Before Yule
+Dec sol:   21 Dec 2060  3:03:01 2473814.62710
+Full moon:  6 Jan 2061  2:24:43 2473830.600508 After Yule
+Full moon:  4 Feb 2061 15:22:39 2473860.140738 Wolf
+Full moon:  6 Mar 2061  5:54:30 2473889.746188 Lenten
+Mar equ:   20 Mar 2061  2:27:52 2473903.60268
+Full moon:  4 Apr 2061 21:47:20 2473919.407873 Egg
+Full moon:  4 May 2061 14:13:11 2473949.092494 Milk
+Full moon:  3 Jun 2061  6:09:23 2473978.756524 Flower
+Jun sol:   20 Jun 2061 19:33:50 2473996.31517
+Full moon:  2 Jul 2061 20:52:23 2474008.369714 Hay
+Full moon:  1 Aug 2061 10:11:17 2474037.924509 Grain
+Full moon: 30 Aug 2061 22:18:05 2474067.429235 Fruit
+Sep equ:   22 Sep 2061 11:33:00 2474089.98125
+Full moon: 29 Sep 2061  9:32:31 2474096.897586 Harvest
+Full moon: 28 Oct 2061 20:12:12 2474126.341812 Hunter's
+Full moon: 27 Nov 2061  6:32:38 2474155.772667 Before Yule
+Dec sol:   21 Dec 2061  8:50:27 2474179.86838
+Full moon: 26 Dec 2061 16:53:00 2474185.203473 After Yule
+Full moon: 25 Jan 2062  3:37:28 2474214.651018 Wolf
+Full moon: 23 Feb 2062 15:08:10 2474244.130675 Lenten
+Mar equ:   20 Mar 2062  8:09:07 2474268.83967
+Full moon: 25 Mar 2062  3:35:44 2474273.649819 Egg
+Full moon: 23 Apr 2062 16:57:17 2474303.206456 Milk
+Full moon: 23 May 2062  7:03:12 2474332.793895 Flower
+Jun sol:   21 Jun 2062  1:13:01 2474361.55071
+Full moon: 21 Jun 2062 21:43:32 2474362.405233 Hay
+Full moon: 21 Jul 2062 12:47:28 2474392.032969 Grain
+Full moon: 20 Aug 2062  3:55:50 2474421.663779 Blue
+Full moon: 18 Sep 2062 18:36:52 2474451.275612 Fruit
+Sep equ:   22 Sep 2062 17:21:33 2474455.22330
+Full moon: 18 Oct 2062  8:18:32 2474480.846204 Harvest
+Full moon: 16 Nov 2062 20:48:05 2474510.366729 Hunter's
+Full moon: 16 Dec 2062  8:17:52 2474539.845742 Before Yule
+Dec sol:   21 Dec 2062 14:44:19 2474545.11412
+Full moon: 14 Jan 2063 19:12:01 2474569.300013 After Yule
+Full moon: 13 Feb 2063  5:48:44 2474598.742181 Wolf
+Full moon: 14 Mar 2063 16:14:19 2474628.176620 Lenten
+Mar equ:   20 Mar 2063 14:00:51 2474634.08393
+Full moon: 13 Apr 2063  2:34:40 2474657.607413 Egg
+Full moon: 12 May 2063 13:11:23 2474687.049572 Milk
+Full moon: 11 Jun 2063  0:43:06 2474716.529940 Flower
+Jun sol:   21 Jun 2063  7:03:35 2474726.79416
+Full moon: 10 Jul 2063 13:48:07 2474746.075087 Hay
+Full moon:  9 Aug 2063  4:40:13 2474775.694604 Grain
+Full moon:  7 Sep 2063 20:52:59 2474805.370127 Fruit
+Sep equ:   22 Sep 2063 23:09:53 2474820.46521
+Full moon:  7 Oct 2063 13:27:04 2474835.060471 Harvest
+Full moon:  6 Nov 2063  5:22:25 2474864.723906 Hunter's
+Full moon:  5 Dec 2063 20:06:08 2474894.337601 Before Yule
+Dec sol:   21 Dec 2063 20:22:48 2474910.34917
+Full moon:  4 Jan 2064  9:31:18 2474923.896741 After Yule
+Full moon:  2 Feb 2064 21:37:05 2474953.400757 Wolf
+Full moon:  3 Mar 2064  8:18:53 2474982.846453 Lenten
+Mar equ:   19 Mar 2064 19:40:19 2474999.31967
+Full moon:  1 Apr 2064 17:40:03 2475012.236154 Egg
+Full moon:  1 May 2064  2:08:08 2475041.588986 Milk
+Full moon: 30 May 2064 10:36:15 2475070.941851 Flower
+Jun sol:   20 Jun 2064 12:47:22 2475092.03290
+Full moon: 28 Jun 2064 20:08:57 2475100.339559 Hay
+Full moon: 28 Jul 2064  7:40:34 2475129.819840 Grain
+Full moon: 26 Aug 2064 21:35:16 2475159.399501 Fruit
+Sep equ:   22 Sep 2064  4:58:45 2475185.70747
+Full moon: 25 Sep 2064 13:38:34 2475189.068451 Harvest
+Full moon: 25 Oct 2064  7:05:44 2475218.795652 Hunter's
+Full moon: 24 Nov 2064  0:58:27 2475248.540595 Before Yule
+Dec sol:   21 Dec 2064  2:10:29 2475275.59062
+Full moon: 23 Dec 2064 18:14:26 2475278.260031 After Yule
+Full moon: 22 Jan 2065  9:53:36 2475307.912223 Wolf
+Full moon: 20 Feb 2065 23:11:20 2475337.466213 Lenten
+Mar equ:   20 Mar 2065  1:29:54 2475364.56244
+Full moon: 22 Mar 2065  9:56:15 2475366.914073 Egg
+Full moon: 20 Apr 2065 18:36:03 2475396.275039 Milk
+Full moon: 20 May 2065  2:05:26 2475425.587113 Blue
+Full moon: 18 Jun 2065  9:28:31 2475454.894811 Flower
+Jun sol:   20 Jun 2065 18:34:13 2475457.27376
+Full moon: 17 Jul 2065 17:45:32 2475484.239956 Hay
+Full moon: 16 Aug 2065  3:45:42 2475513.656745 Grain
+Full moon: 14 Sep 2065 16:05:15 2475543.170317 Fruit
+Sep equ:   22 Sep 2065 10:44:20 2475550.94746
+Full moon: 14 Oct 2065  7:04:41 2475572.794919 Harvest
+Full moon: 13 Nov 2065  0:37:35 2475602.526104 Hunter's
+Full moon: 12 Dec 2065 19:52:22 2475632.328043 Before Yule
+Dec sol:   21 Dec 2065  8:02:31 2475640.83508
+Full moon: 11 Jan 2066 15:07:37 2475662.130292 After Yule
+Full moon: 10 Feb 2066  8:29:03 2475691.853517 Wolf
+Full moon: 11 Mar 2066 22:48:01 2475721.450019 Lenten
+Mar equ:   20 Mar 2066  7:21:34 2475729.80665
+Full moon: 10 Apr 2066 10:03:17 2475750.918948 Egg
+Full moon:  9 May 2066 18:58:33 2475780.290664 Milk
+Full moon:  8 Jun 2066  2:31:05 2475809.604925 Flower
+Jun sol:   21 Jun 2066  0:18:10 2475822.51262
+Full moon:  7 Jul 2066  9:34:53 2475838.899231 Hay
+Full moon:  5 Aug 2066 16:59:42 2475868.208134 Grain
+Full moon:  4 Sep 2066  1:37:30 2475897.567709 Fruit
+Sep equ:   22 Sep 2066 16:28:47 2475916.18666
+Full moon:  3 Oct 2066 12:25:11 2475927.017497 Harvest
+Full moon:  2 Nov 2066  2:13:19 2475956.592583 Hunter's
+Full moon:  1 Dec 2066 19:16:28 2475986.303102 Before Yule
+Dec sol:   21 Dec 2066 13:47:19 2476006.07453
+Full moon: 31 Dec 2066 14:41:04 2476016.111856 After Yule
+Full moon: 30 Jan 2067 10:30:06 2476045.937570 Wolf
+Full moon:  1 Mar 2067  4:42:05 2476075.695900 Lenten
+Mar equ:   20 Mar 2067 12:55:24 2476095.03848
+Full moon: 30 Mar 2067 20:08:39 2476105.339344 Egg
+Full moon: 29 Apr 2067  8:40:21 2476134.861359 Milk
+Full moon: 28 May 2067 18:42:06 2476164.279244 Flower
+Jun sol:   21 Jun 2067  5:57:48 2476187.74848
+Full moon: 27 Jun 2067  2:52:37 2476193.619879 Hay
+Full moon: 26 Jul 2067  9:58:48 2476222.915841 Grain
+Full moon: 24 Aug 2067 16:57:33 2476252.206642 Fruit
+Sep equ:   22 Sep 2067 22:21:26 2476281.43156
+Full moon: 23 Sep 2067  0:54:40 2476281.537967 Harvest
+Full moon: 22 Oct 2067 10:56:12 2476310.955699 Hunter's
+Full moon: 20 Nov 2067 23:49:58 2476340.493036 Blue
+Full moon: 20 Dec 2067 15:41:50 2476370.154053 Before Yule
+Dec sol:   21 Dec 2067 19:44:54 2476371.32286
+Full moon: 19 Jan 2068  9:45:16 2476399.906444 After Yule
+Full moon: 18 Feb 2068  4:38:30 2476429.693412 Wolf
+Full moon: 18 Mar 2068 22:56:07 2476459.455647 Lenten
+Mar equ:   19 Mar 2068 18:50:48 2476460.28528
+Full moon: 17 Apr 2068 15:29:42 2476489.145627 Egg
+Full moon: 17 May 2068  5:35:12 2476518.732781 Milk
+Full moon: 15 Jun 2068 17:00:06 2476548.208412 Flower
+Jun sol:   20 Jun 2068 11:55:36 2476552.99695
+Full moon: 15 Jul 2068  2:07:39 2476577.588652 Hay
+Full moon: 13 Aug 2068  9:51:16 2476606.910608 Grain
+Full moon: 11 Sep 2068 17:19:49 2476636.222106 Fruit
+Sep equ:   22 Sep 2068  4:08:36 2476646.67264
+Full moon: 11 Oct 2068  1:40:02 2476665.569469 Harvest
+Full moon:  9 Nov 2068 11:40:29 2476694.986452 Hunter's
+Full moon:  8 Dec 2068 23:42:24 2476724.487788 Before Yule
+Dec sol:   21 Dec 2068  1:34:30 2476736.56563
+Full moon:  7 Jan 2069 13:43:29 2476754.071863 After Yule
+Full moon:  6 Feb 2069  5:29:32 2476783.728842 Wolf
+Full moon:  7 Mar 2069 22:35:25 2476813.441268 Lenten
+Mar equ:   20 Mar 2069  0:46:54 2476825.53257
+Full moon:  6 Apr 2069 16:13:22 2476843.175954 Egg
+Full moon:  6 May 2069  9:11:34 2476872.883035 Milk
+Full moon:  5 Jun 2069  0:19:55 2476902.513835 Flower
+Jun sol:   20 Jun 2069 17:43:09 2476918.23830
+Full moon:  4 Jul 2069 13:05:31 2476932.045504 Hay
+Full moon:  2 Aug 2069 23:44:36 2476961.489306 Grain
+Full moon:  1 Sep 2069  9:06:52 2476990.879776 Fruit
+Sep equ:   22 Sep 2069  9:53:44 2477011.91232
+Full moon: 30 Sep 2069 18:09:38 2477020.256698 Harvest
+Full moon: 30 Oct 2069  3:35:52 2477049.649915 Hunter's
+Full moon: 28 Nov 2069 13:46:32 2477079.073982 Before Yule
+Dec sol:   21 Dec 2069  7:23:55 2477101.80828
+Full moon: 28 Dec 2069  0:50:26 2477108.535029 After Yule
+Full moon: 26 Jan 2070 12:59:43 2477138.041477 Wolf
+Full moon: 25 Feb 2070  2:31:34 2477167.605259 Lenten
+Mar equ:   20 Mar 2070  6:36:46 2477190.77554
+Full moon: 26 Mar 2070 17:30:57 2477197.229830 Egg
+Full moon: 25 Apr 2070  9:31:21 2477226.896777 Milk
+Full moon: 25 May 2070  1:38:01 2477256.568074 Flower
+Jun sol:   20 Jun 2070 23:24:28 2477283.47533
+Full moon: 23 Jun 2070 16:57:16 2477286.206443 Hay
+Full moon: 23 Jul 2070  7:02:24 2477315.793339 Grain
+Full moon: 21 Aug 2070 19:54:19 2477345.329388 Blue
+Full moon: 20 Sep 2070  7:47:53 2477374.824926 Fruit
+Sep equ:   22 Sep 2070 15:46:42 2477377.15743
+Full moon: 19 Oct 2070 18:59:12 2477404.291111 Harvest
+Full moon: 18 Nov 2070  5:40:43 2477433.736610 Hunter's
+Full moon: 17 Dec 2070 16:06:07 2477463.170917 Before Yule
+Dec sol:   21 Dec 2070 13:21:13 2477467.05641
+Full moon: 16 Jan 2071  2:35:42 2477492.608131 After Yule
+Full moon: 14 Feb 2071 13:33:33 2477522.064969 Wolf
+Full moon: 16 Mar 2071  1:18:15 2477551.554344 Lenten
+Mar equ:   20 Mar 2071 12:36:34 2477556.02540
+Full moon: 14 Apr 2071 13:56:18 2477581.080765 Egg
+Full moon: 14 May 2071  3:24:28 2477610.641993 Milk
+Full moon: 12 Jun 2071 17:36:33 2477640.233724 Flower
+Jun sol:   21 Jun 2071  5:22:44 2477648.72412
+Full moon: 12 Jul 2071  8:25:47 2477669.851247 Hay
+Full moon: 10 Aug 2071 23:39:44 2477699.485932 Grain
+Full moon:  9 Sep 2071 14:51:43 2477729.119255 Fruit
+Sep equ:   22 Sep 2071 21:39:39 2477742.40254
+Full moon:  9 Oct 2071  5:24:00 2477758.725007 Harvest
+Full moon:  7 Nov 2071 18:47:25 2477788.282936 Hunter's
+Full moon:  7 Dec 2071  6:58:00 2477817.790278 Before Yule
+Dec sol:   21 Dec 2071 19:05:48 2477832.29570
+Full moon:  5 Jan 2072 18:13:30 2477847.259382 After Yule
+Full moon:  4 Feb 2072  4:55:54 2477876.705489 Wolf
+Full moon:  4 Mar 2072 15:17:47 2477906.137356 Lenten
+Mar equ:   19 Mar 2072 18:22:59 2477921.26596
+Full moon:  3 Apr 2072  1:25:24 2477935.559311 Egg
+Full moon:  2 May 2072 11:34:08 2477964.982043 Milk
+Full moon: 31 May 2072 22:18:17 2477994.429365 Flower
+Jun sol:   20 Jun 2072 11:15:44 2478013.96926
+Full moon: 30 Jun 2072 10:22:02 2478023.931971 Hay
+Full moon: 30 Jul 2072  0:17:00 2478053.511815 Grain
+Full moon: 28 Aug 2072 15:59:40 2478083.166442 Fruit
+Sep equ:   22 Sep 2072  3:29:46 2478107.64567
+Full moon: 27 Sep 2072  8:43:48 2478112.863752 Harvest
+Full moon: 27 Oct 2072  1:21:32 2478142.556621 Hunter's
+Full moon: 25 Nov 2072 16:59:35 2478172.208050 Before Yule
+Dec sol:   21 Dec 2072  0:57:58 2478197.54026
+Full moon: 25 Dec 2072  7:15:38 2478201.802531 After Yule
+Full moon: 23 Jan 2073 20:05:43 2478231.337310 Wolf
+Full moon: 22 Feb 2073  7:26:40 2478260.810192 Lenten
+Mar equ:   20 Mar 2073  0:15:18 2478286.51063
+Full moon: 23 Mar 2073 17:17:24 2478290.220420 Egg
+Full moon: 22 Apr 2073  1:54:53 2478319.579786 Milk
+Full moon: 21 May 2073 10:03:01 2478348.918770 Blue
+Full moon: 19 Jun 2073 18:45:01 2478378.281262 Flower
+Jun sol:   20 Jun 2073 17:08:58 2478379.21457
+Full moon: 19 Jul 2073  5:04:50 2478407.711689 Hay
+Full moon: 17 Aug 2073 17:45:28 2478437.239916 Grain
+Full moon: 16 Sep 2073  8:52:51 2478466.870039 Fruit
+Sep equ:   22 Sep 2073  9:17:16 2478472.88699
+Full moon: 16 Oct 2073  1:54:44 2478496.579686 Harvest
+Full moon: 14 Nov 2073 19:55:10 2478526.329978 Hunter's
+Full moon: 14 Dec 2073 13:49:25 2478556.075986 Before Yule
+Dec sol:   21 Dec 2073  6:52:41 2478562.78659
+Full moon: 13 Jan 2074  6:31:41 2478585.772007 After Yule
+Full moon: 11 Feb 2074 21:05:32 2478615.378851 Wolf
+Full moon: 13 Mar 2074  9:01:32 2478644.876070 Lenten
+Mar equ:   20 Mar 2074  6:10:51 2478651.75754
+Full moon: 11 Apr 2074 18:30:27 2478674.271150 Egg
+Full moon: 11 May 2074  2:18:10 2478703.595954 Milk
+Full moon:  9 Jun 2074  9:28:12 2478732.894586 Flower
+Jun sol:   20 Jun 2074 23:00:27 2478744.45865
+Full moon:  8 Jul 2074 17:05:28 2478762.212138 Hay
+Full moon:  7 Aug 2074  2:06:10 2478791.587626 Grain
+Full moon:  5 Sep 2074 13:13:25 2478821.050994 Fruit
+Sep equ:   22 Sep 2074 15:05:48 2478838.12903
+Full moon:  5 Oct 2074  2:56:00 2478850.622231 Harvest
+Full moon:  3 Nov 2074 19:22:11 2478880.307073 Hunter's
+Full moon:  3 Dec 2074 14:03:31 2478910.085783 Before Yule
+Dec sol:   21 Dec 2074 12:37:15 2478928.02588
+Full moon:  2 Jan 2075  9:39:39 2478939.902540 After Yule
+Full moon:  1 Feb 2075  4:13:23 2478969.675970 Wolf
+Full moon:  2 Mar 2075 20:06:29 2478999.337839 Lenten
+Mar equ:   20 Mar 2075 11:48:36 2479016.99209
+Full moon:  1 Apr 2075  8:45:32 2479028.864962 Egg
+Full moon: 30 Apr 2075 18:37:45 2479058.276226 Milk
+Full moon: 30 May 2075  2:38:48 2479087.610284 Flower
+Jun sol:   21 Jun 2075  4:42:27 2479109.69616
+Full moon: 28 Jun 2075  9:46:57 2479116.907608 Hay
+Full moon: 27 Jul 2075 16:54:27 2479146.204484 Grain
+Full moon: 26 Aug 2075  0:51:16 2479175.535609 Fruit
+Sep equ:   22 Sep 2075 21:00:52 2479203.37560
+Full moon: 24 Sep 2075 10:31:15 2479204.938374 Harvest
+Full moon: 23 Oct 2075 22:49:20 2479234.450930 Hunter's
+Full moon: 22 Nov 2075 14:21:02 2479264.097949 Before Yule
+Dec sol:   21 Dec 2075 18:29:08 2479293.27023
+Full moon: 22 Dec 2075  8:48:12 2479293.866806 After Yule
+Full moon: 21 Jan 2076  4:40:17 2479323.694649 Wolf
+Full moon: 19 Feb 2076 23:49:22 2479353.492616 Lenten
+Mar equ:   19 Mar 2076 17:40:54 2479382.23674
+Full moon: 20 Mar 2076 16:37:43 2479383.192867 Egg
+Full moon: 19 Apr 2076  6:30:06 2479412.770912 Milk
+Full moon: 18 May 2076 17:38:54 2479442.235357 Blue
+Full moon: 17 Jun 2076  2:38:36 2479471.610141 Flower
+Jun sol:   20 Jun 2076 10:38:50 2479474.94364
+Full moon: 16 Jul 2076 10:12:33 2479500.925385 Hay
+Full moon: 14 Aug 2076 17:12:20 2479530.216899 Grain
+Full moon: 13 Sep 2076  0:38:52 2479559.526999 Fruit
+Sep equ:   22 Sep 2076  2:52:19 2479568.61967
+Full moon: 12 Oct 2076  9:38:12 2479588.901538 Harvest
+Full moon: 10 Nov 2076 21:08:01 2479618.380569 Hunter's
+Full moon: 10 Dec 2076 11:35:24 2479647.982922 Before Yule
+Dec sol:   21 Dec 2076  0:15:28 2479658.51075
+Full moon:  9 Jan 2077  4:38:08 2479677.693155 After Yule
+Full moon:  7 Feb 2077 23:08:58 2479707.464564 Wolf
+Full moon:  9 Mar 2077 17:43:18 2479737.238405 Lenten
+Mar equ:   19 Mar 2077 23:33:12 2479747.48139
+Full moon:  8 Apr 2077 11:06:17 2479766.962701 Egg
+Full moon:  8 May 2077  2:23:41 2479796.599783 Milk
+Full moon:  6 Jun 2077 15:07:22 2479826.130126 Flower
+Jun sol:   20 Jun 2077 16:25:34 2479840.18443
+Full moon:  6 Jul 2077  1:22:18 2479855.557163 Hay
+Full moon:  4 Aug 2077  9:47:07 2479884.907731 Grain
+Full moon:  2 Sep 2077 17:23:57 2479914.224969 Fruit
+Sep equ:   22 Sep 2077  8:37:58 2479933.85971
+Full moon:  2 Oct 2077  1:21:26 2479943.556557 Harvest
+Full moon: 31 Oct 2077 10:37:01 2479972.942380 Hunter's
+Full moon: 29 Nov 2077 21:43:21 2480002.405106 Before Yule
+Dec sol:   21 Dec 2077  6:02:57 2480023.75205
+Full moon: 29 Dec 2077 10:45:53 2480031.948537 After Yule
+Full moon: 28 Jan 2078  1:34:09 2480061.565382 Wolf
+Full moon: 26 Feb 2078 17:50:54 2480091.243686 Lenten
+Mar equ:   20 Mar 2078  5:12:58 2480112.71735
+Full moon: 28 Mar 2078 11:04:52 2480120.961720 Egg
+Full moon: 27 Apr 2078  4:19:37 2480150.680296 Milk
+Full moon: 26 May 2078 20:23:25 2480180.349600 Flower
+Jun sol:   20 Jun 2078 22:00:05 2480205.41673
+Full moon: 25 Jun 2078 10:22:24 2480209.932228 Hay
+Full moon: 24 Jul 2078 22:07:25 2480239.421823 Grain
+Full moon: 23 Aug 2078  8:12:13 2480268.841821 Blue
+Full moon: 21 Sep 2078 17:31:31 2480298.230222 Fruit
+Sep equ:   22 Sep 2078 14:26:40 2480299.10186
+Full moon: 21 Oct 2078  2:55:27 2480327.621840 Harvest
+Full moon: 19 Nov 2078 12:53:11 2480357.036934 Hunter's
+Full moon: 18 Dec 2078 23:34:45 2480386.482471 Before Yule
+Dec sol:   21 Dec 2078 12:00:08 2480389.00009
+Full moon: 17 Jan 2079 11:07:09 2480415.963309 After Yule
+Full moon: 15 Feb 2079 23:45:46 2480445.490124 Wolf
+Full moon: 17 Mar 2079 13:46:12 2480475.073758 Lenten
+Mar equ:   20 Mar 2079 11:02:51 2480477.96032
+Full moon: 16 Apr 2079  5:03:10 2480504.710537 Egg
+Full moon: 15 May 2079 20:58:57 2480534.374276 Milk
+Full moon: 14 Jun 2079 12:39:25 2480564.027378 Flower
+Jun sol:   21 Jun 2079  3:51:30 2480570.66077
+Full moon: 14 Jul 2079  3:24:17 2480593.641866 Hay
+Full moon: 12 Aug 2079 17:00:53 2480623.208947 Grain
+Full moon: 11 Sep 2079  5:36:21 2480652.733586 Fruit
+Sep equ:   22 Sep 2079 20:15:21 2480664.34400
+Full moon: 10 Oct 2079 17:24:05 2480682.225067 Harvest
+Full moon:  9 Nov 2079  4:34:40 2480711.690748 Hunter's
+Full moon:  8 Dec 2079 15:16:56 2480741.136765 Before Yule
+Dec sol:   21 Dec 2079 17:46:13 2480754.24044
+Full moon:  7 Jan 2080  1:45:19 2480770.573136 After Yule
+Full moon:  5 Feb 2080 12:22:01 2480800.015296 Wolf
+Full moon:  5 Mar 2080 23:30:09 2480829.479282 Lenten
+Mar equ:   19 Mar 2080 16:46:20 2480843.19885
+Full moon:  4 Apr 2080 11:24:48 2480858.975561 Egg
+Full moon:  4 May 2080  0:10:31 2480888.507311 Milk
+Full moon:  2 Jun 2080 13:46:16 2480918.073796 Flower
+Jun sol:   20 Jun 2080  9:36:19 2480935.90023
+Full moon:  2 Jul 2080  4:09:33 2480947.673300 Hay
+Full moon: 31 Jul 2080 19:14:11 2480977.301521 Grain
+Full moon: 30 Aug 2080 10:41:25 2481006.945431 Fruit
+Sep equ:   22 Sep 2080  1:58:39 2481029.58240
+Full moon: 29 Sep 2080  1:54:45 2481036.579695 Harvest
+Full moon: 28 Oct 2080 16:13:14 2481066.175864 Hunter's
+Full moon: 27 Nov 2080  5:14:34 2481095.718453 Before Yule
+Dec sol:   20 Dec 2080 23:35:04 2481119.48269
+Full moon: 26 Dec 2080 17:04:00 2481125.211116 After Yule
+Full moon: 25 Jan 2081  4:02:16 2481154.668245 Wolf
+Full moon: 23 Feb 2081 14:27:41 2481184.102558 Lenten
+Mar equ:   19 Mar 2081 22:36:31 2481208.44203
+Full moon: 25 Mar 2081  0:29:53 2481213.520756 Egg
+Full moon: 23 Apr 2081 10:20:21 2481242.930806 Milk
+Full moon: 22 May 2081 20:26:41 2481272.351866 Flower
+Jun sol:   20 Jun 2081 15:18:40 2481301.13796
+Full moon: 21 Jun 2081  7:33:01 2481301.814602 Hay
+Full moon: 20 Jul 2081 20:23:08 2481331.349408 Grain
+Full moon: 19 Aug 2081 11:15:49 2481360.969324 Blue
+Full moon: 18 Sep 2081  3:46:15 2481390.657119 Fruit
+Sep equ:   22 Sep 2081  7:40:05 2481394.81951
+Full moon: 17 Oct 2081 20:50:43 2481420.368564 Harvest
+Full moon: 16 Nov 2081 13:19:59 2481450.055545 Hunter's
+Full moon: 16 Dec 2081  4:31:28 2481479.688526 Before Yule
+Dec sol:   21 Dec 2081  5:24:48 2481484.72557
+Full moon: 14 Jan 2082 18:11:34 2481509.258041 After Yule
+Full moon: 13 Feb 2082  6:17:10 2481538.761929 Wolf
+Full moon: 14 Mar 2082 16:45:47 2481568.198471 Lenten
+Mar equ:   20 Mar 2082  4:32:55 2481573.68953
+Full moon: 13 Apr 2082  1:45:47 2481597.573461 Egg
+Full moon: 12 May 2082  9:50:00 2481626.909726 Milk
+Full moon: 10 Jun 2082 17:55:45 2481656.247059 Flower
+Jun sol:   20 Jun 2082 21:05:35 2481666.37889
+Full moon: 10 Jul 2082  3:10:56 2481685.632598 Hay
+Full moon:  8 Aug 2082 14:33:24 2481715.106528 Grain
+Full moon:  7 Sep 2082  4:30:27 2481744.687815 Fruit
+Sep equ:   22 Sep 2082 13:25:17 2481760.05923
+Full moon:  6 Oct 2082 20:48:20 2481774.366907 Harvest
+Full moon:  5 Nov 2082 14:39:01 2481804.110431 Hunter's
+Full moon:  5 Dec 2082  8:57:19 2481833.873137 Before Yule
+Dec sol:   21 Dec 2082 11:07:00 2481849.96320
+Full moon:  4 Jan 2083  2:33:13 2481863.606404 After Yule
+Full moon:  2 Feb 2083 18:21:02 2481893.264609 Wolf
+Full moon:  4 Mar 2083  7:35:09 2481922.816076 Lenten
+Mar equ:   20 Mar 2083 10:12:51 2481938.92560
+Full moon:  2 Apr 2083 18:07:20 2481952.255092 Egg
+Full moon:  2 May 2083  2:30:06 2481981.604247 Milk
+Full moon: 31 May 2083  9:42:36 2482010.904588 Flower
+Jun sol:   21 Jun 2083  2:46:14 2482031.61545
+Full moon: 29 Jun 2083 16:52:11 2482040.202908 Hay
+Full moon: 29 Jul 2083  1:01:17 2482069.542566 Grain
+Full moon: 27 Aug 2083 11:00:23 2482098.958601 Fruit
+Sep equ:   22 Sep 2083 19:13:59 2482125.30138
+Full moon: 25 Sep 2083 23:25:39 2482128.476152 Harvest
+Full moon: 25 Oct 2083 14:36:28 2482158.108666 Hunter's
+Full moon: 24 Nov 2083  8:23:54 2482187.849935 Before Yule
+Dec sol:   21 Dec 2083 16:55:44 2482215.20538
+Full moon: 24 Dec 2083  3:52:13 2482217.661271 After Yule
+Full moon: 22 Jan 2084 23:15:32 2482247.469121 Wolf
+Full moon: 21 Feb 2084 16:37:05 2482277.192424 Lenten
+Mar equ:   19 Mar 2084 16:01:51 2482304.16795
+Full moon: 22 Mar 2084  6:49:04 2482306.784083 Egg
+Full moon: 20 Apr 2084 17:53:17 2482336.245344 Milk
+Full moon: 20 May 2084  2:37:08 2482365.609125 Blue
+Full moon: 18 Jun 2084 10:01:18 2482394.917576 Flower
+Jun sol:   20 Jun 2084  8:42:58 2482396.86317
+Full moon: 17 Jul 2084 17:02:11 2482424.209851 Hay
+Full moon: 16 Aug 2084  0:30:08 2482453.520927 Grain
+Full moon: 14 Sep 2084  9:15:48 2482482.885978 Fruit
+Sep equ:   22 Sep 2084  1:01:30 2482490.54272
+Full moon: 13 Oct 2084 20:13:34 2482512.342756 Harvest
+Full moon: 12 Nov 2084 10:10:53 2482541.924229 Hunter's
+Full moon: 12 Dec 2084  3:19:20 2482571.638430 Before Yule
+Dec sol:   20 Dec 2084 22:43:41 2482580.44701
+Full moon: 10 Jan 2085 22:43:05 2482601.446594 After Yule
+Full moon:  9 Feb 2085 18:25:05 2482631.267427 Wolf
+Full moon: 11 Mar 2085 12:26:19 2482661.018278 Lenten
+Mar equ:   19 Mar 2085 21:55:58 2482669.41387
+Full moon: 10 Apr 2085  3:41:45 2482690.653995 Egg
+Full moon:  9 May 2085 16:04:50 2482720.170034 Milk
+Full moon:  8 Jun 2085  2:02:42 2482749.585209 Flower
+Jun sol:   20 Jun 2085 14:35:17 2482762.10784
+Full moon:  7 Jul 2085 10:15:23 2482778.927358 Hay
+Full moon:  5 Aug 2085 17:29:57 2482808.229135 Grain
+Full moon:  4 Sep 2085  0:41:52 2482837.529085 Fruit
+Sep equ:   22 Sep 2085  6:45:57 2482855.78191
+Full moon:  3 Oct 2085  8:54:18 2482866.871047 Harvest
+Full moon:  1 Nov 2085 19:09:27 2482896.298237 Hunter's
+Full moon:  1 Dec 2085  8:10:33 2482925.840665 Before Yule
+Dec sol:   21 Dec 2085  4:31:12 2482945.68834
+Full moon: 30 Dec 2085 23:59:35 2482955.499716 After Yule
+Full moon: 29 Jan 2086 17:49:21 2482985.242604 Wolf
+Full moon: 28 Feb 2086 12:21:51 2483015.015177 Lenten
+Mar equ:   20 Mar 2086  3:37:45 2483034.65122
+Full moon: 30 Mar 2086  6:18:09 2483044.762610 Egg
+Full moon: 28 Apr 2086 22:36:07 2483074.441757 Milk
+Full moon: 28 May 2086 12:35:36 2483104.024723 Flower
+Jun sol:   20 Jun 2086 20:12:06 2483127.34174
+Full moon: 27 Jun 2086  0:04:35 2483133.503188 Hay
+Full moon: 26 Jul 2086  9:24:31 2483162.892029 Grain
+Full moon: 24 Aug 2086 17:26:11 2483192.226523 Fruit
+Sep equ:   22 Sep 2086 12:34:43 2483221.02411
+Full moon: 23 Sep 2086  1:15:49 2483221.552651 Harvest
+Full moon: 22 Oct 2086  9:56:44 2483250.914401 Hunter's
+Full moon: 20 Nov 2086 20:12:47 2483280.342215 Blue
+Full moon: 20 Dec 2086  8:19:44 2483309.847044 Before Yule
+Dec sol:   21 Dec 2086 10:25:10 2483310.93415
+Full moon: 18 Jan 2087 22:11:37 2483339.424739 After Yule
+Full moon: 17 Feb 2087 13:34:55 2483369.065923 Wolf
+Full moon: 19 Mar 2087  6:09:58 2483398.756921 Lenten
+Mar equ:   20 Mar 2087  9:30:51 2483399.89642
+Full moon: 17 Apr 2087 23:17:49 2483428.470716 Egg
+Full moon: 17 May 2087 15:55:53 2483458.163815 Milk
+Full moon: 16 Jun 2087  6:59:22 2483487.791235 Flower
+Jun sol:   21 Jun 2087  2:08:31 2483492.58925
+Full moon: 15 Jul 2087 19:54:54 2483517.329795 Hay
+Full moon: 14 Aug 2087  6:54:35 2483546.787915 Grain
+Full moon: 12 Sep 2087 16:43:31 2483576.196893 Fruit
+Sep equ:   22 Sep 2087 18:30:52 2483586.27144
+Full moon: 12 Oct 2087  2:14:35 2483605.593465 Harvest
+Full moon: 10 Nov 2087 12:05:45 2483635.004003 Hunter's
+Full moon:  9 Dec 2087 22:32:16 2483664.439082 Before Yule
+Dec sol:   21 Dec 2087 16:11:03 2483676.17435
+Full moon:  8 Jan 2088  9:38:07 2483693.901478 After Yule
+Full moon:  6 Feb 2088 21:33:28 2483723.398241 Wolf
+Full moon:  7 Mar 2088 10:37:10 2483752.942479 Lenten
+Mar equ:   19 Mar 2088 15:19:37 2483765.13862
+Full moon:  6 Apr 2088  1:00:14 2483782.541833 Egg
+Full moon:  5 May 2088 16:25:49 2483812.184600 Milk
+Full moon:  4 Jun 2088  8:09:16 2483841.839769 Flower
+Jun sol:   20 Jun 2088  7:59:17 2483857.83285
+Full moon:  3 Jul 2088 23:22:56 2483871.474263 Hay
+Full moon:  2 Aug 2088 13:40:24 2483901.069727 Grain
+Full moon:  1 Sep 2088  2:58:31 2483930.623977 Fruit
+Sep equ:   22 Sep 2088  0:20:52 2483951.51450
+Full moon: 30 Sep 2088 15:25:47 2483960.142907 Harvest
+Full moon: 30 Oct 2088  3:10:51 2483989.632538 Hunter's
+Full moon: 28 Nov 2088 14:18:54 2484019.096465 Before Yule
+Dec sol:   20 Dec 2088 21:58:48 2484041.41584
+Full moon: 28 Dec 2088  0:57:58 2484048.540259 After Yule
+Full moon: 26 Jan 2089 11:25:31 2484077.976056 Wolf
+Full moon: 24 Feb 2089 22:05:49 2484107.420707 Lenten
+Mar equ:   19 Mar 2089 21:09:13 2484130.38141
+Full moon: 26 Mar 2089  9:20:47 2484136.889438 Egg
+Full moon: 24 Apr 2089 21:23:20 2484166.391213 Milk
+Full moon: 24 May 2089 10:18:27 2484195.929480 Flower
+Jun sol:   20 Jun 2089 13:45:36 2484223.07334
+Full moon: 23 Jun 2089  0:07:49 2484225.505432 Hay
+Full moon: 22 Jul 2089 14:50:31 2484255.118415 Grain
+Full moon: 21 Aug 2089  6:16:24 2484284.761397 Blue
+Full moon: 19 Sep 2089 21:56:19 2484314.414117 Fruit
+Sep equ:   22 Sep 2089  6:09:34 2484316.75665
+Full moon: 19 Oct 2089 13:04:57 2484344.045104 Harvest
+Full moon: 18 Nov 2089  3:03:04 2484373.627135 Hunter's
+Full moon: 17 Dec 2089 15:38:14 2484403.151560 Before Yule
+Dec sol:   21 Dec 2089  3:54:42 2484406.66299
+Full moon: 16 Jan 2090  3:03:31 2484432.627451 After Yule
+Full moon: 14 Feb 2090 13:39:59 2484462.069438 Wolf
+Full moon: 15 Mar 2090 23:42:40 2484491.487967 Lenten
+Mar equ:   20 Mar 2090  3:04:35 2484495.62819
+Full moon: 14 Apr 2090  9:22:46 2484520.890821 Egg
+Full moon: 13 May 2090 19:01:35 2484550.292773 Milk
+Full moon: 12 Jun 2090  5:18:45 2484579.721357 Flower
+Jun sol:   20 Jun 2090 19:38:35 2484588.31847
+Full moon: 11 Jul 2090 17:03:27 2484609.210732 Hay
+Full moon: 10 Aug 2090  6:52:22 2484638.786373 Grain
+Full moon:  8 Sep 2090 22:45:22 2484668.448178 Fruit
+Sep equ:   22 Sep 2090 12:02:03 2484682.00143
+Full moon:  8 Oct 2090 15:54:55 2484698.163138 Harvest
+Full moon:  7 Nov 2090  9:05:52 2484727.879084 Hunter's
+Full moon:  7 Dec 2090  1:14:56 2484757.552040 Before Yule
+Dec sol:   21 Dec 2090  9:46:17 2484771.90715
+Full moon:  5 Jan 2091 15:51:23 2484787.160691 After Yule
+Full moon:  4 Feb 2091  4:47:07 2484816.699393 Wolf
+Full moon:  5 Mar 2091 15:59:32 2484846.166350 Lenten
+Mar equ:   20 Mar 2091  8:44:36 2484860.86431
+Full moon:  4 Apr 2091  1:31:48 2484875.563757 Egg
+Full moon:  3 May 2091  9:46:24 2484904.907223 Milk
+Full moon:  1 Jun 2091 17:31:49 2484934.230434 Flower
+Jun sol:   21 Jun 2091  1:21:41 2484953.55672
+Full moon:  1 Jul 2091  1:54:39 2484963.579625 Hay
+Full moon: 30 Jul 2091 12:02:01 2484993.001407 Grain
+Full moon: 29 Aug 2091  0:40:07 2485022.527868 Fruit
+Sep equ:   22 Sep 2091 17:53:36 2485047.24556
+Full moon: 27 Sep 2091 15:56:51 2485052.164483 Harvest
+Full moon: 27 Oct 2091  9:18:34 2485081.887900 Hunter's
+Full moon: 26 Nov 2091  3:43:52 2485111.655463 Before Yule
+Dec sol:   21 Dec 2091 15:41:18 2485137.15369
+Full moon: 25 Dec 2091 22:00:24 2485141.416954 After Yule
+Full moon: 24 Jan 2092 14:55:39 2485171.121987 Wolf
+Full moon: 23 Feb 2092  5:30:11 2485200.729303 Lenten
+Mar equ:   19 Mar 2092 14:36:20 2485226.10858
+Full moon: 23 Mar 2092 17:16:25 2485230.219741 Egg
+Full moon: 22 Apr 2092  2:29:44 2485259.603985 Milk
+Full moon: 21 May 2092 10:00:46 2485288.917199 Blue
+Full moon: 19 Jun 2092 16:56:41 2485318.206030 Flower
+Jun sol:   20 Jun 2092  7:17:45 2485318.80400
+Full moon: 19 Jul 2092  0:24:53 2485347.517289 Hay
+Full moon: 17 Aug 2092  9:23:01 2485376.890985 Grain
+Full moon: 15 Sep 2092 20:34:19 2485406.357169 Fruit
+Sep equ:   21 Sep 2092 23:44:35 2485412.48930
+Full moon: 15 Oct 2092 10:26:29 2485435.935063 Harvest
+Full moon: 14 Nov 2092  3:05:32 2485465.628848 Hunter's
+Full moon: 13 Dec 2092 21:59:37 2485495.416405 Before Yule
+Dec sol:   20 Dec 2092 21:34:43 2485502.39911
+Full moon: 12 Jan 2093 17:44:18 2485525.239107 After Yule
+Full moon: 11 Feb 2093 12:19:35 2485555.013607 Wolf
+Full moon: 13 Mar 2093  4:07:17 2485584.671735 Lenten
+Mar equ:   19 Mar 2093 20:37:20 2485591.35927
+Full moon: 11 Apr 2093 16:36:32 2485614.192043 Egg
+Full moon: 11 May 2093  2:17:53 2485643.595763 Milk
+Full moon:  9 Jun 2093 10:10:18 2485672.923830 Flower
+Jun sol:   20 Jun 2093 13:09:53 2485684.04853
+Full moon:  8 Jul 2093 17:14:39 2485702.218510 Hay
+Full moon:  7 Aug 2093  0:24:20 2485731.516909 Grain
+Full moon:  5 Sep 2093  8:28:38 2485760.853222 Fruit
+Sep equ:   22 Sep 2093  5:31:44 2485777.73037
+Full moon:  4 Oct 2093 18:18:57 2485790.263164 Harvest
+Full moon:  3 Nov 2093  6:46:56 2485819.782601 Hunter's
+Full moon:  2 Dec 2093 22:24:51 2485849.433929 Before Yule
+Dec sol:   21 Dec 2093  3:23:35 2485867.64138
+Full moon:  1 Jan 2094 16:52:02 2485879.202809 After Yule
+Full moon: 31 Jan 2094 12:37:35 2485909.026105 Wolf
+Full moon:  2 Mar 2094  7:35:43 2485938.816475 Lenten
+Mar equ:   20 Mar 2094  2:24:24 2485956.60029
+Full moon:  1 Apr 2094  0:12:19 2485968.508559 Egg
+Full moon: 30 Apr 2094 13:55:15 2485998.080036 Milk
+Full moon: 30 May 2094  0:59:02 2486027.541000 Flower
+Jun sol:   20 Jun 2094 18:45:09 2486049.28136
+Full moon: 28 Jun 2094  9:59:32 2486056.916345 Hay
+Full moon: 27 Jul 2094 17:40:30 2486086.236467 Grain
+Full moon: 26 Aug 2094  0:52:34 2486115.536509 Fruit
+Sep equ:   22 Sep 2094 11:19:24 2486142.97181
+Full moon: 24 Sep 2094  8:34:26 2486144.857248 Harvest
+Full moon: 23 Oct 2094 17:48:41 2486174.242145 Hunter's
+Full moon: 22 Nov 2094  5:28:34 2486203.728181 Before Yule
+Dec sol:   21 Dec 2094  9:16:11 2486232.88624
+Full moon: 21 Dec 2094 19:56:48 2486233.331116 After Yule
+Full moon: 20 Jan 2095 12:48:55 2486263.033980 Wolf
+Full moon: 19 Feb 2095  6:59:58 2486292.791649 Lenten
+Mar equ:   20 Mar 2095  8:17:49 2486321.84571
+Full moon: 21 Mar 2095  1:11:21 2486322.549554 Egg
+Full moon: 19 Apr 2095 18:15:09 2486352.260529 Milk
+Full moon: 19 May 2095  9:22:18 2486381.890493 Blue
+Full moon: 17 Jun 2095 22:06:36 2486411.421250 Flower
+Jun sol:   21 Jun 2095  0:41:43 2486414.52898
+Full moon: 17 Jul 2095  8:31:50 2486440.855446 Hay
+Full moon: 15 Aug 2095 17:13:56 2486470.218010 Grain
+Full moon: 14 Sep 2095  1:12:03 2486499.550040 Fruit
+Sep equ:   22 Sep 2095 17:13:59 2486508.21805
+Full moon: 13 Oct 2095  9:31:39 2486528.896990 Harvest
+Full moon: 11 Nov 2095 19:05:55 2486558.295777 Hunter's
+Full moon: 11 Dec 2095  6:22:05 2486587.765336 Before Yule
+Dec sol:   21 Dec 2095 15:03:42 2486598.12758
+Full moon:  9 Jan 2096 19:20:55 2486617.306202 After Yule
+Full moon:  8 Feb 2096  9:50:43 2486646.910231 Wolf
+Full moon:  9 Mar 2096  1:37:54 2486676.567995 Lenten
+Mar equ:   19 Mar 2096 14:05:49 2486687.08737
+Full moon:  7 Apr 2096 18:19:06 2486706.263265 Egg
+Full moon:  7 May 2096 11:07:38 2486735.963641 Milk
+Full moon:  6 Jun 2096  2:59:32 2486765.624677 Flower
+Jun sol:   20 Jun 2096  6:33:41 2486779.77340
+Full moon:  5 Jul 2096 17:03:05 2486795.210476 Hay
+Full moon:  4 Aug 2096  5:06:02 2486824.712530 Grain
+Full moon:  2 Sep 2096 15:37:00 2486854.150694 Fruit
+Sep equ:   21 Sep 2096 22:57:38 2486873.45669
+Full moon:  2 Oct 2096  1:25:40 2486883.559491 Harvest
+Full moon: 31 Oct 2096 11:17:10 2486912.970258 Hunter's
+Full moon: 29 Nov 2096 21:35:02 2486942.399337 Before Yule
+Dec sol:   20 Dec 2096 20:49:07 2486963.36745
+Full moon: 29 Dec 2096  8:24:01 2486971.850013 After Yule
+Full moon: 27 Jan 2097 19:48:06 2487001.325073 Wolf
+Full moon: 26 Feb 2097  8:03:12 2487030.835566 Lenten
+Mar equ:   19 Mar 2097 19:51:18 2487052.32730
+Full moon: 27 Mar 2097 21:29:26 2487060.395444 Egg
+Full moon: 26 Apr 2097 12:09:48 2487090.006808 Milk
+Full moon: 26 May 2097  3:36:51 2487119.650601 Flower
+Jun sol:   20 Jun 2097 12:16:18 2487145.01133
+Full moon: 24 Jun 2097 19:04:34 2487149.294840 Hay
+Full moon: 24 Jul 2097  9:55:15 2487178.913376 Grain
+Full moon: 22 Aug 2097 23:53:41 2487208.495622 Blue
+Full moon: 21 Sep 2097 13:01:11 2487238.042489 Fruit
+Sep equ:   22 Sep 2097  4:38:46 2487238.69359
+Full moon: 21 Oct 2097  1:23:41 2487267.558124 Harvest
+Full moon: 19 Nov 2097 13:04:08 2487297.044545 Hunter's
+Full moon: 19 Dec 2097  0:04:54 2487326.503406 Before Yule
+Dec sol:   21 Dec 2097  2:40:21 2487328.61136
+Full moon: 17 Jan 2098 10:36:43 2487355.942166 After Yule
+Full moon: 15 Feb 2098 21:01:15 2487385.375876 Wolf
+Full moon: 17 Mar 2098  7:44:00 2487414.822222 Lenten
+Mar equ:   20 Mar 2098  1:43:22 2487417.57179
+Full moon: 15 Apr 2098 19:05:14 2487444.295308 Egg
+Full moon: 15 May 2098  7:16:56 2487473.803434 Milk
+Full moon: 13 Jun 2098 20:25:52 2487503.351304 Flower
+Jun sol:   20 Jun 2098 18:05:55 2487510.25411
+Full moon: 13 Jul 2098 10:36:05 2487532.941735 Hay
+Full moon: 12 Aug 2098  1:45:11 2487562.573044 Grain
+Full moon: 10 Sep 2098 17:34:07 2487592.232030 Fruit
+Sep equ:   22 Sep 2098 10:27:09 2487603.93553
+Full moon: 10 Oct 2098  9:21:09 2487621.889690 Harvest
+Full moon:  9 Nov 2098  0:15:55 2487651.511058 Hunter's
+Full moon:  8 Dec 2098 13:46:26 2487681.073912 Before Yule
+Dec sol:   21 Dec 2098  8:23:46 2487693.84985
+Full moon:  7 Jan 2099  1:51:28 2487710.577408 After Yule
+Full moon:  5 Feb 2099 12:49:35 2487740.034438 Wolf
+Full moon:  6 Mar 2099 23:00:29 2487769.458675 Lenten
+Mar equ:   20 Mar 2099  7:20:40 2487782.80602
+Full moon:  5 Apr 2099  8:38:05 2487798.859781 Egg
+Full moon:  4 May 2099 17:59:32 2487828.249680 Milk
+Full moon:  3 Jun 2099  3:37:54 2487857.651330 Flower
+Jun sol:   20 Jun 2099 23:44:36 2487875.48931
+Full moon:  2 Jul 2099 14:22:09 2487887.098716 Hay
+Full moon:  1 Aug 2099  3:00:46 2487916.625537 Grain
+Full moon: 30 Aug 2099 17:56:48 2487946.247786 Fruit
+Sep equ:   22 Sep 2099 16:14:03 2487969.17642
+Full moon: 29 Sep 2099 10:46:33 2487975.948993 Harvest
+Full moon: 29 Oct 2099  4:21:35 2488005.681656 Hunter's
+Full moon: 27 Nov 2099 21:23:15 2488035.391145 Before Yule
+Dec sol:   21 Dec 2099 14:07:18 2488059.08841
+Full moon: 27 Dec 2099 12:59:29 2488065.041308 After Yule
