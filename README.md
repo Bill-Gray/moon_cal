@@ -2,13 +2,15 @@
 
 Code to make lunar phase calendars
 ==================================
+![snippet](https://user-images.githubusercontent.com/16679342/211208815-8e810991-ae76-4cda-9f8e-af890bde88f2.png)
 
-(Looking at `2023.pdf` in this repository should make the idea obvious,  and you may just print that out.  You need only read the following if you'd like to tweak the calendar,  generate calendars for other years,  or read about why I went to the trouble of doing this.)
+
+(The above shows the overall idea.  [Click here for the calendar as a PDF.](https://github.com/Bill-Gray/moon_cal/blob/master/2023.pdf)  You can just grab that and print it out;  you need only read the following if you'd like to tweak the calendar,  generate calendars for other years,  or read about why I went to the trouble of doing this.)
 
 Building/running the code
 -------------------------
 
-Just run
+Run
 ```c
 cc -Wall -Wextra -pedantic -o moon_cal moon_cal.c -lm
 ```
@@ -21,13 +23,13 @@ Once printed on two US letter or A4 pages,  a bit of scissors work and transpare
 Rationale
 ---------
 
-Some years back,  my sister gave me a printed calendar resembling this one for Christmas.  It was useful,  and had better artwork than what I'm providing here.  But it wasn't particularly oriented to what a working astronomer might actually need,  and it made me think about what I'd actually want to have.
+Some years back,  my sister gave me a printed calendar resembling this one for Christmas.  It was useful,  and had better artwork than what I'm providing here.  But it wasn't particularly oriented to what a working astronomer might actually need (it was a bit "New Age"-ish),  and it made me think about what I'd actually want to have.
 
 The column of days of the month was on the left edge,  which made it a little tricky to find the day of the month you wanted a little tricky.  Putting it in the middle helped.
 
 I added the 'Su Mo Tu..." to make it still easier to find the desired day.
 
-The lunar month names are traditional ones from the _Maine Farmer's Almanac_.  The rationale is described in `fullmoon.txt`.
+The lunar month names are the traditional ones from the _Maine Farmer's Almanac_ (I'm from Maine).  The rationale is described in `fullmoon.txt`.
 
 Possible improvements
 ---------------------
