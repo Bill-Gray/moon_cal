@@ -25,7 +25,7 @@ Rationale
 
 Some years back,  my sister gave me a printed calendar resembling this one for Christmas.  It was useful,  and had better artwork than what I'm providing here.  But it wasn't particularly oriented to what a working astronomer might actually need (it was a bit "New Age"-ish),  and it made me think about what I'd actually want to have.
 
-The column of days of the month was on the left edge,  which made it a little tricky to find the day of the month you wanted a little tricky.  Putting it in the middle helped.
+The column of days of the month was on the left edge,  which made it a little tricky to find the day of the month you wanted by the time you got to the end of the year.  Putting it in the middle helped.
 
 I added the 'Su Mo Tu..." to make it still easier to find the desired day.
 
@@ -41,3 +41,5 @@ I'd sort of like to have lunar eclipses noted.  As it stands,  I just have solar
 I could imagine indicating lunar and solar eclipses with some modification of the new moon/full moon symbol.  Possibly even taking a chunk out of the symbol to indicate the maximum extent of the eclipse.
 
 I made no use of color,  since my printer is a black-and-white laser.  I could imagine different colors indicating... well.. something or other.
+
+Somewhere or other,  I've seen a chart resembling this sort,  but in 'landscape' mode (days of the month run horizontally,  so you have 31 columns and 12 rows instead of 12 columns and 31 rows.)  Might make a nice alternative.
