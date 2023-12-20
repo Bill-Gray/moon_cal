@@ -4,7 +4,7 @@
 %%DocumentMedia: Default 612 792 0 () ()
 %%Creator: calendar.cpp
 %%Copyright: none
-%%Title: Lunar calendar for 2021
+%%Title: Lunar calendar for YEAR
 %%Version: none
 %%DocumentData: Clean7Bit
 %%EndComments
@@ -96,6 +96,12 @@ text fit_to_label stroke
    } ifelse
 } def
 
+/show_pi  {    % either p (Mar 14) or ~p (Jun 28) on stack
+   x y 10 sub moveto gsave
+   /Symbol findfont 32 scalefont setfont centershow
+   grestore
+} def
+
 /fullmoon  {  % string (usually full moon name), x, y on stack
    /y exch def
    /x exch def
@@ -106,15 +112,11 @@ text fit_to_label stroke
    stroke
  } def
 
-/fullmoon2  {  % two strings, x, y on stack
-   /y exch def
-   /x exch def
-   10 font_size
-   x y  7 sub moveto centershow
-   x y  4 add moveto centershow
+/two_strings  {   % font size and two strings on the stack
+   font_size
+   x y  4 sub fontsize .5 mul sub moveto centershow
+   x y  4 sub fontsize .5 mul add moveto centershow
    default_font_size
-   newpath
-   x y moon_r 0 360 arc
    stroke                     } def
 
 /newmoon  {  % string (usually weekday), x, y on stack

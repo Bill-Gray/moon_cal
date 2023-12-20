@@ -1,0 +1,45 @@
+   Dates for 2025.  See 'date2023.txt' for explanation.
+YYYY MM DD M Pt Text
+2025 01 29 n - (new moons)
+2025 02 28 n -
+2025 03 29 n Partial
+2025 04 27 n -
+2025 05 27 n -
+2025 06 25 n -
+2025 07 24 n -
+2025 08 23 n -
+2025 09 21 n Partial
+2025 10 21 n -
+2025 11 20 n -
+2025 12 20 n -
+2025 01 13 f 12 After$Yule
+2025 02 12 f Wolf
+2025 03 14 f Lenten
+2025 04 13 f Egg
+2025 05 12 f Milk
+2025 06 11 f Flower
+2025 07 10 f Hay
+2025 08 09 f Grain
+2025 09 07 f Fruit
+2025 10 07 f Harvest
+2025 11 05 f Hunter's
+2025 12 04 f 12 Before$Yule
+2025 03 20 e Equi
+2025 06 21 e Sols
+2025 09 22 e Equi
+2025 12 21 e Sols
+2025 01 20 h 15 MLK$Day
+2025 02 17 h 16 Pres$Day
+2025 04 20 h Easter
+2025 04 21 h 16 Patr$Day
+2025 05 11 h 16 Mom$Day
+2025 06 15 h 16 Dad$Day
+2025 09 01 h 15 Labor$Day
+2025 10 13 h 18 InP$Day
+2025 11 10 h 15 Armi$Day
+2025 11 27 h T-Day
+2025 12 25 h XMas
+2025 04 22 b 12 SCG$B-day
+2025 07 31 b 12 KHG$B-day
+ 2025 03 14 h \p     (conflicts with Lenten full moon)
+2025 07 22 h ~\p

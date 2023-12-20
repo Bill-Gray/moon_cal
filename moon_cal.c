@@ -30,65 +30,51 @@ static int jd_of_year( const int year)
    return( 1721060 + year * 365 + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400);
 }
 
-static int get_moon_name( FILE *ifile, char *buff, const int jd)
-{
-   int ijd;
-
-   while( memcmp( buff, "Full moon:", 10) || (ijd = (int)( atof( buff + 32) - .5)) < jd)
-      if( !fgets( buff, 90, ifile))
-         fprintf( stderr, "Failure reading from 'fullmoon.txt'\n");
-      else
-         {
-         int i = 0;
-
-         while( buff[i] >= ' ')
-            i++;
-         buff[i] = '\0';
-         }
-   return( ijd == jd);
-}
-
-static void get_new_moons( const char *year, int *dates)
-{
-   FILE *ifile = fopen( "phases.txt", "rb");
-   char buff[90];
-   int i;
-
-   assert( ifile);
-   while( fgets( buff, sizeof( buff), ifile))
-      if( !memcmp( buff, "New moon:", 8))
-         for( i = 15; i < 60; i += 20)
-            if( !memcmp( buff + i, year, 4))
-               {
-               const char *months = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec ";
-               const char *tptr;
-
-               buff[i + 8] = '\0';
-               tptr = strstr( months, buff + i + 5);
-               assert( tptr);
-               *dates++ = ((tptr - months) / 4 + 1) * 100 + atoi( buff + i + 9);
-               }
-   fclose( ifile);
-   *dates = 0;
-}
+#define MAX_DATES 408
 
 int main( const int argc, const char **argv)
 {
-   FILE *ifile = fopen( "moon_cal.ps", "rb");
-   FILE *ofile = fopen( "z.ps", "wb");
-   FILE *moons = fopen( "fullmoon.txt", "rb");
-   char buff[100];
-   int page, year, new_moons[20];
+   FILE *ofile, *ifile;
+   char buff[100], *dates[MAX_DATES];
+   const char *events_shown = "nfeh";  /* by default,  show new/full moons, */
+   int page, year;                     /* equinoxes,  and holidays */
+   size_t i;
 
-   assert( ifile);
-   assert( ofile);
-   assert( moons);
    if( argc < 2 || (year = atoi( argv[1])) < 1900)
       {
       printf( "'moon_cal' needs a year as a command-line argument.  The lunar chart\n"
               "for that year will be written to 'z.ps'.\n");
       return( -1);
       }
+   if( argc == 3)
+      events_shown = argv[2];
+   snprintf( buff, sizeof( buff), "date%d.txt", year);
+   ifile = fopen( buff, "rb");
+   assert( ifile);
+   memset( dates, 0, sizeof( dates));
+   while( fgets( buff, sizeof( buff), ifile))
+      if( !memcmp( buff, argv[1], 4) && strlen( buff) > 13)
+         {
+         const int pseudo_jd = atoi( buff + 5) * 31 + atoi( buff + 8);
+
+         assert( pseudo_jd > 31 && pseudo_jd <= 31 * 13);
+         if( dates[pseudo_jd])
+            {
+            fprintf( stderr, "You have two date texts defined for this date\n");
+            fprintf( stderr, "%s%s\nPlease remove one of them.\n",
+                        buff + 11, dates[pseudo_jd]);
+            return( -1);
+            }
+         dates[pseudo_jd] = (char *)malloc( strlen( buff + 10));
+         buff[strlen( buff) - 1] = '\0';     /* remove trailing lf */
+         strcpy( dates[pseudo_jd], buff + 11);
+         }
+   fclose( ifile);
+
+   ifile = fopen( "moon_cal.ps", "rb");
+   assert( ifile);
+   ofile = fopen( "z.ps", "wb");
+   assert( ofile);
    while( fgets( buff, sizeof( buff), ifile))
       {
       char *tptr = strstr( buff, "YEAR");
@@ -98,78 +84,82 @@ int main( const int argc, const char **argv)
       fputs( buff, ofile);
       }
    fclose( ifile);
-   get_new_moons( argv[1], new_moons);
+
    for( page = 1; page <= 2; page++)
       {
-      int month, day, jd = jd_of_year( year);
-      char next_moon[90];
+      int month, day, jd = jd_of_year( year) - 1;
 
-      fseek( moons, 0L, SEEK_SET);
-      *next_moon = '\0';
       fprintf( ofile, "%%%%Page: %d %d\n", page, page);
       fprintf( ofile, "%%%%PageOrientation: Portrait\n");
       if( page == 1)
          fprintf( ofile, " (%s) yearshow\n", argv[1]);
       for( month = 1; month <= 12; month++)
-         for( day = 1; day <= month_length( month, year); day++, jd++)
-            if( (page == 1 && day < 16) || (page == 2 && day > 15))
+         {
+         const int end_day = (page == 1 ? 15 : month_length( month, year));
+         const int xloc = 30 + (month + month / 7) * 40;
+
+         day = (page == 1 ? 1 : 16);
+         while( day <= end_day)
+            {
+            int yloc = 720 - (day - page * 15 + 15) * 40;
+            const char *month_name = " JFMAMJJASOND";
+            const char *text, *weekdays[7] = { "Su", "Mo", "Tu",
+                        "We", "Th", "Fr", "Sa" };
+            const char *date_text = dates[month * 31 + day];
+            const char *split_ptr;
+            int is_new_moon;
+
+            is_new_moon = (date_text && *date_text == 'n');
+            text = weekdays[(jd + day + 2) % 7];
+            if( date_text && date_text[2] != '-' && strchr( events_shown, *date_text))
+               text = date_text + 2;
+            split_ptr = strchr( text, '$');
+            if( strstr( text, "\\p"))
+               split_ptr = text;
+            if( page == 1)
+               yloc -= 50;
+            if( is_new_moon)
+               fprintf( ofile, "(%s) %d %d newmoon\n",
+                        (split_ptr ? " " : text), xloc, yloc);
+            else if( date_text && *date_text == 'f')
+               fprintf( ofile, "(%s) %d %d fullmoon\n",
+                        (split_ptr ? " " : text), xloc, yloc);
+            else
                {
-               int xloc = 30 + (month + month / 7) * 40;
-               int yloc = 720 - (day - page * 15 + 15) * 40;
-               const char *month_name = " JFMAMJJASOND";
-               const char *text, *weekdays[7] = { "Su", "Mo", "Tu",
-                           "We", "Th", "Fr", "Sa" };
+               double phase = ((double)(jd + day) + 1.0 - 2451550.09766) / 29.530588861;
 
-               int i = 0;
-
-               text = weekdays[(jd + 2) % 7];
-               if( page == 1)
-                  yloc -= 50;
-               while( new_moons[i] && new_moons[i] != month * 100 + day)
-                  i++;
-               if( new_moons[i])
-                  {
-                  if( year == 2021 && month == 6)   /* 2021 Jun 10 eclipse */
-                     text = "Annular";
-                  if( year == 2021 && month == 12)   /* 2021 Dec  4 eclipse */
-                     text = "Total";
-                  if( year == 2023 && month == 4)   /* 2023 Apr 20 eclipse */
-                     text = "Hybrid";
-                  if( year == 2023 && month == 10)   /* 2023 Oct 14 eclipse */
-                     text = "Annular";
-                  fprintf( ofile, "(%s) %d %d newmoon", text, xloc, yloc);
-                  }
-               else if( get_moon_name( moons, next_moon, jd))
-                  {
-                  char *moon_name = next_moon + 47;
-
-                  if( !strcmp( next_moon + 47, "After Yule"))
-                     fprintf( ofile, "(After) (Yule) %d %d fullmoon2\n", xloc, yloc);
-                  else if( !strcmp( next_moon + 47, "Before Yule"))
-                     fprintf( ofile, "(Before) (Yule) %d %d fullmoon2\n", xloc, yloc);
-                  else
-                     fprintf( ofile, "(%s) %d %d fullmoon\n", moon_name, xloc, yloc);
-                  }
-               else
-                  {
-                  double phase = ((double)jd + 1.0 - 2451550.09766) / 29.530588861;
-
-                  phase = fmod( phase, 1);
-                  if( phase < 0.)
-                     phase += 1.;
-                  fprintf( ofile, " (%s) %.3f %d %d %smoon\n",
-                           text, cos( phase * 2. * PI), xloc, yloc,
-                           (phase < 0.5 ? "right" : "left"));
-                  }
-               if( month == 7)
-                  fprintf( ofile, "(%d) %d %d dayshow\n",
-                          day, xloc - 40, yloc);
-               if( day == 1)
-                  fprintf( ofile, "(%c) %d %d monthshow\n",
-                           month_name[month], xloc, yloc + 40);
+               phase = fmod( phase, 1);
+               if( phase < 0.)
+                  phase += 1.;
+               fprintf( ofile, " (%s) %.3f %d %d %smoon\n",
+                        (split_ptr ? " " : text),
+                        cos( phase * 2. * PI), xloc, yloc,
+                        (phase < 0.5 ? "right" : "left"));
                }
+            if( split_ptr)
+               {
+               if( *split_ptr == '$')     /* text on two lines */
+                  fprintf( ofile, "(%.*s) (%s) %d two_strings\n",
+                        (int)( split_ptr - text) - 3,
+                        text + 3, split_ptr + 1, atoi( text));
+               else        /* pi (3/14) or ~pi (22/7)   */
+                  fprintf( ofile, "(%s) show_pi\n", (*split_ptr == '~' ? "~p" : "p"));
+               }
+            if( month == 7)
+               fprintf( ofile, "(%d) %d %d dayshow\n",
+                       day, xloc - 40, yloc);
+            if( day == 1)
+               fprintf( ofile, "(%c) %d %d monthshow\n",
+                        month_name[month], xloc, yloc + 40);
+            day++;
+            }
+         jd += month_length( month, year);
+         }
       fprintf( ofile, "showpage\n");
       }
+   for( i = 0; i < sizeof( dates) / sizeof( dates[0]); i++)
+      if( dates[i])
+         free( dates[i]);
    fclose( ofile);
    return( 0);
 }

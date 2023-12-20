@@ -1,0 +1,63 @@
+   Any line beginning with the actual year/month/day will be parsed to
+get text to be shown on that date.  A '-' indicates that the default
+(two-letter day of week abbreviation) text should be shown;  this is
+done for all the new moons,  except those coinciding with solar eclipses.
+   For each date,  a 'category' letter is given : n=new moon,  f=full
+moon, e=equinox/solstice,  h=holiday,  b=birthday.  Further categories
+may be added,  and the categories to be used can be specified on the
+command line.  By default,  all are shown except the birthdays.
+   '\p' on March 14 (3/14,  US-style) and '~\p' on July 22 (22/7,
+everywhere else in the world) are for Pi Day and Pi Approximation Day,
+respectively.
+   A '$',  as in 'After$Yule' and 'Before$Yule',  indicates that the
+text in question is to be shown on two lines.  For those,  you have to
+specify a font size in points (11 points for 'Before$Yule' and 12
+points for 'After$Yule',  for example).  'moon_cal.ps' has some logic
+to determine a best-fit size for single lines,  but I've not tried to
+extend that to the two-line cases.
+   This file has to be assembled by hand for each year.  This is not
+particularly difficult,  but is why I've not attempted to go into the
+distant future/past.
+YYYY MM DD M Pt Text
+2023 01 21 n -
+2023 02 20 n -
+2023 03 21 n -
+2023 04 20 n Hybrid
+2023 05 19 n -
+2023 06 18 n -
+2023 07 17 n -
+2023 08 16 n -
+2023 09 15 n -
+2023 10 14 n Annular
+2023 11 13 n -
+2023 12 12 n -
+2023 01 06 f 12 After$Yule
+2023 02 05 f Wolf
+2023 03 07 f Lenten
+2023 04 06 f Egg
+2023 05 05 f Milk
+2023 06 04 f Flower
+2023 07 03 f Hay
+2023 08 01 f Grain
+2023 08 31 f Fruit
+2023 09 29 f Harvest
+2023 10 28 f Hunter's
+2023 11 27 f 11 Before$Yule
+2023 12 27 f 12 After$Yule
+2023 03 20 e Equi
+2023 06 21 e Sols
+2023 09 23 e Equi
+2023 12 22 e Sols
+2023 01 16 h 15 MLK$Day
+2023 04 09 h Easter
+2023 04 17 h 16 Patr$Day
+2023 05 14 h 16 Mom$Day
+2023 09 04 h 15 Labor$Day
+2023 10 09 h 18 InP$Day
+2023 11 11 h 15 Armi$Day
+2023 11 23 h T-Day
+2023 12 25 h XMas
+2023 04 22 b 12 SCG$B-day
+2023 07 31 b 12 KHG$B-day
+2023 03 14 h \p
+2023 07 22 h ~\p
