@@ -24,12 +24,13 @@ Once printed on two US letter or A4 pages,  a bit of scissors work and transpare
 
 Rationale
 ---------
+I do a fair bit of work writing software for asteroid observers ("planetary defense",  the folks looking for rocks that might hit the earth).  There's usually about a week or so around each full moon where we can't observe much,  and a few days before/after that where moonlight interferes to an annoying extent.
 
-Some years back,  my sister gave me a printed calendar resembling this one for Christmas.  It was useful,  and had better artwork than what I'm providing here.  But it wasn't particularly oriented to what a working astronomer might actually need (it was a bit "New Age"-ish),  and it made me think about what I'd actually want to have.
+Some Christmases back,  my sister gave me a printed calendar vaguely resembling the ones shown here.  It was useful,  and had better artwork than what I'm providing here.  It wasn't particularly oriented to what a working astronomer might actually need (it was a bit "New Age"-ish),  but it made me think about what I'd actually want to have.
 
 The column of days of the month was on the left edge,  which made it a little tricky to find the day of the month you wanted by the time you got to the end of the year.  Putting it in the middle helped.
 
-I added the 'Su Mo Tu..." to make it still easier to find the desired day.
+I added the 'Su Mo Tu..." to make it still easier to find the desired day,  and made it possible to note other days.
 
 The lunar month names are the traditional ones from the _Maine Farmer's Almanac_ (I'm from Maine).  The rationale is described in `fullmoon.txt`.
 
@@ -39,7 +40,6 @@ I could imagine indicating lunar and solar eclipses with some modification of th
 
 I made no use of color,  since my printer is a black-and-white laser.  I could imagine different colors indicating... well.. something or other.
 
-Somewhere or other,  I've seen a chart resembling this sort,  but in 'landscape' mode (days of the month run horizontally,  so you have 31 columns and 12 rows instead of 12 columns and 31 rows.)  Might make a nice alternative.
+Somewhere or other,  I've seen a chart resembling this sort,  but in 'landscape' mode (days of the month run horizontally,  so you have 31 columns and 12 rows instead of 12 columns and 31 rows.)  That might make a nice alternative.
 
 I may put together an on-line service on [my Web site](https://www.projectpluto.com) where you would enter the desired year,  then be presented with an edit box containing the default `dateYYYY.txt` file for that year.  Edit as desired to remove stuff you don't want and to label your pet's birthday or other date(s) of interest,  click 'Make Calendar',  and you'd get your customized calendar without having to download and compile and run this code.
-
