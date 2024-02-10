@@ -15,13 +15,13 @@ YYYY MM DD M Pt Text
 2024 12 30 n -
 2024 01 25 f Wolf
 2024 02 24 f Lenten
-2024 03 25 f Egg
+2024 03 25 f 12 Egg$Penum
 2024 04 23 f Milk
 2024 05 23 f Flower
 2024 06 22 f Hay
 2024 07 21 f Grain
 2024 08 19 f Blue
-2024 09 18 f Fruit
+2024 09 18 f 11 Fruit$Umbra
 2024 10 17 f Harvest
 2024 11 15 f Hunter's
 2024 12 15 f 11 Before$Yule

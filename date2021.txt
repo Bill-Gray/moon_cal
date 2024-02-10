@@ -1,0 +1,30 @@
+   Dates for 2021.  See 'date2023.txt' for explanation.
+YYYY MM DD M Pt Text
+2021 01 13 n -
+2021 02 11 n -
+2021 03 13 n -
+2021 04 12 n -
+2021 05 11 n -
+2021 06 10 n Annular
+2021 07 10 n -
+2021 08 08 n -
+2021 09 07 n -
+2021 10 06 n -
+2021 11 04 n -
+2021 12 04 n Total
+2021 01 28 f Wolf
+2021 02 27 f Lenten
+2021 03 28 f Egg
+2021 04 27 f Milk
+2021 05 26 f 11 Flower$Total
+2021 06 24 f Hay
+2021 07 24 f Grain
+2021 08 22 f Blue
+2021 09 20 f Fruit
+2021 10 20 f Harvest
+2021 11 19 f 10 Hunter's$Umbral
+2021 12 19 f 12 Before$Yule
+2021 03 20 e Equi
+2021 06 21 e Sols
+2021 09 22 e Equi
+2021 12 21 e Sols

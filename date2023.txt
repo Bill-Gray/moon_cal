@@ -35,13 +35,13 @@ YYYY MM DD M Pt Text
 2023 02 05 f Wolf
 2023 03 07 f Lenten
 2023 04 06 f Egg
-2023 05 05 f Milk
+2023 05 05 f 11 Milk$Penum
 2023 06 04 f Flower
 2023 07 03 f Hay
 2023 08 01 f Grain
 2023 08 31 f Fruit
 2023 09 29 f Harvest
-2023 10 28 f Hunter's
+2023 10 28 f 10 Hunter's$Umbral
 2023 11 27 f 11 Before$Yule
 2023 12 27 f 12 After$Yule
 2023 03 20 e Equi
