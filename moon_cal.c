@@ -38,7 +38,7 @@ int main( const int argc, const char **argv)
    FILE *ofile, *ifile;
    char buff[100], *dates[MAX_DATES];
    const char *events_shown = "nfeh";  /* by default,  show new/full moons, */
-   int page, year;                     /* equinoxes,  and holidays */
+   int month, jd, year;                /* equinoxes,  and holidays */
    size_t i;
    bool use_color = false;
 
@@ -62,6 +62,8 @@ int main( const int argc, const char **argv)
                fprintf( stderr, "Argument '%s' not interpreted\n", argv[i]);
                return( -1);
             }
+
+   jd = jd_of_year( year) - 1;
    snprintf( buff, sizeof( buff), "date%d.txt", year);
    ifile = fopen( buff, "rb");
    assert( ifile);
@@ -89,7 +91,7 @@ int main( const int argc, const char **argv)
    assert( ifile);
    ofile = fopen( "z.ps", "wb");
    assert( ofile);
-   while( fgets( buff, sizeof( buff), ifile))
+   while( fgets( buff, sizeof( buff), ifile) && memcmp( buff, "BREAK", 5))
       {
       char *tptr = strstr( buff, "YEAR");
 
@@ -97,96 +99,84 @@ int main( const int argc, const char **argv)
          memcpy( tptr, argv[1], 4);
       fputs( buff, ofile);
       }
-   fclose( ifile);
 
-   for( page = 1; page <= 2; page++)
+   fprintf( ofile, " (%s) yearshow\n", argv[1]);
+   for( month = 1; month <= 12; month++)
       {
-      int month, day, jd = jd_of_year( year) - 1;
+      const int end_day = month_length( month, year);
+      const int xloc = 30 + (month + month / 7) * 40;
+      int day;
 
-      fprintf( ofile, "%%%%Page: %d %d\n", page, page);
-      fprintf( ofile, "%%%%PageOrientation: Portrait\n");
-      if( page == 1)
-         fprintf( ofile, " (%s) yearshow\n", argv[1]);
-      for( month = 1; month <= 12; month++)
+      for( day = 1; day <= end_day; day++)
          {
-         const int end_day = (page == 1 ? 15 : month_length( month, year));
-         const int xloc = 30 + (month + month / 7) * 40;
+         int yloc = 670 - day * 40;
+         const char *month_name = " JFMAMJJASOND";
+         const char *text, *weekdays[7] = { "Su", "Mo", "Tu",
+                     "We", "Th", "Fr", "Sa" };
+         const char *date_text = dates[month * 31 + day];
+         const char *split_ptr;
+         const int day_of_week = (jd + day + 2) % 7;
+         int is_new_moon;
 
-         day = (page == 1 ? 1 : 16);
-         while( day <= end_day)
+         is_new_moon = (date_text && *date_text == 'n');
+         text = weekdays[day_of_week];
+         if( date_text && date_text[2] != '-' && strchr( events_shown, *date_text))
+            text = date_text + 2;
+         split_ptr = strchr( text, '$');
+         if( strstr( text, "\\p"))
+            split_ptr = text;
+         if( month == 7)
+            fprintf( ofile, "(%d) %d %d dayshow\n",
+                    day, xloc - 40, yloc);
+         if( use_color)
             {
-            int yloc = 720 - (day - page * 15 + 15) * 40;
-            const char *month_name = " JFMAMJJASOND";
-            const char *text, *weekdays[7] = { "Su", "Mo", "Tu",
-                        "We", "Th", "Fr", "Sa" };
-            const char *date_text = dates[month * 31 + day];
-            const char *split_ptr;
-            const int day_of_week = (jd + day + 2) % 7;
-            int is_new_moon;
-
-            is_new_moon = (date_text && *date_text == 'n');
-            text = weekdays[day_of_week];
-            if( date_text && date_text[2] != '-' && strchr( events_shown, *date_text))
-               text = date_text + 2;
-            split_ptr = strchr( text, '$');
-            if( strstr( text, "\\p"))
-               split_ptr = text;
-            if( page == 1)    /* push first page down to make room */
-               yloc -= 50;    /* for year,  month headers */
-            else
-               yloc += 50;
-            if( month == 7)
-               fprintf( ofile, "(%d) %d %d dayshow\n",
-                       day, xloc - 40, yloc);
-            if( use_color)
-               {
-               if( date_text && *date_text == 'h')
-                  fprintf( ofile, "holiday ");
-               else if( !day_of_week)
-                  fprintf( ofile, "sunday ");
-               }
-            if( is_new_moon)
-               fprintf( ofile, "(%s) %d %d newmoon\n",
-                        (split_ptr ? " " : text), xloc, yloc);
-            else if( date_text && *date_text == 'f')
-               fprintf( ofile, "(%s) %d %d fullmoon\n",
-                        (split_ptr ? " " : text), xloc, yloc);
-            else
-               {
-               double phase = ((double)(jd + day) + 1.0 - 2451550.09766) / 29.530588861;
-
-               phase = fmod( phase, 1);
-               if( phase < 0.)
-                  phase += 1.;
-               fprintf( ofile, " (%s) %.3f %d %d %smoon\n",
-                        (split_ptr ? " " : text),
-                        cos( phase * 2. * PI), xloc, yloc,
-                        (phase < 0.5 ? "right" : "left"));
-               }
-            if( split_ptr)
-               {
-               if( *split_ptr == '$')     /* text on two lines */
-                  fprintf( ofile, "(%.*s) (%s) %d two_strings\n",
-                        (int)( split_ptr - text) - 3,
-                        text + 3, split_ptr + 1, atoi( text));
-               else        /* pi (3/14) or ~pi (22/7)   */
-                  fprintf( ofile, "(%s) show_pi\n", (*split_ptr == '~' ? "~p" : "p"));
-               }
-            if( use_color)
-               if( !day_of_week || (date_text && *date_text == 'h'))
-                  fprintf( ofile, "def_day\n");
-            if( day == 1)
-               fprintf( ofile, "(%c) %d %d monthshow\n",
-                        month_name[month], xloc, yloc + 40);
-            day++;
+            if( date_text && *date_text == 'h')
+               fprintf( ofile, "holiday ");
+            else if( !day_of_week)
+               fprintf( ofile, "sunday ");
             }
-         jd += month_length( month, year);
+         if( is_new_moon)
+            fprintf( ofile, "(%s) %d %d newmoon\n",
+                     (split_ptr ? " " : text), xloc, yloc);
+         else if( date_text && *date_text == 'f')
+            fprintf( ofile, "(%s) %d %d fullmoon\n",
+                     (split_ptr ? " " : text), xloc, yloc);
+         else
+            {
+            double phase = ((double)(jd + day) + 1.0 - 2451550.09766) / 29.530588861;
+
+            phase = fmod( phase, 1);
+            if( phase < 0.)
+               phase += 1.;
+            fprintf( ofile, " (%s) %.3f %d %d %smoon\n",
+                     (split_ptr ? " " : text),
+                     cos( phase * 2. * PI), xloc, yloc,
+                     (phase < 0.5 ? "right" : "left"));
+            }
+         if( split_ptr)
+            {
+            if( *split_ptr == '$')     /* text on two lines */
+               fprintf( ofile, "(%.*s) (%s) %d two_strings\n",
+                     (int)( split_ptr - text) - 3,
+                     text + 3, split_ptr + 1, atoi( text));
+            else        /* pi (3/14) or ~pi (22/7)   */
+               fprintf( ofile, "(%s) show_pi\n", (*split_ptr == '~' ? "~p" : "p"));
+            }
+         if( use_color)
+            if( !day_of_week || (date_text && *date_text == 'h'))
+               fprintf( ofile, "def_day\n");
+         if( day == 1)
+            fprintf( ofile, "(%c) %d %d monthshow\n",
+                     month_name[month], xloc, yloc + 40);
          }
-      fprintf( ofile, "showpage\n");
+      jd += month_length( month, year);
       }
    for( i = 0; i < sizeof( dates) / sizeof( dates[0]); i++)
       if( dates[i])
          free( dates[i]);
+   while( fgets( buff, sizeof( buff), ifile))
+      fputs( buff, ofile);
+   fclose( ifile);
    fclose( ofile);
    return( 0);
 }

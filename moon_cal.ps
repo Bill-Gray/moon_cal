@@ -12,6 +12,14 @@
 %%PageResources: font Times-Roman
 %%EndDefaults
 
+newpath
+36 50 moveto
+0 700 rlineto
+550 0 rlineto
+0 -700 rlineto
+closepath clip
+newpath
+
 /font_size {
    /fontsize exch def
    /Times-Roman findfont fontsize scalefont setfont } def
@@ -163,3 +171,18 @@ text fit_to_label stroke
 /def_day   {
 0 setgray
 } def
+
+/show_calendar {
+BREAK
+} def
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+show_calendar
+showpage
+
+%%Page: 2 2
+%%PageOrientation: Portrait
+0 700 translate
+show_calendar
+showpage
