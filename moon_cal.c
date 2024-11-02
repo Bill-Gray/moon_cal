@@ -3,6 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 /* Code to create a PostScript lunar strip chart for a given year.
 Run with the year as a command-line argument.  Output is to 'z.ps'.
@@ -39,6 +40,7 @@ int main( const int argc, const char **argv)
    const char *events_shown = "nfeh";  /* by default,  show new/full moons, */
    int page, year;                     /* equinoxes,  and holidays */
    size_t i;
+   bool use_color = false;
 
    if( argc < 2 || (year = atoi( argv[1])) < 1900)
       {
@@ -46,8 +48,20 @@ int main( const int argc, const char **argv)
               "for that year will be written to 'z.ps'.\n");
       return( -1);
       }
-   if( argc == 3)
-      events_shown = argv[2];
+   for( i = 2; i < (size_t)argc; i++)
+      if( argv[i][0] == '-')
+         switch( argv[i][1])
+            {
+            case 'e':
+               events_shown = argv[i] + 2;
+               break;
+            case 'c':
+               use_color = true;
+               break;
+            default:
+               fprintf( stderr, "Argument '%s' not interpreted\n", argv[i]);
+               return( -1);
+            }
    snprintf( buff, sizeof( buff), "date%d.txt", year);
    ifile = fopen( buff, "rb");
    assert( ifile);
@@ -107,17 +121,30 @@ int main( const int argc, const char **argv)
                         "We", "Th", "Fr", "Sa" };
             const char *date_text = dates[month * 31 + day];
             const char *split_ptr;
+            const int day_of_week = (jd + day + 2) % 7;
             int is_new_moon;
 
             is_new_moon = (date_text && *date_text == 'n');
-            text = weekdays[(jd + day + 2) % 7];
+            text = weekdays[day_of_week];
             if( date_text && date_text[2] != '-' && strchr( events_shown, *date_text))
                text = date_text + 2;
             split_ptr = strchr( text, '$');
             if( strstr( text, "\\p"))
                split_ptr = text;
-            if( page == 1)
-               yloc -= 50;
+            if( page == 1)    /* push first page down to make room */
+               yloc -= 50;    /* for year,  month headers */
+            else
+               yloc += 50;
+            if( month == 7)
+               fprintf( ofile, "(%d) %d %d dayshow\n",
+                       day, xloc - 40, yloc);
+            if( use_color)
+               {
+               if( date_text && *date_text == 'h')
+                  fprintf( ofile, "holiday ");
+               else if( !day_of_week)
+                  fprintf( ofile, "sunday ");
+               }
             if( is_new_moon)
                fprintf( ofile, "(%s) %d %d newmoon\n",
                         (split_ptr ? " " : text), xloc, yloc);
@@ -145,9 +172,9 @@ int main( const int argc, const char **argv)
                else        /* pi (3/14) or ~pi (22/7)   */
                   fprintf( ofile, "(%s) show_pi\n", (*split_ptr == '~' ? "~p" : "p"));
                }
-            if( month == 7)
-               fprintf( ofile, "(%d) %d %d dayshow\n",
-                       day, xloc - 40, yloc);
+            if( use_color)
+               if( !day_of_week || (date_text && *date_text == 'h'))
+                  fprintf( ofile, "def_day\n");
             if( day == 1)
                fprintf( ofile, "(%c) %d %d monthshow\n",
                         month_name[month], xloc, yloc + 40);
