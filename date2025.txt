@@ -20,7 +20,7 @@ YYYY MM DD M Pt Text
 2025 06 11 f Flower
 2025 07 10 f 12 Hay$Umbra
 2025 08 09 f Grain
-2025 09 07 f Fruit
+2025 09 07 f 13 Fruit$Total
 2025 10 07 f Harvest
 2025 11 05 f Hunter's
 2025 12 04 f 12 Before$Yule
@@ -43,7 +43,7 @@ YYYY MM DD M Pt Text
 2025 11 10 h 15 Armi$Day
 2025 11 27 h T-Day
 2025 12 25 h XMas
-2025 04 22 b 12 SCG$B-day
-2025 07 31 b 12 KHG$B-day
+2025 04 22 b 14 SCG$B-day
+2025 07 31 b 14 KHG$B-day
  2025 03 14 h \p     (conflicts with Lenten full moon)
 2025 07 22 h ~\p

@@ -2,7 +2,7 @@
 YYYY MM DD M Pt Text
 2024 01 11 n -
 2024 02 09 n -
-2024 03 10 n -
+2024 03 10 n 12 DST$begin
 2024 04 08 n Total
 2024 05 08 n -
 2024 06 06 n -
@@ -37,6 +37,7 @@ YYYY MM DD M Pt Text
 2024 06 16 h 16 Dad$Day
 2024 09 02 h 15 Labor$Day
 2024 10 14 h 18 InP$Day
+2024 11 03 h 12 DST$ends
 2024 11 11 h 15 Armi$Day
 2024 11 28 h T-Day
 2024 12 25 h XMas

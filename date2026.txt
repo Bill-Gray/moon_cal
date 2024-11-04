@@ -1,26 +1,26 @@
    Dates for 2026.  See 'date2023.txt' for explanation.
 YYYY MM DD M Pt Text
 2026 01 18 n -
-2026 02 17 n -
+2026 02 17 n Annular
 2026 03 19 n -
 2026 04 17 n -
 2026 05 16 n -
 2026 06 15 n -
 2026 07 14 n -
-2026 08 12 n -
+2026 08 12 n Total
 2026 09 11 n -
 2026 10 10 n -
 2026 11 09 n -
 2026 12 09 n -
 2026 01 03 f 12 After$Yule
 2026 02 01 f Wolf
-2026 03 03 f Lenten
+2026 03 03 f 12 Lenten$Total
 2026 04 02 f Egg
 2026 05 01 f Milk
 2026 05 31 f Flower
 2026 06 29 f Hay
 2026 07 29 f Grain
-2026 08 28 f Fruit
+2026 08 28 f 12 Fruit$Umbra
 2026 09 26 f Harvest
 2026 10 26 f Hunter's
 2026 11 24 f 12 Before$Yule
