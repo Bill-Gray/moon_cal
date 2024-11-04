@@ -42,7 +42,7 @@ int main( const int argc, const char **argv)
    size_t i;
    bool use_color = false;
 
-   if( argc < 2 || (year = atoi( argv[1])) < 1900)
+   if( argc < 2 || (year = atoi( argv[1])) < 1900 || year > 2100)
       {
       printf( "'moon_cal' needs a year as a command-line argument.  The lunar chart\n"
               "for that year will be written to 'z.ps'.\n");
@@ -69,7 +69,8 @@ int main( const int argc, const char **argv)
    assert( ifile);
    memset( dates, 0, sizeof( dates));
    while( fgets( buff, sizeof( buff), ifile))
-      if( !memcmp( buff, argv[1], 4) && strlen( buff) > 13)
+      if( !memcmp( buff, argv[1], 4) && strlen( buff) > 13
+                     && strchr( events_shown, buff[11]))
          {
          const int pseudo_jd = atoi( buff + 5) * 31 + atoi( buff + 8);
 
@@ -111,6 +112,7 @@ int main( const int argc, const char **argv)
          {
          int yloc = 670 - day * 40;
          const char *month_name = " JFMAMJJASOND";
+         const char *override_default_day = NULL;
          const char *text, *weekdays[7] = { "Su", "Mo", "Tu",
                      "We", "Th", "Fr", "Sa" };
          const char *date_text = dates[month * 31 + day];
@@ -120,7 +122,7 @@ int main( const int argc, const char **argv)
 
          is_new_moon = (date_text && *date_text == 'n');
          text = weekdays[day_of_week];
-         if( date_text && date_text[2] != '-' && strchr( events_shown, *date_text))
+         if( date_text && date_text[2] != '-')
             text = date_text + 2;
          split_ptr = strchr( text, '$');
          if( strstr( text, "\\p"))
@@ -131,9 +133,13 @@ int main( const int argc, const char **argv)
          if( use_color)
             {
             if( date_text && *date_text == 'h')
-               fprintf( ofile, "holiday ");
+               override_default_day = "holiday";
+            else if( date_text && *date_text == 'b')
+               override_default_day = "birthday";
             else if( !day_of_week)
-               fprintf( ofile, "sunday ");
+               override_default_day = "sunday";
+            if( override_default_day)
+               fprintf( ofile, "%s ", override_default_day);
             }
          if( is_new_moon)
             fprintf( ofile, "(%s) %d %d newmoon\n",
@@ -162,9 +168,8 @@ int main( const int argc, const char **argv)
             else        /* pi (3/14) or ~pi (22/7)   */
                fprintf( ofile, "(%s) show_pi\n", (*split_ptr == '~' ? "~p" : "p"));
             }
-         if( use_color)
-            if( !day_of_week || (date_text && *date_text == 'h'))
-               fprintf( ofile, "def_day\n");
+         if( override_default_day)
+            fprintf( ofile, "def_day\n");
          if( day == 1)
             fprintf( ofile, "(%c) %d %d monthshow\n",
                      month_name[month], xloc, yloc + 40);
