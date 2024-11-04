@@ -12,14 +12,6 @@
 %%PageResources: font Times-Roman
 %%EndDefaults
 
-newpath
-36 50 moveto
-0 700 rlineto
-550 0 rlineto
-0 -700 rlineto
-closepath clip
-newpath
-
 /font_size {
    /fontsize exch def
    /Times-Roman findfont fontsize scalefont setfont } def
@@ -180,13 +172,30 @@ text fit_to_label stroke
 BREAK
 } def
 
+/bottom_margin 50 def
+/left_margin 36 def
+/height 700 def
+/width 550 def
+
+/set_clip_rect {
+   newpath
+   left_margin bottom_margin  moveto
+   0 height rlineto
+   width 0 rlineto
+   0 height -1 mul rlineto
+   closepath clip
+   newpath } def
+
 %%Page: 1 1
 %%PageOrientation: Portrait
+set_clip_rect
 show_calendar
 showpage
 
 %%Page: 2 2
 %%PageOrientation: Portrait
-0 700 translate
+0 height translate
+/bottom_margin bottom_margin height sub def
+set_clip_rect
 show_calendar
 showpage
