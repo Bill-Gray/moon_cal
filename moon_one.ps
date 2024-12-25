@@ -1,0 +1,197 @@
+%!PS-Adobe-2.0
+%%Pages: 1
+%%PageOrder: Ascend
+%%DocumentMedia: Default 612 1392 0 () ()
+%%Creator: calendar.cpp
+%%Copyright: none
+%%Title: Lunar calendar for YEAR
+%%Version: none
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Times-Roman
+%%EndDefaults
+
+/font_size {
+   /fontsize exch def
+   /Times-Roman findfont fontsize scalefont setfont } def
+
+/default_font_size  {
+   16 font_size } def
+
+default_font_size
+
+/moon_r 18 def
+
+/leftmoon {
+/y exch def
+/x exch def
+/phase exch def
+/text exch def
+gsave
+   newpath
+   x y translate
+   0 0 moon_r 90 270 arc
+   phase 1 scale
+   0 0 moon_r 270 90 arcn
+   closepath
+   gsave
+     .7 setgray fill
+   grestore
+   stroke
+grestore
+x y moveto
+text fit_to_label stroke
+} def
+
+/rightmoon {
+/y exch def
+/x exch def
+/phase exch def
+/text exch def
+gsave
+   newpath
+   x y translate
+   0 0 moon_r 90 270 arcn
+   phase 1 scale
+   0 0 moon_r 270 90 arc
+   closepath
+   gsave
+     .7 setgray fill
+   grestore
+   stroke
+grestore
+x y moveto
+text fit_to_label stroke
+} def
+
+/centershow
+{ dup stringwidth pop
+ -0.5 mul 0
+  rmoveto show } def
+
+% Similar,  except fits to desired width
+
+/fit_to_label  {      % takes text on the stack
+   25 font_size
+   dup stringwidth
+   /textheight exch def
+   /textwidth exch def
+   dup length
+   2 eq
+   {              % it's a two-char string,  i.e.,  a weekday
+      0 fontsize -.3 mul rmoveto
+      textwidth -0.51 mul 0 rmoveto show
+   }
+   {
+      /max_string_width 32 def
+      /resize max_string_width textwidth div def
+      gsave
+      0 fontsize resize mul -.3 mul rmoveto
+      currentpoint translate
+      resize resize scale
+      0 0 moveto
+      centershow
+      grestore
+   } ifelse
+} def
+
+/show_pi  {    % either p (Mar 14) or ~p (Jun 28) on stack
+   x y 10 sub moveto gsave
+   /Symbol findfont 32 scalefont setfont centershow
+   grestore
+} def
+
+/fullmoon  {  % string (usually full moon name), x, y on stack
+   /y exch def
+   /x exch def
+   x y moveto fit_to_label
+   default_font_size
+   newpath
+   x y moon_r 0 360 arc
+   stroke
+ } def
+
+/two_strings  {   % font size and two strings on the stack
+   font_size
+   x y  4 sub fontsize .5 mul sub moveto centershow
+   x y  4 sub fontsize .5 mul add moveto centershow
+   default_font_size
+   stroke                     } def
+
+/newmoon  {  % string (usually weekday), x, y on stack
+   /y exch def
+   /x exch def
+   30 font_size
+   x y moveto fit_to_label
+   default_font_size
+   0 20 360
+      { /ang exch def newpath
+      x y moon_r ang 10 add ang arcn stroke } for
+   } def
+
+/dayshow  {  % string (1-31), x, y on stack
+   5 sub       % nudge text down on page
+   28 font_size moveto centershow
+   default_font_size
+ } def
+
+/monthshow  {  % string (J, F, M,  etc.), x, y on stack
+   5 sub       % nudge text down on page
+   28 font_size moveto centershow
+   default_font_size
+ } def
+
+/yearshow { % string (four-digit year)
+   310 700 moveto
+   72 font_size centershow
+   default_font_size
+ } def
+
+/logoshow  {
+   350 -640 moveto 12 font_size (https://www.github.com/Bill-Gray/moon_cal) show stroke
+} def
+
+/sunday  {
+1 0 0 setrgbcolor
+} def
+
+/holiday  {
+0.3 0.5 0 setrgbcolor
+} def
+
+/birthday  {
+0 0 0.8 setrgbcolor
+} def
+
+/def_day   {
+0 setgray
+} def
+
+/show_calendar {
+BREAK
+} def
+
+/bottom_margin 50 def
+/left_margin 36 def
+/height 1300 def
+/width 550 def
+
+/set_clip_rect {
+   newpath
+   left_margin bottom_margin  moveto
+   0 height rlineto
+   width 0 rlineto
+   0 height -1 mul rlineto
+   closepath clip
+   newpath } def
+
+/base 600 def
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+0 base translate
+/bottom_margin bottom_margin base sub def
+set_clip_rect
+show_calendar
+showpage
