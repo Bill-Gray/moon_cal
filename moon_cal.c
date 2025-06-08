@@ -33,7 +33,7 @@ static int jd_of_year( const int year)
 
 #define MAX_DATES 408
 
-int main( const int argc, const char **argv)
+int dummy_main( const int argc, const char **argv)
 {
    FILE *ofile, *ifile;
    char buff[100], *dates[MAX_DATES];
@@ -65,28 +65,30 @@ int main( const int argc, const char **argv)
 
    jd = jd_of_year( year) - 1;
    snprintf( buff, sizeof( buff), "date%d.txt", year);
-   ifile = fopen( buff, "rb");
-   assert( ifile);
    memset( dates, 0, sizeof( dates));
-   while( fgets( buff, sizeof( buff), ifile))
-      if( !memcmp( buff, argv[1], 4) && strlen( buff) > 13
-                     && strchr( events_shown, buff[11]))
-         {
-         const int pseudo_jd = atoi( buff + 5) * 31 + atoi( buff + 8);
-
-         assert( pseudo_jd > 31 && pseudo_jd <= 31 * 13);
-         if( dates[pseudo_jd])
+   ifile = fopen( buff, "rb");
+   if( ifile)
+      {
+      while( fgets( buff, sizeof( buff), ifile))
+         if( !memcmp( buff, argv[1], 4) && strlen( buff) > 13
+                        && strchr( events_shown, buff[11]))
             {
-            fprintf( stderr, "You have two date texts defined for this date\n");
-            fprintf( stderr, "%s%s\nPlease remove one of them.\n",
-                        buff + 11, dates[pseudo_jd]);
-            return( -1);
+            const int pseudo_jd = atoi( buff + 5) * 31 + atoi( buff + 8);
+
+            assert( pseudo_jd > 31 && pseudo_jd <= 31 * 13);
+            if( dates[pseudo_jd])
+               {
+               fprintf( stderr, "You have two date texts defined for this date\n");
+               fprintf( stderr, "%s%s\nPlease remove one of them.\n",
+                           buff + 11, dates[pseudo_jd]);
+               return( -1);
+               }
+            dates[pseudo_jd] = (char *)malloc( strlen( buff + 10));
+            buff[strlen( buff) - 1] = '\0';     /* remove trailing lf */
+            strcpy( dates[pseudo_jd], buff + 11);
             }
-         dates[pseudo_jd] = (char *)malloc( strlen( buff + 10));
-         buff[strlen( buff) - 1] = '\0';     /* remove trailing lf */
-         strcpy( dates[pseudo_jd], buff + 11);
-         }
-   fclose( ifile);
+      fclose( ifile);
+      }
 
    ifile = fopen( "moon_cal.ps", "rb");
    assert( ifile);
@@ -185,3 +187,105 @@ int main( const int argc, const char **argv)
    fclose( ofile);
    return( 0);
 }
+
+#ifndef CGI_VERSION     /* "standard" command-line test version */
+int main( const int argc, const char **argv)
+{
+   return( dummy_main( argc, argv));
+}
+#else
+
+#include <time.h>
+#ifdef __has_include
+   #if __has_include(<cgi_func.h>)
+       #include "cgi_func.h"
+   #else
+       #error   \
+         'cgi_func.h' not found.  This project depends on the 'lunar'\
+         library.  See www.github.com/Bill-Gray/lunar .\
+         Clone that repository,  'make'  and 'make install' it.
+       #ifdef __GNUC__
+         #include <stop_compiling_here>
+            /* Above line suppresses cascading errors. */
+       #endif
+   #endif
+#else
+   #include "cgi_func.h"
+#endif
+
+int main( void)
+{
+   char field[30], year[5], buff[1000];
+   FILE *lock_file = fopen( "lock.txt", "a"), *ifile;
+   int rval, i;
+   const time_t t0 = time( NULL);
+   int n_args = 2;
+   char *args[20];
+
+   if( !lock_file)
+      {
+      printf( "Content-type: text/html\n\n");
+      printf( "<pre>");
+      printf( "<h1> Server is busy.  Try again in a minute or two. </h1>");
+      printf( "<p> Your lunar calendar is very important to us! </p>");
+      printf( "<p> (I don't really expect this service to get a lot of "
+              "use.  If you see this error several times in a row, "
+              "something else must be wrong; please contact me.)</p>");
+      return( 0);
+      }
+   setvbuf( lock_file, NULL, _IONBF, 0);
+   fprintf( lock_file, "Current time %.24s UTC\n", asctime( gmtime( &t0)));
+   fprintf( lock_file, "moon_cal ver: %s %s\n", __DATE__, __TIME__);
+   avoid_runaway_process( 300);
+   fprintf( lock_file, "300-second limit set\n");
+   args[0] = NULL;
+   args[1] = year;
+   args[2] = NULL;
+   strcpy( year, "2021");
+   rval = initialize_cgi_reading( );
+   if( rval <= 0)
+      {
+      printf( "<p> <b> CGI data reading failed : error %d </b>", rval);
+      printf( "This isn't supposed to happen.</p>\n");
+      return( 0);
+      }
+   while( !get_cgi_data( field, buff, NULL, sizeof( buff)))
+      {
+      fprintf( lock_file, "Field '%s': '%s'\n", field, buff);
+      if( !strcmp( field, "year") && strlen( buff) == 4)
+         strcpy( year, buff);
+      }
+   fprintf( lock_file, "Options read and parsed;  year '%s'\n", year);
+   for( i = 0; i < n_args; i++)
+      fprintf( lock_file, "%d: '%s'\n", i, args[i]);
+   rval = dummy_main( n_args, (const char **)args);
+   fprintf( lock_file, "Done: rval %d\n", rval);
+   ifile = fopen( "z.ps", "rb");
+   if( !ifile)
+      fprintf( lock_file, "z.ps not opened!\n");
+   else
+      {
+      fclose( ifile);
+      system( "ps2pdf z.ps z.pdf");
+      ifile = fopen( "z.pdf", "rb");
+      if( !ifile)
+         fprintf( lock_file, "z.pdf not opened!\n");
+      else
+         {
+         size_t bytes_read;
+
+         printf( "Content-type: application/pdf\n");
+         fseek( ifile, 0L, SEEK_END);
+         printf( "Content-length: %ld\n\n", ftell( ifile));
+         fseek( ifile, 0L, SEEK_SET);
+         while( 0 != (bytes_read = fread( buff, 1, sizeof( buff), ifile)))
+            fwrite( buff, bytes_read, 1, stdout);
+         fclose( ifile);
+         fprintf( lock_file, "Copied 'z.pdf'\n");
+         }
+      }
+// for( i = 3; i < n_args; i++)
+//    free( args[i]);
+   fclose( lock_file);
+}
+#endif
