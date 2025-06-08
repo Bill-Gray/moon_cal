@@ -215,11 +215,11 @@ int main( const int argc, const char **argv)
 
 int main( void)
 {
-   char field[30], year[5], buff[1000];
+   char field[30], year[5], buff[1000], events_shown[20];
    FILE *lock_file = fopen( "lock.txt", "a"), *ifile;
    int rval, i;
    const time_t t0 = time( NULL);
-   int n_args = 2;
+   int n_args = 3;
    char *args[20];
 
    if( !lock_file)
@@ -240,8 +240,10 @@ int main( void)
    fprintf( lock_file, "300-second limit set\n");
    args[0] = NULL;
    args[1] = year;
-   args[2] = NULL;
+   args[2] = events_shown;
+   args[3] = NULL;
    strcpy( year, "2021");
+   strcpy( events_shown, "-e");
    rval = initialize_cgi_reading( );
    if( rval <= 0)
       {
@@ -254,6 +256,23 @@ int main( void)
       fprintf( lock_file, "Field '%s': '%s'\n", field, buff);
       if( !strcmp( field, "year") && strlen( buff) == 4)
          strcpy( year, buff);
+      else if( !strcmp( field, "us_hol"))
+         strcat( events_shown, "u");
+      else if( !strcmp( field, "full"))
+         strcat( events_shown, "f");
+      else if( !strcmp( field, "new"))
+         strcat( events_shown, "n");
+      else if( !strcmp( field, "holi"))
+         strcat( events_shown, "h");
+      else if( !strcmp( field, "equi"))
+         strcat( events_shown, "e");
+      else if( !strcmp( field, "birt"))
+         strcat( events_shown, "b");
+      else if( !strcmp( field, "color"))
+         {
+         args[n_args++] = "-c";
+         args[n_args] = NULL;
+         }
       }
    fprintf( lock_file, "Options read and parsed;  year '%s'\n", year);
    for( i = 0; i < n_args; i++)
