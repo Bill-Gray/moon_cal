@@ -12,9 +12,17 @@
 %%PageResources: font Times-Roman
 %%EndDefaults
 
+/Times-Roman findfont               % load the font, for instance, Courier
+0 dict copy begin               % copy it to a new dictionary
+/Encoding ISOLatin1Encoding def % replace encoding vector
+/MyCourier /FontName def        % replace font name
+currentdict end
+dup /FID undef                  % remove internal data
+/Latin1Times-Roman exch definefont pop  % define the new font
+
 /font_size {
    /fontsize exch def
-   /Times-Roman findfont fontsize scalefont setfont } def
+   /Latin1Times-Roman findfont fontsize scalefont setfont } def
 
 /default_font_size  {
    16 font_size } def

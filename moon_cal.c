@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 /* Code to create a PostScript lunar strip chart for a given year.
 Run with the year as a command-line argument.  Output is to 'z.ps'.
@@ -31,6 +32,88 @@ static int jd_of_year( const int year)
    return( 1721060 + year * 365 + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400);
 }
 
+void utf8_to_win1252( char *text)
+{
+   char *optr = text;
+
+   while( *text)
+      if( (unsigned char)*text < 0x80)
+         *optr++ = *text++;
+      else
+         {
+         const unsigned char t0 = (unsigned char)text[0];
+         const unsigned char t1 = (unsigned char)text[1];
+
+         *optr++ = (char)( (t0 << 6) | (t1 & 0x3f));
+         text += 2;
+         }
+   *optr = '\0';
+}
+
+static void fix_for_postscript( char *buff)
+{
+   unsigned char *tptr;
+
+   utf8_to_win1252( buff);
+   for( tptr = (unsigned char *)buff; *tptr; tptr++)
+      if( *tptr == '(' || *tptr == ')' || (*tptr & 0x80))
+         {
+         char tbuff[8];
+
+         memmove( tptr + 3, tptr, strlen( (char *)tptr) + 1);
+         sprintf( tbuff, "%03o", *tptr);
+         memcpy( tptr + 1, tbuff, 3);
+         tptr[0] = '\\';
+         }
+}
+
+static char *get_text( char *buff, const char language, int idx)
+{
+   static char *xlate = NULL;
+   char search[3], *rval = buff, *tptr;
+
+   if( !buff)
+      {
+      free( xlate);
+      xlate = NULL;
+      return( NULL);
+      }
+   if( !xlate)
+      {
+      FILE *ifile = fopen( "xlate.txt", "rb");
+      size_t len;
+
+      assert( ifile);
+      fseek( ifile, 0, SEEK_END);
+      len = ftell( ifile);
+      fseek( ifile, 0, SEEK_SET);
+      xlate = (char *)malloc( len + 1);
+      fread( xlate, len, 1, ifile);
+      fclose( ifile);
+      xlate[len] = '\0';
+      }
+   search[0] = '!';
+   search[1] = language;
+   search[2] = '\0';
+   tptr = strstr( xlate, search);
+   assert( tptr);
+   tptr += 3;
+   while( idx >= 0)
+      {
+      while( isspace( *tptr))
+         tptr++;
+      while( !isspace( *tptr))
+         if( !idx)
+            *buff++ = *tptr++;
+         else
+            tptr++;
+      idx--;
+      }
+   *buff = '\0';
+   fix_for_postscript( rval);
+   return( rval);
+}
+
 #define MAX_DATES 408
 
 int dummy_main( const int argc, const char **argv)
@@ -41,6 +124,7 @@ int dummy_main( const int argc, const char **argv)
    int month, jd, year;                /* equinoxes,  and holidays */
    size_t i;
    bool use_color = false;
+   char language = 'e';
 
    if( argc < 2 || (year = atoi( argv[1])) < 1900 || year > 2100)
       {
@@ -54,6 +138,9 @@ int dummy_main( const int argc, const char **argv)
             {
             case 'e':
                events_shown = argv[i] + 2;
+               break;
+            case 'l':
+               language = argv[i][2];
                break;
             case 'c':
                use_color = true;
@@ -122,17 +209,15 @@ int dummy_main( const int argc, const char **argv)
       for( day = 1; day <= end_day; day++)
          {
          int yloc = 670 - day * 40;
-         const char *month_name = " JFMAMJJASOND";
          const char *override_default_day = NULL;
-         const char *text, *weekdays[7] = { "Su", "Mo", "Tu",
-                     "We", "Th", "Fr", "Sa" };
          const char *date_text = dates[month * 31 + day];
-         const char *split_ptr;
+         const char *split_ptr, *text;
          const int day_of_week = (jd + day + 2) % 7;
          int is_new_moon;
+         char tbuff[30];
 
          is_new_moon = (date_text && *date_text == 'n');
-         text = weekdays[day_of_week];
+         text = get_text( tbuff, language, day_of_week);
          if( date_text && date_text[2] != '-')
             text = date_text + 2;
          split_ptr = strchr( text, '$');
@@ -181,12 +266,14 @@ int dummy_main( const int argc, const char **argv)
             }
          if( override_default_day)
             fprintf( ofile, "def_day\n");
+         get_text( tbuff, language, month + 6);
          if( day == 1)
-            fprintf( ofile, "(%c) %d %d monthshow\n",
-                     month_name[month], xloc, yloc + 40);
+            fprintf( ofile, "(%c) %d %d monthshow\n", *tbuff,
+                                        xloc, yloc + 40);
          }
       jd += month_length( month, year);
       }
+   get_text( NULL, '\0', 0);
    for( i = 0; i < sizeof( dates) / sizeof( dates[0]); i++)
       if( dates[i])
          free( dates[i]);
@@ -225,6 +312,7 @@ int main( const int argc, const char **argv)
 int main( void)
 {
    char field[30], year[5], buff[1000], events_shown[20];
+   char language[5];
    FILE *lock_file = fopen( "lock.txt", "a"), *ifile;
    int rval, i;
    const time_t t0 = time( NULL);
@@ -281,6 +369,12 @@ int main( void)
          {
          args[n_args++] = "-c";
          args[n_args] = NULL;
+         }
+      else if( !strcmp( field, "lang"))
+         {
+         args[n_args++] = language;
+         args[n_args] = NULL;
+         snprintf( language, sizeof( language), "-l%c", buff[0]);
          }
       }
    fprintf( lock_file, "Options read and parsed;  year '%s'\n", year);

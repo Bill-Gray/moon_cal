@@ -1,0 +1,24 @@
+   Translations for lunar calendars.  Adding further Latin-alphabet languages
+   should be quite easy.  Each begins with '!' followed by a letter for that
+   language,  followed by a line with the abbreviated days of the week,  followed
+   by a line with the month initials for the top line.
+   Cyrillic or Asian text is a job for another day (sadly,  PostScript is
+   surprisingly ignorant of Unicode...)
+!e
+Su Mo Tu We Th Fr Sa
+J F M A M J J A S O N D
+!d
+So Mo Di Mi Do Fr Sa
+J F M A M J J A S O N D
+!f
+di lu ma me je ve sa
+J F M A M J J A S O N D
+!i
+do lu ma me gi ve sa
+G F M A M G L A S O N D
+!s
+do lu ma mi ju vi sá
+E F M A M J J A S O N D
+!n
+sø ma ti on to fr lø
+J F M A M J J A S O N D
