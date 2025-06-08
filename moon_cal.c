@@ -70,23 +70,32 @@ int dummy_main( const int argc, const char **argv)
    if( ifile)
       {
       while( fgets( buff, sizeof( buff), ifile))
-         if( !memcmp( buff, argv[1], 4) && strlen( buff) > 13
-                        && strchr( events_shown, buff[11]))
+         if( !memcmp( buff, argv[1], 4) && strlen( buff) > 13)
             {
-            const int pseudo_jd = atoi( buff + 5) * 31 + atoi( buff + 8);
+            int show_it = (NULL != strchr( events_shown, buff[11]));
 
-            assert( pseudo_jd > 31 && pseudo_jd <= 31 * 13);
-            if( dates[pseudo_jd])
+            if( !show_it && (buff[11] == 'n' || buff[11] == 'f'))
                {
-               fprintf( stderr, "You have two date texts defined for this date\n");
-               fprintf( stderr, "%s%s\nPlease remove one of them.\n",
-                           buff + 11, dates[pseudo_jd]);
-               return( -1);
+               show_it = 1;
+               strcpy( buff + 12, " -\n");
                }
-            dates[pseudo_jd] = (char *)malloc( strlen( buff + 10));
-            buff[strlen( buff) - 1] = '\0';     /* remove trailing lf */
-            strcpy( dates[pseudo_jd], buff + 11);
-            }
+            if( show_it)
+               {
+               const int pseudo_jd = atoi( buff + 5) * 31 + atoi( buff + 8);
+
+               assert( pseudo_jd > 31 && pseudo_jd <= 31 * 13);
+               if( dates[pseudo_jd])
+                  {
+                  fprintf( stderr, "You have two date texts defined for this date\n");
+                  fprintf( stderr, "%s%s\nPlease remove one of them.\n",
+                              buff + 11, dates[pseudo_jd]);
+                  return( -1);
+                  }
+               dates[pseudo_jd] = (char *)malloc( strlen( buff + 10));
+               buff[strlen( buff) - 1] = '\0';     /* remove trailing lf */
+               strcpy( dates[pseudo_jd], buff + 11);
+               }
+         }
       fclose( ifile);
       }
 
