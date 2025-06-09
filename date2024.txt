@@ -29,17 +29,17 @@ YYYY MM DD M Pt Text
 2024 06 20 e Sols
 2024 09 22 e Equi
 2024 12 21 e Sols
-2024 01 15 h 15 MLK$Day
-2024 02 19 h 16 Pres$Day
+2024 01 15 u 15 MLK$Day
+2024 02 19 u 16 Pres$Day
 2024 03 31 h Easter
-2024 04 15 h 16 Patr$Day
-2024 05 12 h 16 Mom$Day
-2024 06 16 h 16 Dad$Day
-2024 09 02 h 15 Labor$Day
-2024 10 14 h 18 InP$Day
-2024 11 03 h 12 DST$ends
-2024 11 11 h 15 Armi$Day
-2024 11 28 h T-Day
+2024 04 15 u 16 Patr$Day
+2024 05 12 u 16 Mom$Day
+2024 06 16 u 16 Dad$Day
+2024 09 02 u 15 Labor$Day
+2024 10 14 u 18 InP$Day
+2024 11 03 u 12 DST$ends
+2024 11 11 u 15 Armi$Day
+2024 11 28 u T-Day
 2024 12 25 h XMas
 2024 04 22 b 12 SCG$B-day
 2024 07 31 b 12 KHG$B-day

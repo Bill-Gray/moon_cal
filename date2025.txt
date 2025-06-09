@@ -28,20 +28,20 @@ YYYY MM DD M Pt Text
 2025 06 21 e Sols
 2025 09 22 e Equi
 2025 12 21 e Sols
-2025 01 20 h 15 MLK$Day
-2025 02 17 h 16 Pres$Day
-2025 03 09 h 12 DST$start
+2025 01 20 u 15 MLK$Day
+2025 02 17 u 16 Pres$Day
+2025 03 09 u 12 DST$start
 2025 04 20 h Easter
-2025 04 21 h 16 Patr$Day
-2025 05 11 h 16 Mom$Day
-2025 05 26 h 16 Memo$Day
-2025 06 15 h 16 Dad$Day
-2025 06 19 h 14 June-$teenth
-2025 09 01 h 15 Labor$Day
-2025 10 13 h 18 InP$Day
-2025 11 02 h 12 DST$ends
-2025 11 10 h 15 Armi$Day
-2025 11 27 h T-Day
+2025 04 21 u 16 Patr$Day
+2025 05 11 u 16 Mom$Day
+2025 05 26 u 16 Memo$Day
+2025 06 15 u 16 Dad$Day
+2025 06 19 u 14 June-$teenth
+2025 09 01 u 15 Labor$Day
+2025 10 13 u 18 InP$Day
+2025 11 02 u 12 DST$ends
+2025 11 10 u 15 Armi$Day
+2025 11 27 u T-Day
 2025 12 25 h XMas
 2025 04 22 b 14 SCG$B-day
 2025 07 31 b 14 KHG$B-day

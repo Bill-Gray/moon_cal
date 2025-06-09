@@ -29,20 +29,20 @@ YYYY MM DD M Pt Text
 2026 06 21 e Sols
 2026 09 23 e Equi
 2026 12 21 e Sols
-2026 01 19 h 15 MLK$Day
-2026 02 16 h 16 Pres$Day
-2026 03 08 h 12 DST$start
+2026 01 19 u 15 MLK$Day
+2026 02 16 u 16 Pres$Day
+2026 03 08 u 12 DST$start
 2026 04 05 h Easter
-2026 04 20 h 16 Patr$Day
-2026 05 10 h 16 Mom$Day
-2026 05 25 h 16 Memo$Day
- 2026 06 21 h 16 Dad$Day      (conflict with solstice)
-2026 06 19 h 14 June-$teenth
-2026 09 07 h 15 Labor$Day
-2026 10 12 h 18 InP$Day
-2026 11 01 h 12 DST$ends
-2026 11 11 h 15 Armi$Day
-2026 11 26 h T-Day
+2026 04 20 u 16 Patr$Day
+2026 05 10 u 16 Mom$Day
+2026 05 25 u 16 Memo$Day
+ 2026 06 21 u 16 Dad$Day      (conflict with solstice)
+2026 06 19 u 14 June-$teenth
+2026 09 07 u 15 Labor$Day
+2026 10 12 u 18 InP$Day
+2026 11 01 u 12 DST$ends
+2026 11 11 u 15 Armi$Day
+2026 11 26 u T-Day
 2026 12 25 h XMas
 2026 04 22 b 12 SCG$B-day
 2026 07 31 b 12 KHG$B-day

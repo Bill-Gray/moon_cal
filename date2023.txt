@@ -2,22 +2,28 @@
 get text to be shown on that date.  A '-' indicates that the default
 (two-letter day of week abbreviation) text should be shown;  this is
 done for all the new moons,  except those coinciding with solar eclipses.
+
    For each date,  a 'category' letter is given : n=new moon,  f=full
-moon, e=equinox/solstice,  h=holiday,  b=birthday.  Further categories
-may be added,  and the categories to be used can be specified on the
-command line.  By default,  all are shown except the birthdays.
+moon, e=equinox/solstice,  u=United States holiday,  h=holiday,
+b=birthday.  Further categories may be added,  and the categories to
+be used can be specified on the command line.  By default,  all are
+shown except the birthdays.
+
    '\p' on March 14 (3/14,  US-style) and '~\p' on July 22 (22/7,
 everywhere else in the world) are for Pi Day and Pi Approximation Day,
 respectively.
+
    A '$',  as in 'After$Yule' and 'Before$Yule',  indicates that the
 text in question is to be shown on two lines.  For those,  you have to
 specify a font size in points (11 points for 'Before$Yule' and 12
 points for 'After$Yule',  for example).  'moon_cal.ps' has some logic
 to determine a best-fit size for single lines,  but I've not tried to
 extend that to the two-line cases.
+
    This file has to be assembled by hand for each year.  This is not
 particularly difficult,  but is why I've not attempted to go into the
 distant future/past.
+
 YYYY MM DD M Pt Text
 2023 01 21 n -
 2023 02 20 n -
@@ -48,14 +54,14 @@ YYYY MM DD M Pt Text
 2023 06 21 e Sols
 2023 09 23 e Equi
 2023 12 22 e Sols
-2023 01 16 h 15 MLK$Day
+2023 01 16 u 15 MLK$Day
 2023 04 09 h Easter
-2023 04 17 h 16 Patr$Day
-2023 05 14 h 16 Mom$Day
-2023 09 04 h 15 Labor$Day
-2023 10 09 h 18 InP$Day
-2023 11 11 h 15 Armi$Day
-2023 11 23 h T-Day
+2023 04 17 u 16 Patr$Day
+2023 05 14 u 16 Mom$Day
+2023 09 04 u 15 Labor$Day
+2023 10 09 u 18 InP$Day
+2023 11 11 u 15 Armi$Day
+2023 11 23 u T-Day
 2023 12 25 h XMas
 2023 04 22 b 12 SCG$B-day
 2023 07 31 b 12 KHG$B-day
