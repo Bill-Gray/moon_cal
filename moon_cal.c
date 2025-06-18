@@ -120,8 +120,8 @@ int dummy_main( const int argc, const char **argv)
 {
    FILE *ofile, *ifile;
    char buff[100], *dates[MAX_DATES];
-   const char *events_shown = "nfeh";  /* by default,  show new/full moons, */
-   int month, jd, year;                /* equinoxes,  and holidays */
+   const char *events_shown = "nfehu";  /* by default,  show new/full moons, */
+   int month, jd, year;            /* equinoxes,  holidays,  and US holidays */
    size_t i;
    bool use_color = false;
    char language = 'e';
