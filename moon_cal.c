@@ -204,8 +204,12 @@ int dummy_main( const int argc, const char **argv)
       {
       const int end_day = month_length( month, year);
       const int xloc = 30 + (month + month / 7) * 40;
+      char tbuff[30];
       int day;
 
+      fprintf( ofile, "%d set_month\n", month);
+      get_text( tbuff, language, month + 6);
+      fprintf( ofile, "(%c) monthshow\n", *tbuff);
       for( day = 1; day <= end_day; day++)
          {
          int yloc = 670 - day * 40;
@@ -214,7 +218,6 @@ int dummy_main( const int argc, const char **argv)
          const char *split_ptr, *text;
          const int day_of_week = (jd + day + 2) % 7;
          int is_new_moon;
-         char tbuff[30];
 
          is_new_moon = (date_text && *date_text == 'n');
          text = get_text( tbuff, language, day_of_week);
@@ -223,9 +226,6 @@ int dummy_main( const int argc, const char **argv)
          split_ptr = strchr( text, '$');
          if( strstr( text, "\\p"))
             split_ptr = text;
-         if( month == 7)
-            fprintf( ofile, "(%d) %d %d dayshow\n",
-                    day, xloc - 40, yloc);
          if( use_color)
             {
             if( date_text && *date_text == 'h')
@@ -266,10 +266,6 @@ int dummy_main( const int argc, const char **argv)
             }
          if( override_default_day)
             fprintf( ofile, "def_day\n");
-         get_text( tbuff, language, month + 6);
-         if( day == 1)
-            fprintf( ofile, "(%c) %d %d monthshow\n", *tbuff,
-                                        xloc, yloc + 40);
          }
       jd += month_length( month, year);
       }

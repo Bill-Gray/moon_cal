@@ -31,6 +31,44 @@ default_font_size
 
 /moon_r 18 def
 
+% In portrait mode,  the days of the month have x-coordinate
+% 'centerline' and y-coordinate 'topline'.  Day 1 <= N <= 31
+% has y-coordinate topline - day * day_spacing.  Months have
+% x-coordinates separated by 'month_spacing' increments from
+% 'centerline' (see the 'set_month' function).
+
+/centerline 306 def
+/month_spacing 40 def
+/topline 670 def
+/day_spacing 40 def
+
+/set_month {       % take month from 1 to 12 on stack
+dup
+7 lt { 1 sub } if    % month is now 0 to 5,  or 7 to 12
+6 sub month_spacing mul
+centerline add /xloc exch def
+reset_yloc
+} def
+
+/reset_yloc {
+   /yloc topline day_spacing sub def   % reset yloc to posn for 1st of month
+}     def
+
+/nd  {            % 'next day' : move yloc down for next day
+/yloc yloc day_spacing sub def
+} def
+
+/show_days  {        % show days 1...31 on center
+   /day_string 4 string def
+   reset_yloc
+   28 font_size
+   1 1 31  {
+   day_string cvs centerline yloc 5 sub moveto centershow
+   nd
+   } for
+   default_font_size
+}    def
+
 /leftmoon {
 /y exch def
 /x exch def
@@ -138,15 +176,11 @@ text fit_to_label stroke
       x y moon_r ang 10 add ang arcn stroke } for
    } def
 
-/dayshow  {  % string (1-31), x, y on stack
-   5 sub       % nudge text down on page
-   28 font_size moveto centershow
-   default_font_size
- } def
-
-/monthshow  {  % string (J, F, M,  etc.), x, y on stack
-   5 sub       % nudge text down on page
-   28 font_size moveto centershow
+/monthshow  {  % string (J, F, M,  etc.) on stack
+   28 font_size
+   xloc topline
+   5 sub moveto        % nudge text down five points on page
+   28 font_size centershow
    default_font_size
  } def
 
@@ -197,6 +231,7 @@ BREAK
 %%Page: 1 1
 %%PageOrientation: Portrait
 set_clip_rect
+show_days
 show_calendar
 showpage
 
@@ -205,5 +240,8 @@ showpage
 0 height translate
 /bottom_margin bottom_margin height sub def
 set_clip_rect
+show_days
 show_calendar
+12 font_size
+72 -650 moveto (https://www.projectpluto.com/moon_cal.htm) show
 showpage
