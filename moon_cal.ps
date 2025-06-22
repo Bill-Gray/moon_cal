@@ -36,8 +36,11 @@ default_font_size
 % has y-coordinate topline - day * day_spacing.  Months have
 % x-coordinates separated by 'month_spacing' increments from
 % 'centerline' (see the 'set_month' function).
+%   Let's put the centerline in the middle of an 8.5-inch wide
+% page (close enough for A4).
 
-/centerline 306 def
+/page_width 8.5 72 mul def    % 72 points/inch
+/centerline page_width 2 div def
 /month_spacing 40 def
 /topline 670 def
 /day_spacing 40 def
@@ -51,32 +54,36 @@ reset_yloc
 } def
 
 /reset_yloc {
-   /yloc topline day_spacing sub def   % reset yloc to posn for 1st of month
+   /yloc topline def
 }     def
 
-/nd  {            % 'next day' : move yloc down for next day
+/next_day  {            % 'next day' : move yloc down for next day
 /yloc yloc day_spacing sub def
+} def
+
+/ctr     {
+xloc yloc moveto
 } def
 
 /show_days  {        % show days 1...31 on center
    /day_string 4 string def
    reset_yloc
+   /xloc centerline def
    28 font_size
    1 1 31  {
-   day_string cvs centerline yloc 5 sub moveto centershow
-   nd
+   next_day
+   day_string cvs ctr 0 -5 rmoveto centershow
    } for
    default_font_size
 }    def
 
 /leftmoon {
-/y exch def
-/x exch def
 /phase exch def
 /text exch def
+next_day
 gsave
    newpath
-   x y translate
+   xloc yloc translate
    0 0 moon_r 90 270 arc
    phase 1 scale
    0 0 moon_r 270 90 arcn
@@ -86,18 +93,17 @@ gsave
    grestore
    stroke
 grestore
-x y moveto
+ctr
 text fit_to_label stroke
 } def
 
 /rightmoon {
-/y exch def
-/x exch def
 /phase exch def
 /text exch def
+next_day
 gsave
    newpath
-   x y translate
+   xloc yloc translate
    0 0 moon_r 90 270 arcn
    phase 1 scale
    0 0 moon_r 270 90 arc
@@ -107,7 +113,7 @@ gsave
    grestore
    stroke
 grestore
-x y moveto
+ctr
 text fit_to_label stroke
 } def
 
@@ -143,37 +149,35 @@ text fit_to_label stroke
 } def
 
 /show_pi  {    % either p (Mar 14) or ~p (Jun 28) on stack
-   x y 10 sub moveto gsave
+   ctr 0 -10 rmoveto gsave
    /Symbol findfont 32 scalefont setfont centershow
    grestore
 } def
 
-/fullmoon  {  % string (usually full moon name), x, y on stack
-   /y exch def
-   /x exch def
-   x y moveto fit_to_label
+/fullmoon  {  % string (usually full moon name) on stack
+   next_day
+   ctr fit_to_label
    default_font_size
    newpath
-   x y moon_r 0 360 arc
+   xloc yloc moon_r 0 360 arc
    stroke
  } def
 
 /two_strings  {   % font size and two strings on the stack
    font_size
-   x y  4 sub fontsize .5 mul sub moveto centershow
-   x y  4 sub fontsize .5 mul add moveto centershow
+   ctr 0 fontsize -.5 mul 4 sub rmoveto centershow
+   ctr 0 fontsize  .5 mul 4 sub rmoveto centershow
    default_font_size
    stroke                     } def
 
-/newmoon  {  % string (usually weekday), x, y on stack
-   /y exch def
-   /x exch def
+/newmoon  {  % string (usually weekday) on stack
+   next_day
    30 font_size
-   x y moveto fit_to_label
+   xloc yloc moveto fit_to_label
    default_font_size
    0 20 360
       { /ang exch def newpath
-      x y moon_r ang 10 add ang arcn stroke } for
+      xloc yloc moon_r ang 10 add ang arcn stroke } for
    } def
 
 /monthshow  {  % string (J, F, M,  etc.) on stack

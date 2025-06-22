@@ -203,7 +203,6 @@ int dummy_main( const int argc, const char **argv)
    for( month = 1; month <= 12; month++)
       {
       const int end_day = month_length( month, year);
-      const int xloc = 30 + (month + month / 7) * 40;
       char tbuff[30];
       int day;
 
@@ -212,7 +211,6 @@ int dummy_main( const int argc, const char **argv)
       fprintf( ofile, "(%c) monthshow\n", *tbuff);
       for( day = 1; day <= end_day; day++)
          {
-         int yloc = 670 - day * 40;
          const char *override_default_day = NULL;
          const char *date_text = dates[month * 31 + day];
          const char *split_ptr, *text;
@@ -238,11 +236,9 @@ int dummy_main( const int argc, const char **argv)
                fprintf( ofile, "%s ", override_default_day);
             }
          if( is_new_moon)
-            fprintf( ofile, "(%s) %d %d newmoon\n",
-                     (split_ptr ? " " : text), xloc, yloc);
+            fprintf( ofile, "(%s) newmoon\n", (split_ptr ? " " : text));
          else if( date_text && *date_text == 'f')
-            fprintf( ofile, "(%s) %d %d fullmoon\n",
-                     (split_ptr ? " " : text), xloc, yloc);
+            fprintf( ofile, "(%s) fullmoon\n", (split_ptr ? " " : text));
          else
             {
             double phase = ((double)(jd + day) + 1.0 - 2451550.09766) / 29.530588861;
@@ -250,9 +246,9 @@ int dummy_main( const int argc, const char **argv)
             phase = fmod( phase, 1);
             if( phase < 0.)
                phase += 1.;
-            fprintf( ofile, " (%s) %.3f %d %d %smoon\n",
+            fprintf( ofile, " (%s) %.3f %smoon\n",
                      (split_ptr ? " " : text),
-                     cos( phase * 2. * PI), xloc, yloc,
+                     cos( phase * 2. * PI),
                      (phase < 0.5 ? "right" : "left"));
             }
          if( split_ptr)
