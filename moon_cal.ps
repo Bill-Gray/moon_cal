@@ -7,6 +7,12 @@
 %%Title: Lunar calendar for YEAR
 %%Version: none
 %%DocumentData: Clean7Bit
+%%PageOrder: Ascend
+#if portrait
+%%Orientation: Portrait
+#if landscape
+%%Orientation: Landscape
+#endif
 %%EndComments
 %%BeginDefaults
 %%PageResources: font Times-Roman
@@ -40,6 +46,7 @@ default_font_size
 % page (close enough for A4).
 
 /page_width 8.5 72 mul def    % 72 points/inch
+/page_height 11 72 mul def
 /centerline page_width 2 div def
 /month_spacing 40 def
 /topline 670 def
@@ -61,8 +68,16 @@ reset_yloc
 /yloc yloc day_spacing sub def
 } def
 
+/set_loc {
+#if portrait
+xloc yloc
+#if landscape
+page_height yloc sub 10 add page_width xloc sub
+#endif
+} def
+
 /ctr     {
-xloc yloc moveto
+set_loc moveto
 } def
 
 /show_days  {        % show days 1...31 on center
@@ -77,13 +92,17 @@ xloc yloc moveto
    default_font_size
 }    def
 
+/xlate {
+set_loc translate
+}def
+
 /leftmoon {
 /phase exch def
 /text exch def
 next_day
 gsave
    newpath
-   xloc yloc translate
+   xlate
    0 0 moon_r 90 270 arc
    phase 1 scale
    0 0 moon_r 270 90 arcn
@@ -103,7 +122,7 @@ text fit_to_label stroke
 next_day
 gsave
    newpath
-   xloc yloc translate
+   xlate
    0 0 moon_r 90 270 arcn
    phase 1 scale
    0 0 moon_r 270 90 arc
@@ -159,7 +178,7 @@ text fit_to_label stroke
    ctr fit_to_label
    default_font_size
    newpath
-   xloc yloc moon_r 0 360 arc
+   set_loc moon_r 0 360 arc
    stroke
  } def
 
@@ -173,29 +192,37 @@ text fit_to_label stroke
 /newmoon  {  % string (usually weekday) on stack
    next_day
    30 font_size
-   xloc yloc moveto fit_to_label
+   ctr fit_to_label
    default_font_size
    0 20 360
       { /ang exch def newpath
-      xloc yloc moon_r ang 10 add ang arcn stroke } for
+      set_loc
+      moon_r ang 10 add ang arcn stroke } for
    } def
 
 /monthshow  {  % string (J, F, M,  etc.) on stack
    28 font_size
-   xloc topline
-   5 sub moveto        % nudge text down five points on page
+   ctr 0 -5 rmoveto    % nudge text down five points on page
    28 font_size centershow
    default_font_size
  } def
 
-/yearshow { % string (four-digit year)
+/yearshow {
+   (YEAR)
+#if landscale
+   180 rotate
+   -310 -100 moveto
+   72 font_size centershow
+   -180 rotate
+#if portrait
    310 700 moveto
    72 font_size centershow
+#endif
    default_font_size
  } def
 
 /logoshow  {
-   350 -640 moveto 12 font_size (https://www.github.com/Bill-Gray/moon_cal) show stroke
+   14 font_size (https://www.projectpluto.com/moon_cal.htm) show stroke
 } def
 
 /sunday  {
@@ -233,19 +260,40 @@ BREAK
    newpath } def
 
 %%Page: 1 1
+#if portrait
 %%PageOrientation: Portrait
+yearshow
 set_clip_rect
+#if landscape
+%%PageOrientation: Landscape
+yearshow
+set_clip_rect
+  90 rotate
+  0 0 page_width sub translate
+#endif
 show_days
 show_calendar
 showpage
 
 %%Page: 2 2
+#if portrait
 %%PageOrientation: Portrait
-0 height translate
-/bottom_margin bottom_margin height sub def
 set_clip_rect
+0 height translate
+#if landscape
+%%PageOrientation: Landscape
+set_clip_rect
+  90 rotate
+  0 height sub
+  0 page_width sub translate
+#endif
+/bottom_margin bottom_margin height sub def
 show_days
 show_calendar
-12 font_size
-72 -650 moveto (https://www.projectpluto.com/moon_cal.htm) show
+#if portrait
+72 -620 moveto logoshow
+#if landscape
+-90 rotate
+-372 1422 moveto logoshow
+#endif
 showpage

@@ -122,6 +122,7 @@ int dummy_main( const int argc, const char **argv)
    char buff[100], *dates[MAX_DATES];
    const char *events_shown = "nfehu";  /* by default,  show new/full moons, */
    int month, jd, year;            /* equinoxes,  holidays,  and US holidays */
+   int showing_lines = 1, is_landscape = 0;
    size_t i;
    bool use_color = false;
    char language = 'e';
@@ -141,6 +142,9 @@ int dummy_main( const int argc, const char **argv)
                break;
             case 'l':
                language = argv[i][2];
+               break;
+            case 'L':
+               is_landscape = 1;
                break;
             case 'c':
                use_color = true;
@@ -196,10 +200,16 @@ int dummy_main( const int argc, const char **argv)
 
       if( tptr)
          memcpy( tptr, argv[1], 4);
-      fputs( buff, ofile);
+      if( !memcmp( buff, "#if port", 8))
+         showing_lines = !is_landscape;
+      else if( !memcmp( buff, "#if land", 8))
+         showing_lines = is_landscape;
+      else if( !memcmp( buff, "#endif", 6))
+         showing_lines = 1;
+      else if( showing_lines)
+         fputs( buff, ofile);
       }
 
-   fprintf( ofile, " (%s) yearshow\n", argv[1]);
    for( month = 1; month <= 12; month++)
       {
       const int end_day = month_length( month, year);
@@ -270,7 +280,16 @@ int dummy_main( const int argc, const char **argv)
       if( dates[i])
          free( dates[i]);
    while( fgets( buff, sizeof( buff), ifile))
-      fputs( buff, ofile);
+      {
+      if( !memcmp( buff, "#if port", 8))
+         showing_lines = !is_landscape;
+      else if( !memcmp( buff, "#if land", 8))
+         showing_lines = is_landscape;
+      else if( !memcmp( buff, "#endif", 6))
+         showing_lines = 1;
+      else if( showing_lines)
+         fputs( buff, ofile);
+      }
    fclose( ifile);
    fclose( ofile);
    return( 0);
@@ -358,17 +377,16 @@ int main( void)
       else if( !strcmp( field, "birt"))
          strcat( events_shown, "b");
       else if( !strcmp( field, "color"))
-         {
          args[n_args++] = "-c";
-         args[n_args] = NULL;
-         }
+      else if( !strcmp( field, "land"))
+         args[n_args++] = "-L";
       else if( !strcmp( field, "lang"))
          {
          args[n_args++] = language;
-         args[n_args] = NULL;
          snprintf( language, sizeof( language), "-l%c", buff[0]);
          }
       }
+   args[n_args] = NULL;
    fprintf( lock_file, "Options read and parsed;  year '%s'\n", year);
    for( i = 0; i < n_args; i++)
       fprintf( lock_file, "%d: '%s'\n", i, args[i]);
