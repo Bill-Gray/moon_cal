@@ -4,7 +4,7 @@ Code to make lunar phase calendars (and ready-to-print calendars)
 =================================================================
 ![snippet](https://github.com/user-attachments/assets/fcfb4702-c1fd-4ef8-ae71-b2c32300b172)
 
-The above image shows the overall idea.  [Click here for the 2024 calendar as a color PDF,](https://github.com/Bill-Gray/moon_cal/blob/master/2024_c.pdf) or [in black and white](https://github.com/Bill-Gray/moon_cal/blob/master/2024.pdf); or [here for the 2025 calendar in color](https://github.com/Bill-Gray/moon_cal/blob/master/2025_c.pdf) or [in black and white](https://github.com/Bill-Gray/moon_cal/blob/master/2025.pdf); or [here for the 2026 calendar in color](https://github.com/Bill-Gray/moon_cal/blob/master/2026_c.pdf) or [in black and white](https://github.com/Bill-Gray/moon_cal/blob/master/2026.pdf).  Further calendars will be supplied when we're a little closer to those years.
+The above image shows the overall idea.  Please note that the simplest thing to do may be to [go to this page to generate your own customized lunar calendar as a PDF.](https://www.projectpluto.com/moon_cal.htm)  That'll give you some control over what events are shown on the calendar,  layout,  color vs. black & white,  and language.
 
 So you can just grab a desired calendar at the above links and print it out on two pages;  a bit of scissors work and tape gets you a two-page-high calendar for the year.  You need only read the following if you'd like to tweak the calendar,  generate calendars for other years,  or read about why I went to the trouble of doing this.
 
@@ -39,8 +39,4 @@ Possible improvements
 ---------------------
 I could imagine indicating lunar and solar eclipses with some modification of the new moon/full moon symbol.  Possibly even taking a chunk out of the symbol to indicate the maximum extent of the eclipse.
 
-Somewhere or other,  I've seen a chart resembling this sort,  but in 'landscape' mode (days of the month run horizontally,  so you have 31 columns and 12 rows instead of 12 columns and 31 rows.)  That might make a nice alternative.
-
 Some printers can take larger pieces of paper,  and it might be nice to print this out on such.
-
-I may put together an on-line service on [my Web site](https://www.projectpluto.com) where you would enter the desired year,  then be presented with an edit box containing the default `dateYYYY.txt` file for that year.  Edit as desired to remove stuff you don't want and to label your pet's birthday or other date(s) of interest,  click 'Make Calendar',  and you'd get your customized calendar without having to download and compile and run this code.
