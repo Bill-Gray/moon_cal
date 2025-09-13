@@ -114,6 +114,19 @@ static char *get_text( char *buff, const char language, int idx)
    return( rval);
 }
 
+static void show_usage( void)
+{
+   fprintf( stderr,
+        "'moon_cal' needs a year as a command-line argument.  The lunar chart\n"
+        "for that year will be written to 'z.ps'.  Command-line flags are:\n\n"
+        "   -e[nfehu]  Show new or full moons,  equinoxes,  holidays,  and/or\n"
+        "              US holidays.  See 'dateyyyy.txt' for the events.\n"
+        "   -l[efdins] Show English, French, German, Italian, Norwegian,\n"
+        "              or Spanish.  Currently affects weekday names only.\n"
+        "   -L         Display landscape mode (default is portrait).\n"
+        "   -c         Output for color printers.\n");
+}
+
 #define MAX_DATES 408
 
 int dummy_main( const int argc, const char **argv)
@@ -129,8 +142,7 @@ int dummy_main( const int argc, const char **argv)
 
    if( argc < 2 || (year = atoi( argv[1])) < 1900 || year > 2100)
       {
-      printf( "'moon_cal' needs a year as a command-line argument.  The lunar chart\n"
-              "for that year will be written to 'z.ps'.\n");
+      show_usage( );
       return( -1);
       }
    for( i = 2; i < (size_t)argc; i++)
@@ -151,6 +163,7 @@ int dummy_main( const int argc, const char **argv)
                break;
             default:
                fprintf( stderr, "Argument '%s' not interpreted\n", argv[i]);
+               show_usage( );
                return( -1);
             }
 
