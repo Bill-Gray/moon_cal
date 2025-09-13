@@ -4,9 +4,9 @@ Code to make lunar phase calendars (and ready-to-print calendars)
 =================================================================
 ![snippet](https://github.com/user-attachments/assets/fcfb4702-c1fd-4ef8-ae71-b2c32300b172)
 
-The above image shows the overall idea.  Please note that the simplest thing to do may be to [go to this page to generate your own customized lunar calendar as a PDF.](https://www.projectpluto.com/moon_cal.htm)  That'll give you some control over what events are shown on the calendar,  layout,  color vs. black & white,  and language.
+The above image shows the overall idea.  Please note that the simplest thing to do may be to [go to this page to generate your own customized lunar calendar as a PDF.](https://www.projectpluto.com/moon_cal.htm)  That'll give you some control over what events are shown on the calendar,  layout,  color vs. black & white,  and language.  And,  of course,  you won't have to download and build this code.
 
-So you can just grab a desired calendar at the above links and print it out on two pages;  a bit of scissors work and tape gets you a two-page-high calendar for the year.  You need only read the following if you'd like to tweak the calendar,  generate calendars for other years,  or read about why I went to the trouble of doing this.
+So you can just grab a desired calendar at the above link and print it out on two pages;  a bit of scissors work and tape gets you a two-page-high calendar for the year.  You need only read the following if you'd like to tweak the calendar and/or read about why I went to the trouble of doing this.
 
 Building/running the code
 -------------------------
@@ -40,3 +40,5 @@ Possible improvements
 I could imagine indicating lunar and solar eclipses with some modification of the new moon/full moon symbol.  Possibly even taking a chunk out of the symbol to indicate the maximum extent of the eclipse.
 
 Some printers can take larger pieces of paper,  and it might be nice to print this out on such.
+
+Further European languages could be added without much trouble.  (As best I can tell,  PostScript has no concept of Unicode.)
