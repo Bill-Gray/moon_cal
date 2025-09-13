@@ -209,11 +209,22 @@ text fit_to_label stroke
 
 /yearshow {
    (YEAR)
-#if landscale
-   180 rotate
-   -310 -100 moveto
-   72 font_size centershow
-   -180 rotate
+#if landscape
+   90 rotate
+   /yeartextsize 95 def
+   72 -200 moveto
+   0 1 getinterval
+   yeartextsize font_size centershow
+   72 -280 moveto
+   (YEAR) 1 1 getinterval
+   yeartextsize font_size centershow
+   72 -360 moveto
+   (YEAR) 2 1 getinterval
+   yeartextsize font_size centershow
+   72 -440 moveto
+   (YEAR) 3 1 getinterval
+   yeartextsize font_size centershow
+   -90 rotate
 #if portrait
    310 700 moveto
    72 font_size centershow
