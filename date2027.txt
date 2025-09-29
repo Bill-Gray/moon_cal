@@ -29,3 +29,22 @@ YYYY MM DD M Pt Text
 2027 06 21 e Sols
 2027 09 23 e Equi
 2027 12 22 e Sols
+2027 01 18 u 15 MLK$Day
+2027 02 15 u 16 Pres$Day
+2027 03 14 u 12 DST$start
+2027 04 19 u 16 Patr$Day
+2027 04 28 h Easter
+2027 05 09 u 16 Mom$Day
+2027 05 31 u 16 Memo$Day
+2027 06 19 u 14 June-$teenth
+2027 06 20 u 16 Dad$Day
+2027 09 06 u 15 Labor$Day
+2027 10 11 u 18 InP$Day
+2027 11 07 u 12 DST$ends
+2027 11 11 u 15 Armi$Day
+2027 11 25 u T-Day
+2027 12 25 h XMas
+2027 04 22 b 12 SCG$B-day
+2027 07 31 b 12 KHG$B-day
+2027 03 14 h \p
+2027 07 22 h ~\p
