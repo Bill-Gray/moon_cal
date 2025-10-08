@@ -188,16 +188,12 @@ int dummy_main( const int argc, const char **argv)
                const int pseudo_jd = atoi( buff + 5) * 31 + atoi( buff + 8);
 
                assert( pseudo_jd > 31 && pseudo_jd <= 31 * 13);
-               if( dates[pseudo_jd])
-                  {
-                  fprintf( stderr, "You have two date texts defined for this date\n");
-                  fprintf( stderr, "%s%s\nPlease remove one of them.\n",
-                              buff + 11, dates[pseudo_jd]);
-                  return( -1);
+               if( !dates[pseudo_jd])     /* if there are duplicates,  we just */
+                  {                       /* go with the first one we find */
+                  dates[pseudo_jd] = (char *)malloc( strlen( buff + 10));
+                  buff[strlen( buff) - 1] = '\0';     /* remove trailing lf */
+                  strcpy( dates[pseudo_jd], buff + 11);
                   }
-               dates[pseudo_jd] = (char *)malloc( strlen( buff + 10));
-               buff[strlen( buff) - 1] = '\0';     /* remove trailing lf */
-               strcpy( dates[pseudo_jd], buff + 11);
                }
          }
       fclose( ifile);
