@@ -1,26 +1,26 @@
    Dates for 2027.  See 'date2023.txt' for explanation.
 YYYY MM DD M Pt Text
 2027 01 07 n -
-2027 02 06 n -
+2027 02 06 n Annular
 2027 03 08 n -
 2027 04 06 n -
 2027 05 06 n -
 2027 06 04 n -
 2027 07 04 n -
-2027 08 02 n -
+2027 08 02 n Total
 2027 08 31 n -
 2027 09 30 n -
 2027 10 29 n -
 2027 11 28 n -
 2027 12 27 n -
 2027 01 22 f Wolf
-2027 02 20 f Lenten
+2027 02 20 f 12 Lenten$Penum
 2027 03 22 f Egg
 2027 04 20 f Milk
 2027 05 20 f Blue
 2027 06 19 f Flower
-2027 07 18 f Hay
-2027 08 17 f Grain
+2027 07 18 f 12 Hay$Penum
+2027 08 17 f 12 Grain$Penum
 2027 09 15 f Fruit
 2027 10 15 f Harvest
 2027 11 14 f Hunter's

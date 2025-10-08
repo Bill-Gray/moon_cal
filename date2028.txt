@@ -1,30 +1,30 @@
    Dates for 2028.  See 'date2023.txt' for explanation.
 YYYY MM DD M Pt Text
-2028 01 26 n -
+2028 01 26 n Annular
 2028 02 25 n -
 2028 03 26 n -
 2028 04 24 n -
 2028 05 24 n -
 2028 06 22 n -
-2028 07 22 n -
+2028 07 22 n Total
 2028 08 20 n -
 2028 09 18 n -
 2028 10 18 n -
 2028 11 16 n -
 2028 12 16 n -
-2028 01 12 f 12 After$Yule
+2028 01 12 f 11 AftYule$Umbra
 2028 02 10 f Wolf
 2028 03 11 f Lenten
 2028 04 09 f Egg
 2028 05 08 f Milk
 2028 06 07 f Flower
-2028 07 06 f Hay
+2028 07 06 f 11 Hay$Umbra
 2028 08 05 f Grain
 2028 09 03 f Fruit
 2028 10 03 f Harvest
 2028 11 02 f Hunter's
 2028 12 02 f 12 Before$Yule
-2028 12 31 f 12 After$Yule
+2028 12 31 f 11 AftYule$Total
 2028 03 20 e Equi
 2028 06 20 e Sols
 2028 09 22 e Equi
