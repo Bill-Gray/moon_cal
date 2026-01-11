@@ -210,21 +210,19 @@ text fit_to_label stroke
 /yearshow {
    (YEAR)
 #if landscape
-   90 rotate
    /yeartextsize 95 def
-   72 -200 moveto
+   72 400 moveto
    0 1 getinterval
    yeartextsize font_size centershow
-   72 -280 moveto
+   72 320 moveto
    (YEAR) 1 1 getinterval
    yeartextsize font_size centershow
-   72 -360 moveto
+   72 240 moveto
    (YEAR) 2 1 getinterval
    yeartextsize font_size centershow
-   72 -440 moveto
+   72 160 moveto
    (YEAR) 3 1 getinterval
    yeartextsize font_size centershow
-   -90 rotate
 #if portrait
    310 700 moveto
    72 font_size centershow
@@ -233,7 +231,7 @@ text fit_to_label stroke
  } def
 
 /logoshow  {
-   14 font_size (https://www.projectpluto.com/moon_cal.htm) show stroke
+   16 font_size (https://www.projectpluto.com/moon_cal.htm) show stroke
 } def
 
 /sunday  {
@@ -256,10 +254,18 @@ text fit_to_label stroke
 BREAK
 } def
 
+#if landscape
+/bottom_margin 36 def
+/left_margin 52 def
+/height 550 def
+/width 700 def
+#endif
+#if portrait
 /bottom_margin 50 def
 /left_margin 36 def
 /height 700 def
 /width 550 def
+#endif
 
 /set_clip_rect {
    newpath
@@ -270,41 +276,41 @@ BREAK
    closepath clip
    newpath } def
 
-%%Page: 1 1
+/show_full_calendar {
+   set_clip_rect
+   yearshow
+   show_days
+   show_calendar
 #if portrait
-%%PageOrientation: Portrait
-yearshow
-set_clip_rect
+   72 -620 moveto logoshow
 #if landscape
-%%PageOrientation: Landscape
-yearshow
-set_clip_rect
-  90 rotate
-  0 0 page_width sub translate
+   90 rotate
+   72 -1420 moveto logoshow
+   -90 rotate
 #endif
-show_days
-show_calendar
-showpage
+   showpage    } def
+
+#if portrait
+%%Page: 1 1
+%%PageOrientation: Portrait
+show_full_calendar
 
 %%Page: 2 2
-#if portrait
 %%PageOrientation: Portrait
-set_clip_rect
 0 height translate
-#if landscape
-%%PageOrientation: Landscape
-set_clip_rect
-  90 rotate
-  0 height sub
-  0 page_width sub translate
-#endif
 /bottom_margin bottom_margin height sub def
-show_days
-show_calendar
-#if portrait
-72 -620 moveto logoshow
+show_full_calendar
+
 #if landscape
--90 rotate
--372 1422 moveto logoshow
-#endif
-showpage
+%%Page: 1 1
+%%PageOrientation: Landscape
+90 rotate
+0 0 page_width sub translate
+show_full_calendar
+
+%%Page: 2 2
+%%PageOrientation: Landscape
+90 rotate
+0 width sub 0 page_width sub translate
+/left_margin left_margin width add def
+show_full_calendar
